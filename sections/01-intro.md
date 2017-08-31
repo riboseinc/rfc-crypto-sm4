@@ -49,8 +49,30 @@ Information Science & Technology (BAIST):
 
 ## Applications
 
-SM4 (and SMS4) has prevalent hardware implementations, due to its being
-the only OSCCA-approved symmetric encryption algorithm allowed for use
-in China.
+SM4 (and SMS4) has prevalent hardware implementations [@SM4-FPGA]
+[@SM4-VLSI], due to its being the only OSCCA-approved symmetric encryption
+algorithm allowed for use in China.
 
 SM4 can be used with ECB, CBC, CFB, CTR, and OFB modes.
+
+## Cryptanalysis
+
+A number of attacks have been attempted on SM4, such as [@SM4-Analysis]
+[@SM4-Linear], but there are no known feasible attacks against SM4 algorithm
+by the time of publishing this document.
+
+However, there are security concerns with regards to side-channel attacks
+[@SideChannel], when the SM4 algorithm is implemented in a device [@SM4-Power].
+
+For instance, [@SM4-Power] illustrated an attack by measuring the power
+consumption of the device. A chosen ciphertext attack, assuming a fixed
+correlation between the sub-keys and data mask, is able to recover the round
+key successfully. When the SM4 algorithm is implemented in hardware, the
+parameters/keys **SHOULD** be randomly generated without fixed correlation.
+
+There have been improvements to the hardware embodiment of SM4 such as
+[@SM4-VLSI] that may resist such attacks.
+
+In order to improve security of the SM4 process, secure white-box
+implementations such as [@SM4-WhiteBox] have been proposed. Speed enhancements
+have also been proposed [@SM4-HiSpeed].

@@ -1,25 +1,3 @@
-<reference anchor='SM2' target='http://www.oscca.gov.cn/UpFile/2010122214822692.pdf'>
-  <front>
-    <title>Public Key Cryptographic Algorithm SM2 Based on Elliptic Curves</title>
-    <author>
-      <organization>Organization of State Commercial Administration of China</organization>
-      <address>
-        <postal>
-         <street>7 Dian Chang Lu, Fengtai Qu</street>
-         <city>Beijing</city>
-         <region>Beijing</region>
-         <code>100036</code>
-         <country>People's Republic of China</country>
-        </postal>
-        <phone>+86 (0)10 5970-3789</phone>
-        <!--<email>contact@oscca.gov.cn</email>-->
-        <uri>http://www.oscca.gov.cn</uri>
-      </address>
-    </author>
-    <date month='December' year='2010'/>
-  </front>
-</reference>
-
 <reference anchor='GMT-0002-2012' target='http://www.oscca.gov.cn/Column/Column_32.htm'>
   <front>
     <title>GM/T 0002-2012: SM4 block cipher algorithm</title>
@@ -39,30 +17,6 @@
       </address>
     </author>
     <date day='21' month='March' year='2012'/>
-  </front>
-</reference>
-
-<reference anchor='SM3' target='http://www.oscca.gov.cn/UpFile/20101222141857786.pdf'>
-<!-- <reference anchor='SM3' target='http://info.dacas.cn/sharedimages/ARTICLES/SMAlgorithms/SM3.pdf'> -->
-  <front>
-  <!--GM/T 0003.5-2012-->
-    <title>SM3 Cryptographic Hash Algorithm</title>
-    <author>
-      <organization>Organization of State Commercial Administration of China</organization>
-      <address>
-        <postal>
-         <street>7 Dian Chang Lu, Fengtai Qu</street>
-         <city>Beijing</city>
-         <region>Beijing</region>
-         <code>100036</code>
-         <country>People's Republic of China</country>
-        </postal>
-        <phone>+86 (0)10 5970-3789</phone>
-        <!--<email>contact@oscca.gov.cn</email>-->
-        <uri>http://www.oscca.gov.cn</uri>
-      </address>
-    </author>
-    <date month='December' year='2010'/>
   </front>
 </reference>
 
@@ -155,96 +109,6 @@
       </address>
     </author>
     <date month='May' year='2017'/>
-  </front>
-</reference>
-
-<reference anchor='NIST.SP.800-56Ar2' target='http://dx.doi.org/10.6028/NIST.SP.800-56Ar2'>
-  <front>
-    <title>SP 800-56Ar2 Recommendation for Pair-Wise Key Establishment Schemes Using Discrete Logarithm Cryptography</title>
-    <author initials="B." surname="Barker" fullname="Elaine B. Barker">
-      <organization>National Institute of Standards and Technology</organization>
-      <address>
-        <postal>
-          <street>100 Bureau Drive</street>
-          <city>Gaithersburg</city>
-          <region>MD</region>
-          <code>20899</code>
-          <country>United States</country>
-        </postal>
-        <uri>http://www.nist.gov/</uri>
-      </address>
-    </author>
-    <author initials="L." surname="Chen" fullname="Lily Chen">
-      <organization>National Institute of Standards and Technology</organization>
-      <address>
-        <postal>
-          <street>100 Bureau Drive</street>
-          <city>Gaithersburg</city>
-          <region>MD</region>
-          <code>20899</code>
-          <country>United States</country>
-        </postal>
-        <uri>http://www.nist.gov/</uri>
-      </address>
-    </author>
-    <author initials="A." surname="Roginsky" fullname="Allen Roginsky">
-      <organization>National Institute of Standards and Technology</organization>
-      <address>
-        <postal>
-          <street>100 Bureau Drive</street>
-          <city>Gaithersburg</city>
-          <region>MD</region>
-          <code>20899</code>
-          <country>United States</country>
-        </postal>
-        <uri>http://www.nist.gov/</uri>
-      </address>
-    </author>
-    <author initials="M." surname="Smid" fullname="Miles Smid">
-      <organization>Orion Security Solutions, Inc.</organization>
-      <address>
-        <postal>
-          <street>1489 Chain Bridge Road</street>
-          <street>Suite 300</street>
-          <city>McLean</city>
-          <region>VA</region>
-          <code>22101</code>
-          <country>United States</country>
-        </postal>
-        <uri>http://www.orionsecuritysolutions.com</uri>
-      </address>
-    </author>
-    <date month='May' year='2013'/>
-  </front>
-</reference>
-
-<reference anchor='NIST.FIPS.180-4' target='http://dx.doi.org/10.6028/NIST.FIPS.180-4'>
-  <front>
-    <title>FIPS 180-4 Secure Hash Standard (SHS)</title>
-    <author>
-      <organization>National Institute of Standards and Technology</organization>
-      <address>
-        <postal>
-          <street>100 Bureau Drive</street>
-          <city>Gaithersburg</city>
-          <region>MD</region>
-          <code>20899-8900</code>
-          <country>United States</country>
-        </postal>
-        <uri>http://www.nist.gov/</uri>
-      </address>
-    </author>
-    <date month='August' year='2015'/>
-  </front>
-</reference>
-
-<reference anchor='SEC1' target='http://www.secg.org/SEC1-Ver-1.0.pdf'>
-  <front>
-    <title>SEC 1: Elliptic Curve Cryptography</title>
-    <author>
-      <organization>Standards for Efficient Cryptography Group</organization>
-    </author>
-    <date month='September' year='2010'/>
   </front>
 </reference>
 
@@ -436,7 +300,7 @@
 
 <reference anchor='SM4-FPGA' target='https://www.researchgate.net/publication/287081686_Improvements_of_SM4_algorithm_and_application_in_Ethernet_encryption_system_based_on_FPGA'>
   <front>
-    @<!-- article{article,
+    <!-- article{article,
     author = {Cheng, H and Zhai, S and Fang, L and Ding, Q and Huang, C},
     year = {2014},
     month = {07},
@@ -557,7 +421,7 @@
   </front>
 </reference>
 
-<reference anchor='SM4-En' target='http://dx.doi.org/10.1002/sec.1394'>
+<reference anchor='SM4-WhiteBox' target='http://dx.doi.org/10.1002/sec.1394'>
   <!-- @article {SEC:SEC1394,
   author = {Bai, Kunpeng and Wu, Chuankun},
   title = {A secure white-box SM4 implementation},
@@ -574,13 +438,12 @@
   } -->
   <front>
     <title>A secure white-box SM4 implementation</title>
-    <author initials="Kunpeng." surname="Bai" fullname="Kunpeng Bai">
+    <author initials="K." surname="Bai" fullname="Kunpeng Bai">
       <organization>State Key Laboratory of Information Security, Institute of Information Engineering, Chinese Academy of Sciences</organization>
       <address>
         <postal>
           <street>Institute of Software, Chinese Academy of Sciences</street>
           <street>No. 4 South Fourth Street</street>
-          <street>Institute of Software, Chinese Academy of Sciences</street>
           <city>Zhong Guan Cun</city>
           <region>Beijing</region>
           <code>100190</code>
@@ -595,7 +458,6 @@
         <postal>
           <street>Institute of Software, Chinese Academy of Sciences</street>
           <street>No. 4 South Fourth Street</street>
-          <street>Institute of Software, Chinese Academy of Sciences</street>
           <city>Zhong Guan Cun</city>
           <region>Beijing</region>
           <code>100190</code>
@@ -617,5 +479,232 @@
       <organization>Xinhua Catalog</organization>
     </author>
     <date day='25' month='November' year='2010'/>
+  </front>
+</reference>
+
+<reference anchor='SideChannel' target='https://doi.org/10.1109/CIS.2015.102'>
+  <!-- 2015 11th International Conference on Computational Intelligence and Security (CIS), Shenzhen, 2015, pp. 398-401. -->
+  <front>
+    <title>Software Hardware Co-design for Side-Channel Analysis Platform on Security Chips</title>
+    <author initials="Q." surname="Lei" fullname="Qian Lei">
+      <organization>Tsinghua National Laboratory for Information Science and Technology, Tsinghua University</organization>
+      <address>
+        <postal>
+          <street>Tsinghua University</street>
+          <city>Haidian</city>
+          <region>Beijing</region>
+          <code>100190</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.sist.tsinghua.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="L." surname="Wu" fullname="Liji Wu">
+      <organization>Tsinghua National Laboratory for Information Science and Technology, Tsinghua University</organization>
+      <address>
+        <postal>
+          <street>Tsinghua University</street>
+          <city>Haidian</city>
+          <region>Beijing</region>
+          <code>100190</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.sist.tsinghua.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="S." surname="Zhang" fullname="Shaohui Zhang">
+      <organization>Tsinghua National Laboratory for Information Science and Technology, Tsinghua University</organization>
+      <address>
+        <postal>
+          <street>Tsinghua University</street>
+          <city>Haidian</city>
+          <region>Beijing</region>
+          <code>100190</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.sist.tsinghua.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="X." surname="Zhang" fullname="Xiangmin Zhang">
+      <organization>Tsinghua National Laboratory for Information Science and Technology, Tsinghua University</organization>
+      <address>
+        <postal>
+          <street>Tsinghua University</street>
+          <city>Haidian</city>
+          <region>Beijing</region>
+          <code>100190</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.sist.tsinghua.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="X." surname="Li" fullname="Xiangyu Li">
+      <organization>Tsinghua National Laboratory for Information Science and Technology, Tsinghua University</organization>
+      <address>
+        <postal>
+          <street>Tsinghua University</street>
+          <city>Haidian</city>
+          <region>Beijing</region>
+          <code>100190</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.sist.tsinghua.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="L." surname="Pan" fullname="Liyang Pan">
+      <organization>Tsinghua National Laboratory for Information Science and Technology, Tsinghua University</organization>
+      <address>
+        <postal>
+          <street>Tsinghua University</street>
+          <city>Haidian</city>
+          <region>Beijing</region>
+          <code>100190</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.sist.tsinghua.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="Z." surname="Dong" fullname="Zhimeng Dong">
+      <organization>Tsinghua National Laboratory for Information Science and Technology, Tsinghua University</organization>
+      <address>
+        <postal>
+          <street>Tsinghua University</street>
+          <city>Haidian</city>
+          <region>Beijing</region>
+          <code>100190</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.sist.tsinghua.edu.cn/</uri>
+      </address>
+    </author>
+    <date day='1' month='December' year='2015'/>
+  </front>
+</reference>
+
+<reference anchor='SM4-VLSI' target='https://doi.org/10.3233/JIFS-169011'>
+<!-- Journal of Intelligent & Fuzzy Systems 31 (2016) 795–803
+DOI:10.3233/JIFS-169011
+IOS Press -->
+  <front>
+    <title>A VLSI implementation of an SM4 algorithm resistant to power analysis</title>
+    <author initials="S." surname="Yu" fullname="Siyang Yu">
+      <organization>College of Information Science and Engineering, Hunan University</organization>
+      <address>
+        <postal>
+          <street>Lushan Road S, Yuelu District</street>
+          <city>Changsha</city>
+          <region>Hunan</region>
+          <code>410082</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <email>nickysy@hnu.edu.cn</email>
+        <uri>http://www.hnu.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="K." surname="Li" fullname="Kenli Li">
+      <organization>Department of Computer Science, New Platz, State University of New York</organization>
+      <address>
+        <postal>
+          <street>SUNY New Paltz, 1 Hawk Drive</street>
+          <city>New Paltz</city>
+          <region>NY</region>
+          <code>12561</code>
+          <country>United States of America</country>
+        </postal>
+        <uri>http://www.hnu.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="K." surname="Li" fullname="Keqin Li">
+      <organization>College of Information Science and Engineering, Hunan University</organization>
+      <address>
+        <postal>
+          <street>Lushan Road S, Yuelu District</street>
+          <city>Changsha</city>
+          <region>Hunan</region>
+          <code>410082</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.hnu.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="Y." surname="Qin" fullname="Yunchuan Qin">
+      <organization>College of Information Science and Engineering, Hunan University</organization>
+      <address>
+        <postal>
+          <street>Lushan Road S, Yuelu District</street>
+          <city>Changsha</city>
+          <region>Hunan</region>
+          <code>410082</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.hnu.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="Z." surname="Tong" fullname="Zhao Tong">
+      <organization>College of Mathematics and Computer Science, Performance Computing and Stochastic Information Processing, (Ministry of Education of China), Hunan Normal University</organization>
+      <address>
+        <postal>
+          <street>36 Lushan Rd., Yuelu District</street>
+          <city>Changsha</city>
+          <region>Hunan</region>
+          <code>410081</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.hunnu.edu.cn/</uri>
+      </address>
+    </author>
+    <date day='22' month='July' year='2016'/>
+  </front>
+</reference>
+
+<reference anchor='SM4-HiSpeed' target='http://dx.doi.org/10.14257/ijsia.2016.10.9.01'>
+<!-- International Journal of Security and its Applications
+Vol. 10, No. 9 (2016), pp.1-8
+http://dx.doi.org/10.14257/ijsia.2016.10.9.01 -->
+  <front>
+    <title>High-speed Encryption &amp; Decryption System Based on SM4</title>
+    <author initials="Q." surname="Lv" fullname="Qian Lv">
+      <organization>Binzhou Polytechnic</organization>
+      <address>
+        <postal>
+          <street>391 Huanghe Road</street>
+          <city>Binzhou</city>
+          <region>Shandong</region>
+          <code>256600</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <email>ihappylucy@outlook.com</email>
+        <uri>http://www.bzu.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="L." surname="Li" fullname="Li Li">
+      <organization>Binzhou Polytechnic</organization>
+      <address>
+        <postal>
+          <street>391 Huanghe Road</street>
+          <city>Binzhou</city>
+          <region>Shandong</region>
+          <code>256600</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <email>lili_thesky@163.com</email>
+        <uri>http://www.bzu.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="Y." surname="Cao" fullname="Yan-yan Cao">
+      <organization>Binzhou Polytechnic</organization>
+      <address>
+        <postal>
+          <street>391 Huanghe Road</street>
+          <city>Binzhou</city>
+          <region>Shandong</region>
+          <code>256600</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <email>yaya_sd@163.com</email>
+        <uri>http://www.bzu.edu.cn/</uri>
+      </address>
+    </author>
+    <date day='22' month='July' year='2016'/>
   </front>
 </reference>
