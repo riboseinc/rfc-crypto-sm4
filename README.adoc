@@ -1,0 +1,28 @@
+= ID: SM4
+
+== Fetching the document
+
+[source,sh]
+----
+git clone https://github.com/riboseinc/rfc-crypto-sm4
+----
+
+== Prerequisites
+
+You will need `mmark` and `xml2rfc`.
+
+If you're on macOS you can run:
+
+[source,sh]
+----
+brew install mmark
+brew install xml2rfc
+----
+
+== Building the document
+
+[source,sh]
+----
+make all
+open draft-crypto-sm4-00.txt
+----
