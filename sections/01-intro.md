@@ -8,8 +8,13 @@ algorithm is applicable  published in public.
 SM4 is a symmetric encryption algorithm, specifically a blockcipher,
 designed for data encryption.
 
-This document is similar to [@SM4-En] in nature. [@SM4-En]
-is a textual translation of "SMS4" [@SM4] published in 2006, while this
+This document does not aim to introduce a new algorithm, but to
+provide a clear and open description of the SM4 algorithm in English,
+and also to serve as a stable reference for IETF documents that utilize
+this algorithm.
+
+While this document is similar to [@SM4-En] in nature, [@SM4-En]
+is a textual translation of "SMS4" [@SM4] published in 2006, and this
 document follows the updated text and structure of [@!GBT.32907-2016].
 
 
