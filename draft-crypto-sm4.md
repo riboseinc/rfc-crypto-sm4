@@ -10,8 +10,10 @@
 {{sections/05-key.md}}
 {{sections/06-round-function.md}}
 {{sections/07-calculation.md}}
-{{sections/08-security.md}}
-{{sections/09-iana.md}}
+{{sections/08-modes.md}}
+{{sections/09-oid.md}}
+{{sections/10-security.md}}
+{{sections/11-iana.md}}
 
 {{sections/97-examples.md}}
 {{sections/98-references.md}}

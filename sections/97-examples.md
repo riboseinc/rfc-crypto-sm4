@@ -17,40 +17,40 @@ Plaintext:
 Encryption key:
     01 23 45 67 89 AB CD EF FE DC BA 98 76 54 32 10
 
-Status of the round key (rk) and round output (X) per round:
+Status of the round key ($$rk_i$$) and round output ($$X_i$$) per round:
 
-    rk[ 0] = F12186F9   X[ 4] = 27FAD345
-    rk[ 1] = 41662B61   X[ 5] = A18B4CB2
-    rk[ 2] = 5A6AB19A   X[ 6] = 11C1E22A
-    rk[ 3] = 7BA92077   X[ 7] = CC13E2EE
-    rk[ 4] = 367360F4   X[ 8] = F87C5BD5
-    rk[ 5] = 776A0C61   X[ 9] = 33220757
-    rk[ 6] = B6BB89B3   X[10] = 77F4C297
-    rk[ 7] = 24763151   X[11] = 7A96F2EB
-    rk[ 8] = A520307C   X[12] = 27DAC07F
-    rk[ 9] = B7584DBD   X[13] = 42DD0F19
-    rk[10] = C30753ED   X[14] = B8A5DA02
-    rk[11] = 7EE55B57   X[15] = 907127FA
-    rk[12] = 6988608C   X[16] = 8B952B83
-    rk[13] = 30D895B7   X[17] = D42B7C59
-    rk[14] = 44BA14AF   X[18] = 2FFC5831
-    rk[15] = 104495A1   X[19] = F69E6888
-    rk[16] = D120B428   X[20] = AF2432C4
-    rk[17] = 73B55FA3   X[21] = ED1EC85E
-    rk[18] = CC874966   X[22] = 55A3BA22
-    rk[19] = 92244439   X[23] = 124B18AA
-    rk[20] = E89E641F   X[24] = 6AE7725F
-    rk[21] = 98CA015A   X[25] = F4CBA1F9
-    rk[22] = C7159060   X[26] = 1DCDFA10
-    rk[23] = 99E1FD2E   X[27] = 2FF60603
-    rk[24] = B79BD80C   X[28] = EFF24FDC
-    rk[25] = 1D2115B0   X[29] = 6FE46B75
-    rk[26] = 0E228AEB   X[30] = 893450AD
-    rk[27] = F1780C81   X[31] = 7B938F4C
-    rk[28] = 428D3654   X[32] = 536E4246
-    rk[29] = 62293496   X[33] = 86B3E94F
-    rk[30] = 01CF72E5   X[34] = D206965E
-    rk[31] = 9124A012   X[35] = 681EDF34
+    rk_0  = F12186F9   X_4  = 27FAD345
+    rk_1  = 41662B61   X_5  = A18B4CB2
+    rk_2  = 5A6AB19A   X_6  = 11C1E22A
+    rk_3  = 7BA92077   X_7  = CC13E2EE
+    rk_4  = 367360F4   X_8  = F87C5BD5
+    rk_5  = 776A0C61   X_9  = 33220757
+    rk_6  = B6BB89B3   X_10 = 77F4C297
+    rk_7  = 24763151   X_11 = 7A96F2EB
+    rk_8  = A520307C   X_12 = 27DAC07F
+    rk_9  = B7584DBD   X_13 = 42DD0F19
+    rk_10 = C30753ED   X_14 = B8A5DA02
+    rk_11 = 7EE55B57   X_15 = 907127FA
+    rk_12 = 6988608C   X_16 = 8B952B83
+    rk_13 = 30D895B7   X_17 = D42B7C59
+    rk_14 = 44BA14AF   X_18 = 2FFC5831
+    rk_15 = 104495A1   X_19 = F69E6888
+    rk_16 = D120B428   X_20 = AF2432C4
+    rk_17 = 73B55FA3   X_21 = ED1EC85E
+    rk_18 = CC874966   X_22 = 55A3BA22
+    rk_19 = 92244439   X_23 = 124B18AA
+    rk_20 = E89E641F   X_24 = 6AE7725F
+    rk_21 = 98CA015A   X_25 = F4CBA1F9
+    rk_22 = C7159060   X_26 = 1DCDFA10
+    rk_23 = 99E1FD2E   X_27 = 2FF60603
+    rk_24 = B79BD80C   X_28 = EFF24FDC
+    rk_25 = 1D2115B0   X_29 = 6FE46B75
+    rk_26 = 0E228AEB   X_30 = 893450AD
+    rk_27 = F1780C81   X_31 = 7B938F4C
+    rk_28 = 428D3654   X_32 = 536E4246
+    rk_29 = 62293496   X_33 = 86B3E94F
+    rk_30 = 01CF72E5   X_34 = D206965E
+    rk_31 = 9124A012   X_35 = 681EDF34
 
 <!-- 输出密文: 68 1E DF 34 D2 06 96 5E 86 B3 E9 4F 53 6E 42 46 -->
 

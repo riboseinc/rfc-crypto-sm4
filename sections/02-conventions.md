@@ -22,7 +22,7 @@ rounds
 <!-- TODO: clarify this -->
 
 round key
-: Also called a sub-key, a key used in each round of the iterative blockcipher, created according to the input key
+: Also called a subkey, it is a key used in each round of the iterative blockcipher, derived from the input key
 
 word
 : a 32-bit quantity

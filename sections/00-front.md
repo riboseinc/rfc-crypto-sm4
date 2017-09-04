@@ -1,6 +1,6 @@
 %%%
 
-Title = "The SM4 Block Cipher Algorithm"
+Title = "The SM4 Block Cipher Algorithm And Its Modes Of Operations"
 category = "info"
 docName = "draft-crypto-sm4-00"
 ipr = "trust200902"

@@ -47,7 +47,7 @@ a. 32 rounds of calculation
   $$i = 0, 1, ..., 31$$
 
   $$
-  X_(i+4) = F(X_(i), X_(i+1), X_(i+2), X_(i+3), rk_i)
+  X_{i+4} = F(X_i, X_{i+1}, X_{i+2}, X_{i+3}, rk_i)
   $$
 
 b. reverse transformation
@@ -110,15 +110,15 @@ Each round key $$rk_i$$ is created as follows, where $$i = 0, 1, ..., 31$$.
 
 $$
 (K_0, K_1, K_2, K_3)
-             = (MK_0 xor FK_0, MK_1 xor FK_1, MK_2 xor FK_2, MK_3 xor FK_3)
+        = (MK_0 xor FK_0, MK_1 xor FK_1, MK_2 xor FK_2, MK_3 xor FK_3)
 $$
 
 $$
-rk_i = K_(i + 4)
+rk_i = K_{i + 4}
 $$
 
 $$
-K_(i + 4) = K_i xor T' (K_(i+1) xor K_(i+2) xor K_(i+3) xor CK_i)
+K_{i + 4} = K_i xor T' (K_{i + 1} xor K_{i + 2} xor K_{i + 3} xor CK_i)
 $$
 
 a. Transformation function $$T'$$ is created from $$T$$ by replacing the linear transform function $$L$$ with $$L'$$.
@@ -138,12 +138,12 @@ $$
 
 c. The method to retrieve values from the constant parameter $$CK$$ is as follows.
 
-Let $$ck_(i,j)$$ be the $$j$$-th byte ($$i = 0, 1, ..., 31; j = 0, 1, 2, 3$$) of $$CK_i$$.
+Let $$ck_{i, j}$$ be the $$j$$-th byte ($$i = 0, 1, ..., 31; j = 0, 1, 2, 3$$) of $$CK_i$$.
 
-Each $$ck_(i,j)$$ is a 8-bit string, and each $$CK_i$$ a 32-bit word.
+Therefore, each $$ck_{i, j}$$ is a 8-bit string, and each $$CK_i$$ a 32-bit word.
 
 $$
-CK_i = (ck_(i,0), ck_(i,1), ck_(i,2), ck_(i,3))
+CK_i = (ck_{i, 0}, ck_{i, 1}, ck_{i, 2}, ck_{i, 3})
 $$
 
 <!-- $$
@@ -151,7 +151,7 @@ CK_i element-of (Z_2^8)^4
 $$ -->
 
 $$
-ck_(i,j) = (4i + j) x 7 (mod 256)
+ck_{i, j} = (4i + j) x 7 (mod 256)
 $$
 
 

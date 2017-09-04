@@ -58,7 +58,8 @@ SM4 (and SMS4) has prevalent hardware implementations [@SM4-FPGA]
 [@SM4-VLSI], due to its being the only OSCCA-approved symmetric encryption
 algorithm allowed for use in China.
 
-SM4 can be used with ECB, CBC, CFB, CTR, and OFB modes.
+SM4 can be used with multiple modes (See (#sm4-modes)).
+
 
 ## Cryptanalysis
 
