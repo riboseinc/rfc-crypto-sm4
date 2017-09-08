@@ -16,14 +16,18 @@ this algorithm.
 While this document is similar to [@SM4-En] in nature, [@SM4-En]
 is a textual translation of "SMS4" [@SM4] published in 2006, and this
 document follows the updated text and structure of [@!GBT.32907-2016].
+The sections 1 to 7 of this document are intentionally mapped to the
+corresponding sections 1 to 7 of the [@!GBT.32907-2016] standard for
+convenience of the reader.
 
 
 ## History
 
 The "SMS4" algorithm (the former name of SM4) was invented by
-Shu-Wang Lu [@LSW-Bio], and published by OSCCA in 2006 [@SM4]. It was
-officially renamed to "SM4" in [@GMT-0002-2012] published by OSCCA in 2012,
-and standardized as a Chinese National Standard (GB Standard) in 2016 as
+Shu-Wang Lu [@LSW-Bio], first published in 2003 as part of
+[@GB.15629.11-2003], then published independently in 2006 [@SM4] by OSCCA,
+officially renamed to "SM4" in 2012 in [@GMT-0002-2012] published by OSCCA,
+and finally standardized in 2016 as a Chinese National Standard (GB Standard)
 [@!GBT.32907-2016].
 
 SMS4 was originally created for use in protecting wireless networks [@SM4],
@@ -64,11 +68,11 @@ SM4 can be used with multiple modes (See (#sm4-modes)).
 ## Cryptanalysis
 
 A number of attacks have been attempted on SM4, such as [@SM4-Analysis]
-[@SM4-Linear], but there are no known feasible attacks against SM4 algorithm
-by the time of publishing this document.
+[@SM4-Linear], but there are no known feasible attacks against the
+SM4 algorithm by the time of publishing this document.
 
-However, there are security concerns with regards to side-channel attacks
-[@SideChannel], when the SM4 algorithm is implemented in a device [@SM4-Power].
+There are, however, security concerns with regards to side-channel attacks
+[@SideChannel] when the SM4 algorithm is implemented in a device [@SM4-Power].
 
 For instance, [@SM4-Power] illustrated an attack by measuring the power
 consumption of the device. A chosen ciphertext attack, assuming a fixed
@@ -79,6 +83,6 @@ parameters/keys **SHOULD** be randomly generated without fixed correlation.
 There have been improvements to the hardware embodiment of SM4 such as
 [@SM4-VLSI] that may resist such attacks.
 
-In order to improve security of the SM4 process, secure white-box
-implementations such as [@SM4-WhiteBox] have been proposed. Speed enhancements
-have also been proposed [@SM4-HiSpeed].
+In order to improve security of the SM4 cryptographic process, secure white-box
+implementations such as [@SM4-WhiteBox] have been proposed. Speed enhancements,
+such as [@SM4-HiSpeed], have also been proposed.

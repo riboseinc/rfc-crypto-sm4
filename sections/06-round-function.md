@@ -99,7 +99,7 @@ $$
 tau(A) = (Sbox(a_0), Sbox(a_1), Sbox(a_2), Sbox(a_3))
 $$
 
-The lookup table of Sbox is shown below:
+The Sbox lookup table is shown here:
 
 <!-- a | 0  | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | A  | B  | C  | D  | E  | F
 xxx|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-

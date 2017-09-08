@@ -20,6 +20,28 @@
   </front>
 </reference>
 
+<reference anchor='GMT-0006-2012' target='http://www.oscca.gov.cn/Column/Column_32.htm'>
+  <front>
+    <title>GM/T 0006-2012: Cryptographic Application Identifier Criterion Specification</title>
+    <author>
+      <organization>Organization of State Commercial Administration of China</organization>
+      <address>
+        <postal>
+         <street>7 Dian Chang Lu, Fengtai Qu</street>
+         <city>Beijing</city>
+         <region>Beijing</region>
+         <code>100036</code>
+         <country>People's Republic of China</country>
+        </postal>
+        <phone>+86 (0)10 5970-3789</phone>
+        <!--<email>contact@oscca.gov.cn</email>-->
+        <uri>http://www.oscca.gov.cn</uri>
+      </address>
+    </author>
+    <date day='21' month='March' year='2012'/>
+  </front>
+</reference>
+
 <reference anchor='SM4' target='http://www.oscca.gov.cn/UpFile/200621016423197990.pdf'>
 <!-- <reference anchor='SM4' target='http://info.dacas.cn/sharedimages/ARTICLES/SMAlgorithms/SM4.pdf'> -->
   <front>
@@ -174,7 +196,7 @@
 
 <reference anchor='NIST.FIPS.197' target='https://doi.org/10.6028/NIST.FIPS.197'>
   <front>
-    <title>FIPS 197 Advanced Encryption Standard (AES)</title>
+    <title>NIST FIPS 197: Advanced Encryption Standard (AES)</title>
     <author>
       <organization>National Institute of Standards and Technology</organization>
       <address>
@@ -189,6 +211,66 @@
       </address>
     </author>
     <date month='November' year='2001'/>
+  </front>
+</reference>
+
+<reference anchor='NIST.SP.800-38A' target='http://dx.doi.org/10.6028/NIST.SP.800-38A'>
+  <front>
+    <title>NIST Special Publication 800-38A: Recommendation for Block Cipher Modes of Operation -- Methods and Techniques</title>
+    <author initials="M." surname="Dworkin" fullname="Morris Dworkin">
+      <organization>National Institute of Standards and Technology</organization>
+      <address>
+        <postal>
+          <street>100 Bureau Drive</street>
+          <city>Gaithersburg</city>
+          <region>MD</region>
+          <code>20899-8930</code>
+          <country>United States</country>
+        </postal>
+        <uri>http://www.nist.gov/</uri>
+      </address>
+    </author>
+    <date month='December' year='2001'/>
+  </front>
+</reference>
+
+<reference anchor='NIST.SP.800-38E' target='http://dx.doi.org/10.6028/NIST.SP.800-38E'>
+  <front>
+    <title>NIST Special Publication 800-38E: Recommendation for Block Cipher Modes of Operation: the XTS-AES Mode for Confidentiality on Storage Devices</title>
+    <author initials="M." surname="Dworkin" fullname="Morris Dworkin">
+      <organization>National Institute of Standards and Technology</organization>
+      <address>
+        <postal>
+          <street>100 Bureau Drive</street>
+          <city>Gaithersburg</city>
+          <region>MD</region>
+          <code>20899-8930</code>
+          <country>United States</country>
+        </postal>
+        <uri>http://www.nist.gov/</uri>
+      </address>
+    </author>
+    <date month='January' year='2010'/>
+  </front>
+</reference>
+
+<reference anchor='IEEE.1619-2007' target='http://dx.doi.org/10.6028/NIST.SP.800-38E'>
+  <front>
+    <title>IEEE P1619-2007: The XTS-AES Tweakable Block Cipher</title>
+    <author>
+      <organization>Institute of Electrical and Electronics Engineers, Inc</organization>
+      <address>
+        <postal>
+          <street>Three Park Avenue</street>
+          <city>New York</city>
+          <region>NY</region>
+          <code>10016-5997</code>
+          <country>United States</country>
+        </postal>
+        <uri>http://www.ieee.org/</uri>
+      </address>
+    </author>
+    <date day='18' month='April' year='2008'/>
   </front>
 </reference>
 

@@ -17,12 +17,12 @@ key expansion algorithm
 : An operation that converts a key into a round key.
 
 rounds
-: The number of iterations of the round function.
+: The number of iterations that the round function is run.
 
 <!-- TODO: clarify this -->
 
 round key
-: Also called a subkey, it is a key used in each round of the iterative blockcipher, derived from the input key
+: A key used in each round on the blockcipher, derived from the input key, also called a subkey.
 
 word
 : a 32-bit quantity

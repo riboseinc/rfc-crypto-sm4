@@ -2,7 +2,7 @@
 
 <!-- 7 算法描述 -->
 
-## Encryption
+## SM4 Encryption {#sm4-encryption}
 
 <!-- 7.1 加密算法 -->
 <!-- 本加密算法由 32 次迭代运算和 1 次反序变换 𝑅 组成。 -->
@@ -63,7 +63,7 @@ b. reverse transformation
 Please refer to (#appendix-a) for a sample calculation.
 
 
-## Decryption
+## SM4 Decryption {#sm4-decryption}
 
 <!-- 7.2 解密算法 本算法的解密变换与加密变换结构相同，不同的仅是轮密钥的使用顺序。解密时，使用
 轮密钥序 𝑟𝑘42, 𝑟𝑘40, ⋯ , 𝑟𝑘0 。 -->
@@ -77,7 +77,7 @@ $$
 (rk_31, rk_30, ..., rk_0)
 $$
 
-## Key Expansion
+## SM4 Key Expansion
 
 <!-- 7.3 密钥扩展算法 -->
 <!-- 本算法轮密钥由加密密钥通过密钥扩展算法生成。 -->
@@ -121,13 +121,24 @@ $$
 K_{i + 4} = K_i xor T' (K_{i + 1} xor K_{i + 2} xor K_{i + 3} xor CK_i)
 $$
 
-a. Transformation function $$T'$$ is created from $$T$$ by replacing the linear transform function $$L$$ with $$L'$$.
+
+Since the decryption key is identical to the encryption key, the round keys
+used in the decryption process are derived from the decryption key through
+the identical process to that of during encryption.
+
+
+### Transformation Function $$T'$$
+
+The transformation function $$T'$$ is created from $$T$$ by replacing the
+linear transform function $$L$$ with $$L'$$.
 
 $$
 L'(B) = B xor (B <<< 13) xor (B <<< 23)
 $$
 
-b. The system parameter $$FK$$, given in hexadecimal notation, is:
+### System Parameter $$FK$$
+
+System parameter $$FK$$ given in hexadecimal notation, is:
 
 $$
 FK_0 = A3B1BAC6
@@ -136,7 +147,9 @@ FK_2 = 677D9197
 FK_3 = B27022DC
 $$
 
-c. The method to retrieve values from the constant parameter $$CK$$ is as follows.
+### Constant Parameter $$CK$$
+
+The method to retrieve values from the constant parameter $$CK$$ is as follows.
 
 Let $$ck_{i, j}$$ be the $$j$$-th byte ($$i = 0, 1, ..., 31; j = 0, 1, 2, 3$$) of $$CK_i$$.
 
@@ -204,6 +217,3 @@ CK_30 = 484F565D
 CK_31 = 646B7279
 ```
 
-Since the decryption key is identical to the encryption key, the round keys
-used in the decryption process are derived from the decryption key through
-the identical process to that of during encryption.

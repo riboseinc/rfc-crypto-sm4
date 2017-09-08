@@ -1,151 +1,440 @@
 #  Modes of Operation {#sm4-modes}
 
-<!-- ECB (Electronic Codebook Mode)
-CBC (Cipher Block Chaining Mode)
-CFB (Cipher Feedback Mode)
-XTS (XEX-based tweaked-codebook mode with ciphertext stealing)
-OFB (Output Feedback Mode)
-CTR (Counter Mode)
+This document defines multiple modes of operation for the SM4 blockcipher
+algorithm.
 
-SMS4-ECB，该模式不推荐
-SMS4-CBC，该模式的实现提供自动的填充，无需应用对明文数据进行填充。
-SMS4-CFB，根据输出比特序列的长度，包含SMS4-CFB1、SMS4-CFB8和SMS4-CFB128三个实现。
-SMS4-OFB
+The CBC (Cipher Block Chaining), ECB (Electronic CodeBook), CFB (Cipher
+FeedBack), OFB (Output FeedBack) and CTR (Counter) modes are defined in
+[@NIST.SP.800-38A] and utilized with the SM4 algorithm in the following
+sections.
 
-SMS4-WRAP，将SMS4用于加密密钥，其中被加密的数据为密钥，而SMS4的密钥为KEK (Key Encryption Key)。
+## Variables And Primitives
 
-[@RFC3602]
+Hereinafter we define:
 
-NIST has defined 5 modes of operation for AES and other FIPS-approved
-ciphers [MODES]: CBC (Cipher Block Chaining), ECB (Electronic
-CodeBook), CFB (Cipher FeedBack), OFB (Output FeedBack) and CTR
-(Counter).  The CBC mode is well-defined and well-understood for
-symmetric ciphers, and is currently required for all other ESP
-ciphers.  This document specifies the use of the AES cipher in CBC
-mode within ESP.  This mode requires an Initialization Vector (IV)
-that is the same size as the block size.  Use of a randomly generated
-IV prevents generation of identical ciphertext from packets which
-have identical data that spans the first block of the cipher
-algorithm's block size.
+SM4Encrypt(P, K)
+: The SM4 algorithm that encrypts plaintext P with key K, described in (#sm4-encryption)
 
-The IV is XOR'd with the first plaintext block before it is
-encrypted.  Then for successive blocks, the previous ciphertext block
-is XOR'd with the current plaintext, before it is encrypted.
+SM4Decrypt(C, K)
+: The SM4 algorithm that decrypts ciphertext C with key K, described in (#sm4-decryption)
 
-More information on CBC mode can be obtained in [MODES, CRYPTO-S].
-For the use of CBC mode in ESP with 64-bit ciphers, see [CBC]. -->
+b
+: block size in bits, defined as 128 for SM4
+
+P_j
+: block j of ciphertext bitstring P
+
+C_j
+: block j of ciphertext bitstring C
+
+NBlocks(B, b)
+: Number of blocks of size $$b$$-bits in bitstring B
+
+IV
+: Initialization vector
+
+LSB(b, S)
+: Least significant $$b$$ bits of the bitstring $$S$$
+
+MSB(b, S)
+: Most significant $$b$$ bits of the bitstring $$S$$
+
+
+## Initialization Vector
+
+The CBC, CFB and OFB modes require an additional input to the encryption process,
+called the initialization vector (IV). The identical IV is used in the input
+of encryption as well as the decryption of the corresponding ciphertext.
+
+The IV **MUST** fulfill the following requirements for security:
+
+* CBC, CFB modes. The IV for a particular execution must be unpredictable.
+* OFB mode. Each execution must be given a unique IV.
+
+
+## SM4-ECB
+
+In SM4-ECB, the same key is utilized to create a
+fixed assignment for a plaintext block with a ciphertext block, meaning
+that a given plaintext block always gets encrypted to the same ciphertext
+block. As described in [@NIST.SP.800-38A], this mode should be avoided if
+this property is undesirable.
+
+This mode requires input plaintext to be a multiple of the block size,
+which in this case of SM4 it is 128-bits. It also allows multiple blocks
+to be computed in parallel.
+
+
+### SM4-ECB Encryption
+
+Inputs:
+
+- P, plaintext, length **MUST** be multiple of $$b$$
+- K, SM4 128-bit encryption key
+
+Output:
+
+- C, ciphertext, length is a multiple of $$b$$
+
+C is defined as follows.
+
+```
+n = NBlocks(P, b)
+
+for i = 1 to n
+  C_i = SM4Encrypt(P_i, K)
+end for
+
+C = C_1 || ... || C_n
+```
+
+### SM4-ECB Decryption
+
+Inputs:
+
+- C, ciphertext, length **MUST** be multiple of $$b$$
+- K, SM4 128-bit encryption key
+
+Output:
+
+- P, plaintext, length is a multiple of $$b$$
+
+P is defined as follows.
+
+```
+n = NBlocks(C, b)
+
+for i = 1 to n
+  P_i = SM4Decrypt(C_i, K)
+end for
+
+P = P_1 || ... || P_n
+```
+
+
+## SM4-CBC
+
+
+SM4-CBC is similar to SM4-ECB that the input plaintext **MUST** be a multiple
+of the block size, which is 128-bits in SM4. SM4-CBC requires
+an additional input, the IV, that is unpredictable for a particular
+execution of the encryption process.
+
+Since CBC encryption relies on a foward cipher operation that depend on results
+of the previous operation, it cannot be parallelized. However, for decryption,
+since ciphertext blocks are already available, CBC parallel decryption is
+possible.
+
+
+### SM4-CBC Encryption
+
+Inputs:
+
+- P, plaintext, length **MUST** be multiple of $$b$$
+- K, SM4 128-bit encryption key
+- IV, 128-bit, unpredictable, initialization vector
+
+Output:
+
+- C, ciphertext, length is a multiple of $$b$$
+
+C is defined as follows.
+
+```
+n = NBlocks(P, b)
+
+C_1 = SM4Encrypt(P_1 xor IV, K)
+
+for i = 2 to n
+  C_i = SM4Encrypt(P_i xor C_{i - 1}, K)
+end for
+
+C = C_1 || ... || C_n
+```
+
+### SM4-CBC Decryption
+
+Inputs:
+
+- C, ciphertext, length **MUST** be a multiple of $$b$$
+- K, SM4 128-bit encryption key
+- IV, 128-bit, unpredictable, initialization vector
+
+Output:
+
+- P, plaintext, length is multiple of $$b$$
+
+P is defined as follows.
+
+```
+n = NBlocks(C, b)
+
+P_1 = SM4Decrypt(C_1, K) xor IV
+
+for i = 2 to n
+  P_i = SM4Decrypt(C_i, K) xor C_{i - 1}
+end for
+
+P = P_1 || ... || P_n
+```
+
+
+
+## SM4-CFB
+
+SM4-CFB relies on feedback provided by successive ciphertext segments to
+generate output blocks. The plaintext given must be a multiple of the block
+size.
+
+Similar to SM4-CBC, SM4-CFB requires an IV that is unpredictable for a particular
+execution of the encryption process.
+
+SM4-CFB further allows setting a positive integer parameter $$s$$, that is less than or
+equal to the block size, to specify the size of each data segment. The same
+segment size must be used in encryption and decryption.
+
+In SM4-CFB, since the input block to each forward cipher function depends
+on the output of the previous block (except the first that depends on the IV),
+encryption is not parallizable. Decryption, however, can be parallelized.
+
+
+### SM4-CFB Variants
+
+<!-- SMS4-CFB，根据输出比特序列的长度，包含SMS4-CFB1、SMS4-CFB8和SMS4-CFB128三个实现。 -->
+
+SM4-CFB takes an integer $$s$$ to determine segment size in its encryption and
+decryption routines. We define the following variants of SM4-CFB for
+various $$s$$:
+
+- SM4-CFB-1, the 1-bit SM4-CFB mode, where $$s$$ is set to 1.
+- SM4-CFB-8, the 8-bit SM4-CFB mode, where $$s$$ is set to 8.
+- SM4-CFB-64, the 64-bit SM4-CFB mode, where $$s$$ is set to 64.
+- SM4-CFB-128, the 128-bit SM4-CFB mode, where $$s$$ is set to 128.
+
+
+### SM4-CFB Encryption
+
+Inputs:
+
+- P#, plaintext, length **MUST** be multiple of $$s$$
+- K, SM4 128-bit encryption key
+- IV, 128-bit, unpredictable, initialization vector
+- s, an integer 1 <= $$s$$ <= $$b$$ that defines segment size
+
+Output:
+
+- C#, ciphertext, length is a multiple of $$s$$
+
+C# is defined as follows.
+
+```
+n = NBlocks(P#, s)
+
+I_1 = IV
+for i = 2 to n
+  I_i = LSB(b - s, I_{i - 1}) || C#_{j - 1}
+end for
+
+for i = 1 to n
+  O_j = SM4Encrypt(I_i, K)
+end for
+
+for i = 1 to n
+  C#_i = P#_1 xor MSB(s, O_j)
+end for
+
+C# = C#_1 || ... || C#_n
+```
+
+### SM4-CFB Decryption
+
+Inputs:
+
+- C#, ciphertext, length **MUST** be a multiple of $$s$$
+- K, SM4 128-bit encryption key
+- IV, 128-bit, unpredictable, initialization vector
+- s, an integer 1 <= s <= $$b$$ that defines segment size
+
+Output:
+
+- P#, plaintext, length is multiple of $$s$$
+
+P is defined as follows.
+
+```
+n = NBlocks(P#, s)
+
+I_1 = IV
+for i = 2 to n
+  I_i = LSB(b - s, I_{i - 1}) || C#_{j - 1}
+end for
+
+for i = 1 to n
+  O_j = SM4Encrypt(I_i, K)
+end for
+
+for i = 1 to n
+  P#_i = C#_1 xor MSB(s, O_j)
+end for
+
+P# = P#_1 || ... || P#_n
+```
+
+
+
+## SM4-OFB
+
+SM4-OFB is the application of SM4 through the Output Feedback mode.
+This mode requires that the IV is a nonce, meaning that the IV **MUST**
+be unique for each execution for an input key. OFB does not require the
+input plaintext to be a multiple of the block size.
+
+In OFB, the routines for encryption and decryption are identical. As
+each forward cipher function (except the first) depends on previous
+results, both routines cannot be parallelized. However given a known IV, output
+blocks could be generated prior to the input of plaintext (encryption)
+or ciphertext (decryption).
+
+
+### SM4-OFB Encryption
+
+Inputs:
+
+- P, plaintext, composed of (n - 1) blocks of size b, with the last block P_n of size 1 <= u <= b
+- K, SM4 128-bit encryption key
+- IV, a nonce (a unique value for each execution per given key)
+
+Output:
+
+- C, ciphertext, composed of (n - 1) blocks of size b, with the last block C_n of size 1 <= u <= b
+
+C is defined as follows.
+
+```
+n = NBlocks(P, b)
+
+I_1 = IV
+for i = 1 to (n - 1)
+  O_i = SM4Encrypt(I_i)
+  I_{i + 1} = O_i
+end for
+
+for i = 1 to (n - 1)
+  C_i = P_i xor O_i
+end for
+
+C_n = P_n xor MSB(u, O_n)
+
+C = C_1 || ... || C_n
+```
+
+### SM4-OFB Decryption
+
+Inputs:
+
+- C, ciphertext, composed of (n - 1) blocks of size b, with the last block C_n of size 1 <= u <= b
+- K, SM4 128-bit encryption key
+- IV, the nonce used during encryption
+
+Output:
+
+- P, plaintext, composed of (n - 1) blocks of size b, with the last block P_n of size 1 <= u <= b
+
+C is defined as follows.
+
+```
+n = NBlocks(C, b)
+
+I_1 = IV
+for i = 1 to (n - 1)
+  O_i = SM4Encrypt(I_i)
+  I_{i + 1} = O_i
+end for
+
+for i = 1 to (n - 1)
+  P_i = C_i xor O_i
+end for
+
+P_n = C_n xor MSB(u, O_n)
+
+P = P_1 || ... || P_n
+```
+
 
 ## SM4-CTR
 
 <!-- SMS4-CTR，由于SMS4软实现性能较低，因此在后续的优化中会首先提供经过Intel AVX2指令集优化的CTR实现。 -->
 
-<!-- CTR mode [3] behaves like a stream cipher, but is based on a block
-cipher primitive (that is, CTR mode operation of a block cipher
-results in a stream cipher).
+SM4-CTR is an implementation of a stream cipher through a block cipher
+primitive. It generates a "keystream" of keys that are used to
+encrypt successive blocks, with the keystream created from the input key,
+a nonce (the IV) and an incremental counter. The counter could be any
+sequence that does not repeat within the block size.
 
-SM4 Counter (SM4-CTR) mode is based on:
+Both SM4-CTR encryption and decryption routines could be parallelized, and
+random access is also possible.
 
-Dworkin, M., "Recommendation for Block Cipher Modes of
-Operation - Methods and Techniques", NIST Special
-Publication 800-38A, December 2001, <http://csrc.nist.gov/publications/nistpubs/800-38a/sp800-38a.pdf>. -->
-
-
-## SM4-XTS
-
-<!-- http://dx.doi.org/10.6028/NIST.SP.800-38E
-
-csrc.nist.gov/publications/nistpubs/800-38E/nist-sp-800-38E.pdf
-SP 800-38E, Recommendation for Block Cipher Modes of Operation: the XTS-. AES Mode for Confidentiality on Storage Devices (January 2010), is available at:.
-
-https://www.oasis-open.org/committees/download.php/55740/AES-XTS.pdf
-Apr 14, 2015 - References [NIST SP800-38B] and [RFC 4493] recommend that the ... The following table defines the AES-XTS secret key object attributes in ..
+### SM4-CTR Encryption
 
 
-3 Introduction
-The XTS-AES algorithm is a mode of operation of the Advanced Encryption Standard (AES) [1]
-algorithm. The Security in Storage Working Group (SISWG) of the P1619 Task Group of the
-Institute of Electrical and Electronics Engineers, Inc (IEEE) developed and specified XTS-AES
-in IEEE Std. 1619-2007 [2]. This Recommendation approves the XTS-AES mode as specified in
-that standard, subject to one additional requirement on the lengths of the data units, which is
-discussed in Section 4 below.
-The XTS-AES mode was designed for the cryptographic protection of data on storage devices
-that use of fixed length “data units,” as defined in Ref. [2]. Note that other approved
-cryptographic algorithms continue to be approved for such devices. The XTS-AES mode was
-not designed for other purposes, such as the encryption of data in transit.
-The XTS-AES mode is an instantiation of Rogaway’s XEX (XOR Encrypt XOR) tweakable
-block cipher [3], supplemented with a method called “ciphertext stealing” to extend the domain
-of possible input data strings. In particular, XEX can only encrypt sequences of complete
-blocks, i.e., any data string that is an integer multiple of 128 bits; whereas for XTS-AES, the data
-string may also consist of one or more complete blocks followed by a single, non-empty partial
-block. (The acronym XTS stands for the XEX Tweakable Block Cipher with Ciphertext
-Stealing).
-The specification of the ciphertext stealing method in Ref.[2] includes an ordering convention for
-the final complete block and partial block of the encrypted data string. A different convention, in
-which the order is swapped, may be desirable in some cases. The specification in Ref.[2]
-provides flexibility in the physical location of these elements, as long as interoperability is not
-compromised, as discussed in Section 5.
-The XTS-AES mode provides confidentiality for the protected data. Authentication is not
-provided, because the P1619 Task Group designed XTS-AES to provide encryption without data
-expansion, so alternative cryptographic methods that incorporate an authentication tag are
-precluded. In the absence of authentication or access control, XTS-AES provides more
-protection than the other approved confidentiality-only modes against unauthorized manipulation
-of the encrypted data.
-Annex D of Ref.[2] discusses in detail the design choices for XTS, including the resistance to
-manipulation of the encrypted data, and their ramifications for the incorporation of XTS-AES
-into an information system. Prospective implementers of XTS-AES should consider this
-information carefully to ensure that XTS-AES is an appropriate solution for a given threat
-model.
+Inputs:
+
+- P, plaintext, composed of (n - 1) blocks of size b, with the last block P_n of size 1 <= u <= b
+- K, SM4 128-bit encryption key
+- IV, a nonce (a unique value for each execution per given key)
+- T, a sequence of counters from T_1 to T_n
+
+Output:
+
+- C, ciphertext, composed of (n - 1) blocks of size b, with the last block C_n of size 1 <= u <= b
+
+C is defined as follows.
+
+```
+n = NBlocks(P, b)
+
+for i = 1 to n
+  O_i = SM4Encrypt(T_i)
+end for
+
+for i = 1 to (n - 1)
+  C_i = P_i xor O_i
+end for
+
+C_n = P_n xor MSB(u, O_n)
+
+C = C_1 || ... || C_n
+```
+
+### SM4-CTR Encryption
 
 
+Inputs:
 
-Conformance
-An instance of an XTS-AES implementation is defined by the following three elements, as
-specified in Ref. [2]:
-1) a secret key,
-2) a single, fixed length for the data units that the key protects,
-3) an implementation of the XTS-AES-Enc procedure or the XTS-AES-Dec procedure, or both,
-for the key and the length of the data units.
-The length of the data unit for any instance of an implementation of XTS-AES shall not exceed
-220 AES blocks. Note that Subclause 5.1 of Ref.[2] recommends this limit but does not require
-it.
-An implementation of the XTS-AES encryption mode may claim conformance with this
-Recommendation if every supported instance satisfies this length requirement for a data unit, in
-addition to all of the requirements in Clauses 1-6 of Ref. [2].
-Key management is important for XTS-AES, as for any keyed cryptographic algorithm, but the
-representation of a key backup structure in the Extensible Markup Language (XML) that is
-specified in Clause 7 of Ref. [2] is outside the scope of this Recommendation.
-Consistent with the 220 block limit for a data unit, an implementation of XTS-AES may further
-restrict the length of the data units for any key. For example, an implementation may support
+- C, ciphertext, composed of (n - 1) blocks of size b, with the last block C_n of size 1 <= u <= b
+- K, SM4 128-bit encryption key
+- IV, a nonce (a unique value for each execution per given key)
+- T, a sequence of counters from T_1 to T_n
 
+Output:
 
-only data units that are sequences of complete blocks. In this case, the ciphertext stealing
-components in the implementations of the XTS-AES-Enc and the XTS-AES-Dec procedures
-would be unnecessary, and these procedures essentially would be reduced to the XTS-AESblockEnc
-and the XTS-AES-blockDec procedures, as specified in Ref. [2].
-Similarly, an implementation may restrict its support to either the 256-bit key size (for XTSAES-128)
-or the 512-bit key size (for XTS-AES-256).
-Restrictions on the supported lengths of the key or the data units may affect interoperability with
-other implementations.
+- P, plaintext, composed of (n - 1) blocks of size b, with the last block P_n of size 1 <= u <= b
 
-5 Ordering Convention for the Ciphertext Stealing Case
-If the length of the data units for an instance of XTS-AES is not an integral multiple of the block
-size, then the specification in Ref. [2] denotes the unencrypted form of a data unit, i.e., the
-plaintext, as a sequence of complete blocks, P0, P1, ...Pm-1, followed by a single, non-empty
-partial block Pm, where m is a positive integer determined by the length of the data unit.
-In this case, the encrypted form of the data unit, i.e., the ciphertext, has the same structure: a
-sequence of complete blocks, denoted C0, C1, ...Cm-1, followed by a single, non-empty partial
-block Cm, whose length is the same as the length of Pm.
-For some implementations, an alternative ordering convention, in which the positions of Cm-1 and
-Cm are swapped, may be desirable for the physical storage of the bits, because that ordering
-corresponds more closely with the generation of the ciphertext. In particular, Cm is the truncation
-of a block that is derived from Pm-1, and Cm-1 is derived from Pm, concatenated with the discarded
-bits from the truncation.
-Subclause 5.1 of [2] indicates that an implementation of XTS-AES should include a mapping
-between the pairs of indices that define the blocks (and possibly a single partial block) of a data
-unit and their physical location in the storage device, but that the mapping itself is outside the
-scope of the standard.
+P is defined as follows.
 
-Thus, if every external interface to the data retrieves the data in a manner that is consistent with
-the ordering specified in Ref [2], then the last block and the partial block may be stored in any
-convenient locations in the storage device. In other words, if necessary, a mechanism for
-swapping the last complete block and the partial block could be built into the interface. -->
+```
+n = NBlocks(C, b)
+
+for i = 1 to n
+  O_i = SM4Encrypt(T_i)
+end for
+
+for i = 1 to (n - 1)
+  P_i = C_i xor O_i
+end for
+
+P_n = C_n xor MSB(u, O_n)
+
+C = C_1 || ... || C_n
+```
+
