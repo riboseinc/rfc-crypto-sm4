@@ -1,8 +1,8 @@
-# Calculation
+# Calculations
 
 <!-- 7 算法描述 -->
 
-## SM4 Encryption {#sm4-encryption}
+## Encryption {#sm4-encryption}
 
 <!-- 7.1 加密算法 -->
 <!-- 本加密算法由 32 次迭代运算和 1 次反序变换 𝑅 组成。 -->
@@ -60,10 +60,10 @@ b. reverse transformation
   R(X_32, X_33, X_34, X_35) = (X_35, X_34, X_33, X_32)
   $$
 
-Please refer to (#appendix-a) for a sample calculation.
+Please refer to (#appendix-a) for sample calculations.
 
 
-## SM4 Decryption {#sm4-decryption}
+## Decryption {#sm4-decryption}
 
 <!-- 7.2 解密算法 本算法的解密变换与加密变换结构相同，不同的仅是轮密钥的使用顺序。解密时，使用
 轮密钥序 𝑟𝑘42, 𝑟𝑘40, ⋯ , 𝑟𝑘0 。 -->
@@ -77,7 +77,7 @@ $$
 (rk_31, rk_30, ..., rk_0)
 $$
 
-## SM4 Key Expansion
+## Key Schedule
 
 <!-- 7.3 密钥扩展算法 -->
 <!-- 本算法轮密钥由加密密钥通过密钥扩展算法生成。 -->
@@ -95,8 +95,8 @@ $$
 
 Round keys used during encryption are derived from the encryption key.
 
-Specifically, given the encryption key $$MK$$, where each $$MK_i$$ is a 32-bit
-word:
+Specifically, given the encryption key $$MK$$, where each $$MK_i$$ is 32 bits
+wide:
 
 $$
 MK = (MK_0, MK_1, MK_2, MK_3)
@@ -126,15 +126,6 @@ Since the decryption key is identical to the encryption key, the round keys
 used in the decryption process are derived from the decryption key through
 the identical process to that of during encryption.
 
-
-### Transformation Function $$T'$$
-
-The transformation function $$T'$$ is created from $$T$$ by replacing the
-linear transform function $$L$$ with $$L'$$.
-
-$$
-L'(B) = B xor (B <<< 13) xor (B <<< 23)
-$$
 
 ### System Parameter $$FK$$
 
@@ -183,37 +174,23 @@ The constant parameter $$CK_i$$, $$(i = 0, 1, ..., 31)$$ values, in
 hexadecimal, are:
 
 ```
-CK_0  = 00070E15
-CK_1  = 1C232A31
-CK_2  = 383F464D
-CK_3  = 545B6269
-CK_4  = 70777E85
-CK_5  = 8C939AA1
-CK_6  = A8AFB6BD
-CK_7  = C4CBD2D9
-CK_8  = E0E7EEF5
-CK_9  = FC030A11
-CK_10 = 181F262D
-CK_11 = 343B4249
-CK_12 = 50575E65
-CK_13 = 6C737A81
-CK_14 = 888F969D
-CK_15 = A4ABB2B9
-CK_16 = C0C7CED5
-CK_17 = DCE3EAF1
-CK_18 = F8FF060D
-CK_19 = 141B2229
-CK_20 = 30373E45
-CK_21 = 4C535A61
-CK_22 = 686F767D
-CK_23 = 848B9299
-CK_24 = A0A7AEB5
-CK_25 = BCC3CAD1
-CK_26 = D8DFE6ED
-CK_27 = F4FB0209
-CK_28 = 10171E25
-CK_29 = 2C333A41
-CK_30 = 484F565D
-CK_31 = 646B7279
+CK_0  = 00070E15   CK_17 = DCE3EAF1
+CK_1  = 1C232A31   CK_18 = F8FF060D
+CK_2  = 383F464D   CK_19 = 141B2229
+CK_3  = 545B6269   CK_20 = 30373E45
+CK_4  = 70777E85   CK_21 = 4C535A61
+CK_5  = 8C939AA1   CK_22 = 686F767D
+CK_6  = A8AFB6BD   CK_23 = 848B9299
+CK_7  = C4CBD2D9   CK_24 = A0A7AEB5
+CK_8  = E0E7EEF5   CK_25 = BCC3CAD1
+CK_9  = FC030A11   CK_26 = D8DFE6ED
+CK_10 = 181F262D   CK_27 = F4FB0209
+CK_11 = 343B4249   CK_28 = 10171E25
+CK_12 = 50575E65   CK_29 = 2C333A41
+CK_13 = 6C737A81   CK_30 = 484F565D
+CK_14 = 888F969D   CK_31 = 646B7279
+CK_15 = A4ABB2B9   CK_17 = DCE3EAF1
+CK_16 = C0C7CED5   CK_18 = F8FF060D
+
 ```
 
