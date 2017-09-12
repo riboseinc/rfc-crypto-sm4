@@ -1,8 +1,8 @@
-# Round Function $$F$$
+# Functions
 
 <!-- 6 轮函数 𝐅 -->
 
-## Round Parameter Structure
+## Round Function $$F$$
 
 <!-- 6.1 轮函数结构 -->
 
@@ -13,31 +13,32 @@
 <!-- This algorithm uses a nonlinear substitution structure, encrypting 32 bits at a time. This
 is called a one-round exchange. To illustrate, consider a one-round-substitution: -->
 
-Given the 128-bit input below, where each $$X_i$ is a 32-bit word:
-
-$$
-(X_0, X_1, X_2, X_3)
-$$
-
-<!-- $$
-(X_0, X_1, X_2, X_3) element-of (Z_2^32)^4
-$$ -->
-
-And the round key $$rk$$ is a 32-bit word:
-
-<!-- $$
-rk element-of Z_2^32
-$$
--->
-
 The round function $$F$$ is defined as:
 
 $$
 F(X_0, X_1, X_2, X_3, rk) = X_0 xor T(X_1 xor X_2 xor X_3 xor rk)
 $$
 
+Where:
 
-## Mixer Substitution $$T$$
+* Each $$X_i$ is 32 bits wide.
+* The round key $$rk$$ is 32 bits wide.
+
+<!-- $$
+(X_0, X_1, X_2, X_3)
+$$ -->
+
+<!-- $$
+(X_0, X_1, X_2, X_3) element-of (Z_2^32)^4
+$$ -->
+
+<!-- $$
+rk element-of Z_2^32
+$$
+-->
+
+
+## Permutation $$T$$ and $$T'$$
 
 <!-- 6.2 合成置换 𝐓 -->
 <!-- 2.1 Mixer-substitution T -->
@@ -45,7 +46,7 @@ $$
 <!-- Transformation T
 𝑇: 𝑍43 → 𝑍43是一个可逆变换，由非线性变换𝜏和线性变换𝐿复合而成，即𝑇 ⋅ = 𝐿 𝜏 ⋅ 。 33 -->
 
-$$T$$ is a reversible substitution function that outputs 32 bits from an input of 32 bits.
+$$T$$ is a reversible permutation that outputs 32 bits from an input of 32 bits.
 
 <!-- $$
 T: Z_2^32 -> Z_2^32
@@ -58,6 +59,15 @@ $$
 T(.) = L(tau(.))
 $$
 
+
+The permutation $$T'$$ is created from $$T$$ by replacing the
+linear transform function $$L$$ with $$L'$$.
+
+$$
+T'(.) = L'(tau(.))
+$$
+
+
 ### Non-linear Transformation tau
 
 <!-- (1) 非线性变换 𝜏 -->
@@ -68,7 +78,7 @@ $$
 
 $$tau$$ is composed of four parallel S-boxes.
 
-Given a 32-bit input of $$A$$, where each $$a_i$$ is a 8-bit string:
+Given a 32-bit input $$A$$, where each $$a_i$$ is a 8-bit string:
 
 $$
 A = (a_0, a_1, a_2, a_3)
@@ -96,10 +106,57 @@ $$
 $$
 
 $$
-tau(A) = (Sbox(a_0), Sbox(a_1), Sbox(a_2), Sbox(a_3))
+tau(A) = (S(a_0), S(a_1), S(a_2), S(a_3))
 $$
 
-The Sbox lookup table is shown here:
+
+### Linear Transformation $$L$$ and $$L'$$
+
+
+<!-- (2) 线性变换 𝐿
+非线性变换 𝜏 的输出是线性变换 𝐿 的输入。设输入为𝐵 ∈ 𝑍43，输出为𝐶 ∈ 𝑍43，则
+33 𝐶=𝐿𝐵 =𝐵⨁𝐵⋘2⨁𝐵⋘10⨁𝐵⋘18⨁𝐵⋘24.
+-->
+
+The output of non-linear transformation function $$tau$$ is used as input
+to linear transformation function $$L$$.
+
+Given $$B$$, a 32-bit input.
+
+<!-- Given $$B$$, a 32-bit input: -->
+
+<!-- $$
+B element-of Z_2^32
+$$
+-->
+
+<!-- $$L$$ produces a 32-bit output $$C$$: -->
+
+<!-- $$
+C element-of Z_2^32
+$$ -->
+
+<!-- $$
+C = L(B)
+$$ -->
+
+
+The linear transformation $$L'$$ is defined as follows.
+
+$$
+L(B) = B xor (B <<< 2) xor (B <<< 10) xor (B <<< 18) xor (B <<< 24)
+$$
+
+
+The linear transformation $$L'$$ is defined as follows.
+
+$$
+L'(B) = B xor (B <<< 13) xor (B <<< 23)
+$$
+
+### S-box $$S$$
+
+The S-box $$S$$ used in $$tau$$ is given in this lookup table in hexadecimal form:
 
 <!-- a | 0  | 1  | 2  | 3  | 4  | 5  | 6  | 7  | 8  | 9  | A  | B  | C  | D  | E  | F
 xxx|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-
@@ -143,35 +200,3 @@ xxx|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|xxx-|x
 For example, input "EF" will produce an output read from the S-box table
 row E and column F, giving the result $$Sbox(EF) = 84$$.
 
-
-## Linear Substitution $$L$$
-
-
-<!-- (2) 线性变换 𝐿
-非线性变换 𝜏 的输出是线性变换 𝐿 的输入。设输入为𝐵 ∈ 𝑍43，输出为𝐶 ∈ 𝑍43，则
-33 𝐶=𝐿𝐵 =𝐵⨁𝐵⋘2⨁𝐵⋘10⨁𝐵⋘18⨁𝐵⋘24.
--->
-
-The output of non-linear transformation function $$tau$$ is used as input
-to linear transformation function $$L$$.
-
-Given $$B$$, a 32-bit input:
-
-<!-- $$
-B element-of Z_2^32
-$$
--->
-
-$$L$$ produces a 32-bit output $$C$$:
-
-<!-- $$
-C element-of Z_2^32
-$$ -->
-
-$$
-C = L(B)
-$$
-
-$$
-L(B) = B xor (B <<< 2) xor (B <<< 10) xor (B <<< 18) xor (B <<< 24)
-$$

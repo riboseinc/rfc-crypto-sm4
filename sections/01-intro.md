@@ -1,6 +1,6 @@
 #  Introduction {#introduction}
 
-SM4 [@!GBT.32907-2016] is a cryptographic standard issued by the
+SM4 [@!GBT.32907-2016] [@!ISO.IEC.18033-3.AMD2] is a cryptographic standard issued by the
 Organization of State Commercial Administration of China [@OSCCA] as
 authorized cryptographic algorithms for the use within China. The
 algorithm is applicable  published in public.
@@ -28,7 +28,8 @@ Shu-Wang Lu [@LSW-Bio], first published in 2003 as part of
 [@GB.15629.11-2003], then published independently in 2006 [@SM4] by OSCCA,
 officially renamed to "SM4" in 2012 in [@GMT-0002-2012] published by OSCCA,
 and finally standardized in 2016 as a Chinese National Standard (GB Standard)
-[@!GBT.32907-2016].
+[@!GBT.32907-2016]. SM4 is also standardized in [@!ISO.IEC.18033-3.AMD2]
+by the International Organization for Standardization in 2017.
 
 SMS4 was originally created for use in protecting wireless networks [@SM4],
 and is mandated in the Chinese National Standard for Wireless LAN WAPI (Wired
