@@ -254,7 +254,7 @@
   </front>
 </reference>
 
-<reference anchor='IEEE.1619-2007' target='http://dx.doi.org/10.6028/NIST.SP.800-38E'>
+<reference anchor='IEEE.1619-2007' target='http://ieeexplore.ieee.org/document/4493450/'>
   <front>
     <title>IEEE P1619-2007: The XTS-AES Tweakable Block Cipher</title>
     <author>
@@ -812,5 +812,29 @@ http://dx.doi.org/10.14257/ijsia.2016.10.9.01 -->
       </address>
     </author>
     <date day='13' month='June' year='2017'/>
+  </front>
+</reference>
+
+<reference anchor='BC-EVAL' target='http://web.cs.ucdavis.edu/~rogaway/papers/modes.pdf'>
+  <front>
+    <title>Evaluation of Some Blockcipher Modes of Operation</title>
+    <author>
+      <organization>University of California, Davis</organization>
+      <address>
+        <postal>
+          <street>Dept. of Computer Science</street>
+          <street>Kemper Hall of Engineering</street>
+          <street>One Shields Avenue</street>
+          <city>Davis</city>
+          <region>California</region>
+          <code>95616-8562</code>
+          <country>United States of America</country>
+        </postal>
+        <phone>+1 530 752 7583</phone>
+        <email>rogaway@cs.ucdavis.edu</email>
+        <uri>http://www.cs.ucdavis.edu/∼rogaway</uri>
+      </address>
+    </author>
+    <date day='10' month='February' year='2011'/>
   </front>
 </reference>

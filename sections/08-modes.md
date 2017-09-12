@@ -40,16 +40,14 @@ MSB(b, S)
 : Most significant $$b$$ bits of the bitstring $$S$$
 
 
-## Initialization Vector
+## Initialization Vectors
 
 The CBC, CFB and OFB modes require an additional input to the encryption process,
 called the initialization vector (IV). The identical IV is used in the input
 of encryption as well as the decryption of the corresponding ciphertext.
 
-The IV **MUST** fulfill the following requirements for security:
-
-* CBC, CFB modes. The IV for a particular execution must be unpredictable.
-* OFB mode. Each execution must be given a unique IV.
+Generation of IV values **MUST** take into account of the considerations
+in (#security-considerations) recommended by [@BC-EVAL].
 
 
 ## SM4-ECB
@@ -120,7 +118,7 @@ of the block size, which is 128-bits in SM4. SM4-CBC requires
 an additional input, the IV, that is unpredictable for a particular
 execution of the encryption process.
 
-Since CBC encryption relies on a foward cipher operation that depend on results
+Since CBC encryption relies on a forward cipher operation that depend on results
 of the previous operation, it cannot be parallelized. However, for decryption,
 since ciphertext blocks are already available, CBC parallel decryption is
 possible.

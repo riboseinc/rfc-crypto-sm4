@@ -8,7 +8,7 @@ The Object Identifier for SM4 is identified through these OIDs.
 
 ## ISO OID
 
-"1.0.18033.3.2.4" for "id-bc128-sm4" [@!ISO.IEC.18033-3.AMD2],
+"1.0.18033.3.2.4" for "id-bc128-sm4" [@ISO.IEC.18033-3.AMD2],
 described below.
 
 ```
