@@ -16,7 +16,13 @@ If you're on macOS you can run:
 [source,sh]
 ----
 brew install mmark
-brew install xml2rfc
+----
+
+[source,sh]
+----
+brew install python
+easy_install pip
+pip install xml2rfc
 ----
 
 == Building the document
@@ -24,5 +30,12 @@ brew install xml2rfc
 [source,sh]
 ----
 make all
-open draft-crypto-sm4-00.txt
+open draft-crypto-sm4.txt
+----
+
+== Iterating the document
+
+[source,sh]
+----
+make clean all; open draft-crypto-sm4.txt
 ----

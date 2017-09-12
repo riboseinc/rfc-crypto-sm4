@@ -2,8 +2,12 @@
 
 Title = "The SM4 Block Cipher Algorithm And Its Modes Of Operations"
 category = "info"
-docName = "draft-crypto-sm4-00"
+docName = "draft-ribose-cfrg-sm4-00"
 ipr = "trust200902"
+submissionType = "IRTF"
+area = "cfrg"
+workgroup = "Crypto Forum Research Group"
+date = 2017-09-12T00:00:00Z
 
 [[author]]
 initials = "R. H."
@@ -32,10 +36,6 @@ organization = "Hang Seng Management College"
     city = "Shatin"
     region = "New Territories"
     country = "Hong Kong"
-
-area = "Internet"
-workgroup = "Network Working Group"
-date = 2017-08-30T00:00:00Z
 
 %%%
 

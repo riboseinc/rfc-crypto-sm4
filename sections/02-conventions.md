@@ -28,4 +28,4 @@ word
 : a 32-bit quantity
 
 S-box
-: The S (substitution) box function produces 8-bit output from 8-bit input, represented as $$Sbox(.)$$
+: The S (substitution) box function produces 8-bit output from 8-bit input, represented as $$S(.)$$
