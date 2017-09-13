@@ -31,8 +31,8 @@ to be used with SM4 and providing the SM4 OIDs.
 
 The "SMS4" algorithm (the former name of SM4) was invented by
 Shu-Wang Lu [@LSW-Bio], first published in 2003 as part of
-[@GB.15629.11-2003], then published independently in 2006 [@SM4] by OSCCA,
-officially renamed to "SM4" in 2012 in [@GMT-0002-2012] published by OSCCA,
+[@GB.15629.11-2003], then published independently in 2006 [@SM4] by the OSCCA,
+officially renamed to "SM4" in 2012 in [@GMT-0002-2012] published by the OSCCA,
 and finally standardized in 2016 as a Chinese National Standard (GB Standard)
 [@!GBT.32907-2016]. SM4 is also standardized in [@ISO.IEC.18033-3.AMD2]
 by the International Organization for Standardization in 2017.
@@ -44,7 +44,7 @@ was made to adopt SMS4 into the IEEE 802.11i standard, but the algorithm
 was eventually not included due to concerns of introducing inoperability
 with existing ciphers.
 
-The latest SM4 standard [@!GBT.32907-2016] was proposed by OSCCA,
+The latest SM4 standard [@!GBT.32907-2016] was proposed by the OSCCA,
 standardized through TC 260 of the Standardization Administration of the
 People's Republic of China (SAC), and was drafted by the following
 individuals at the Data Assurance and Communication Security Research

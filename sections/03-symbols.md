@@ -1,7 +1,7 @@
 # Symbols And Abbreviations
 
 $$S xor T$$
-: bitwise execlusive-or of two 32-bit vectors $$S$$ and $$T$$.
+: bitwise exclusive-or of two 32-bit vectors $$S$$ and $$T$$.
   $$S$$ and $$T$$ will always have the same length.
 
 $$a <<< i$$
