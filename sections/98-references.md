@@ -68,7 +68,7 @@
 <reference anchor='GBT.32907-2016' target='http://www.gb688.cn/bzgk/gb/newGbInfo?hcno=7803DE42D3BC5E80B0C3E5D8E873D56A'>
 <!--http://www.sac.gov.cn/SACSearch/search?channelid=97779&templet=gjcxjg_detail.jsp&searchword=STANDARD_CODE=%27GB/T%2032907-2016%27 -->
   <front>
-    <title>GB/T 32907-2016: Information security technology —- SM4 block cipher algorithm</title>
+    <title>GB/T 32907-2016: Information security technology -- SM4 block cipher algorithm</title>
     <author>
       <organization>Standardization Administration of the People's Republic of China</organization>
       <address>
@@ -815,7 +815,7 @@ http://dx.doi.org/10.14257/ijsia.2016.10.9.01 -->
   </front>
 </reference>
 
-<reference anchor='BC-EVAL' target='http://web.cs.ucdavis.edu/~rogaway/papers/modes.pdf'>
+<reference anchor='BC-EVAL' target='http://web.cs.ucdavis.edu/&tilde;rogaway/papers/modes.pdf'>
   <front>
     <title>Evaluation of Some Blockcipher Modes of Operation</title>
     <author>
@@ -832,7 +832,7 @@ http://dx.doi.org/10.14257/ijsia.2016.10.9.01 -->
         </postal>
         <phone>+1 530 752 7583</phone>
         <email>rogaway@cs.ucdavis.edu</email>
-        <uri>http://www.cs.ucdavis.edu/∼rogaway</uri>
+        <uri>http://www.cs.ucdavis.edu/&tilde;rogaway</uri>
       </address>
     </author>
     <date day='10' month='February' year='2011'/>
