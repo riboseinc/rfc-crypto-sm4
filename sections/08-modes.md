@@ -193,8 +193,7 @@ segment size must be used in encryption and decryption.
 
 In SM4-CFB, since the input block to each forward cipher function depends
 on the output of the previous block (except the first that depends on the IV),
-encryption is not parallizable. Decryption, however, can be parallelized.
-
+encryption is not parallelizable. Decryption, however, can be parallelized.
 
 ### SM4-CFB Variants
 
