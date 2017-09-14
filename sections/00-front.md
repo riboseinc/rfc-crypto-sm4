@@ -7,7 +7,7 @@ ipr = "trust200902"
 submissionType = "IRTF"
 area = "cfrg"
 workgroup = "Crypto Forum Research Group"
-date = 2017-09-14T00:00:00Z
+date = 2017-09-12T00:00:00Z
 
 [[author]]
 initials = "R. H."
