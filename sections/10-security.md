@@ -22,7 +22,7 @@
   it **SHOULD NOT** be used in most cases.
 
 * SM4-CBC, SM4-CFB, SM4-OFB: CBC, CFB and OFB are IV-based modes of operation
-  that were originally defined for DES.
+  originally defined for DES.
 
   When using these modes of operation, the IV **SHOULD** be random to preserve
   message confidentiality [@BC-EVAL]. It is shown in the same document that

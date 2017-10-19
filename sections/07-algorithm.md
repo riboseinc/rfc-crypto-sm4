@@ -1,4 +1,4 @@
-# Calculations
+# Algorithm
 
 <!-- 7 算法描述 -->
 
@@ -127,9 +127,9 @@ used in the decryption process are derived from the decryption key through
 the identical process to that of during encryption.
 
 
-### System Parameter $$FK$$
+### Family Key $$FK$$
 
-System parameter $$FK$$ given in hexadecimal notation, is:
+Family key $$FK$$ given in hexadecimal notation, is:
 
 $$
 FK_0 = A3B1BAC6
@@ -138,9 +138,9 @@ FK_2 = 677D9197
 FK_3 = B27022DC
 $$
 
-### Constant Parameter $$CK$$
+### Constant Key $$CK$$
 
-The method to retrieve values from the constant parameter $$CK$$ is as follows.
+The method to retrieve values from the constant key $$CK$$ is as follows.
 
 Let $$ck_{i, j}$$ be the $$j$$-th byte ($$i = 0, 1, ..., 31; j = 0, 1, 2, 3$$) of $$CK_i$$.
 
@@ -170,7 +170,7 @@ A0A7AEB5, BCC3CAD1, D8DFE6ED, F4FB0209,
 10171E25, 2C333A41, 484F565D, 646B7279.
  -->
 
-The constant parameter $$CK_i$$, $$(i = 0, 1, ..., 31)$$ values, in
+The values of the constant key $$CK_i$$, where $$(i = 0, 1, ..., 31)$$, in
 hexadecimal, are:
 
 ```

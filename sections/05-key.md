@@ -20,7 +20,7 @@ $$
 $$
 
 
-System parameters used for key expansion is represented as $$FK$$, where
+The family key used for key expansion is represented as $$FK$$, where
 each $$FK_i (i = 0, ..., 3)$$ is a word:
 
 $$
@@ -28,7 +28,7 @@ FK = (FK_0, FK_1, FK_2, FK_3)
 $$
 
 
-Constant parameters used for key expansion is represented as $$CK$$, where
+The constant key used for key expansion is represented as $$CK$$, where
 each $$CK_i (i = 0, ..., 31)$$ is a word:
 
 $$

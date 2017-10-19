@@ -818,12 +818,12 @@ http://dx.doi.org/10.14257/ijsia.2016.10.9.01 -->
 <reference anchor='BC-EVAL' target='http://web.cs.ucdavis.edu/&tilde;rogaway/papers/modes.pdf'>
   <front>
     <title>Evaluation of Some Blockcipher Modes of Operation</title>
-    <author>
+    <author initials="P." surname="Rogaway" fullname="Phillip Rogaway">
       <organization>University of California, Davis</organization>
       <address>
         <postal>
           <street>Dept. of Computer Science</street>
-          <street>Kemper Hall of Engineering</street>
+          <street>Kemper Hall of Engineering, #3009</street>
           <street>One Shields Avenue</street>
           <city>Davis</city>
           <region>California</region>
@@ -836,5 +836,44 @@ http://dx.doi.org/10.14257/ijsia.2016.10.9.01 -->
       </address>
     </author>
     <date day='10' month='February' year='2011'/>
+  </front>
+</reference>
+
+<reference anchor='BOTAN' target='https://botan.randombit.net'>
+  <front>
+    <title>Botan: Crypto and TLS for C++11</title>
+    <author initials="J. E." surname="Lloyd" fullname="Jack E. Lloyd">
+      <organization>Botan Project</organization>
+      <address>
+        <postal>
+          <street></street>
+          <country>United States of America</country>
+        </postal>
+        <email>jack@randombit.net</email>
+        <uri>https://botan.randombit.net</uri>
+      </address>
+    </author>
+    <date day='18' month='October' year='2017'/>
+  </front>
+</reference>
+
+<reference anchor='OPENSSL' target='https://www.openssl.org'>
+  <front>
+    <title>OpenSSL: Cryptography and SSL/TLS Toolkit</title>
+    <author>
+      <organization>OpenSSL Software Foundation</organization>
+      <address>
+        <postal>
+          <street>20-22 Wenlock Road</street>
+          <city>London</city>
+          <code>N1 7GU</code>
+          <country>United Kingdom</country>
+        </postal>
+        <phone>+44 17 8550 8015</phone>
+        <email>info@opensslfoundation.org</email>
+        <uri>https://www.openssl.org</uri>
+      </address>
+    </author>
+    <date day='18' month='October' year='2017'/>
   </front>
 </reference>
