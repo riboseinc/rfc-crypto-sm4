@@ -403,7 +403,7 @@ C_n = P_n xor MSB(u, O_n)
 C = C_1 || ... || C_n
 ```
 
-### SM4-CTR Encryption
+### SM4-CTR Decryption
 
 
 Inputs:

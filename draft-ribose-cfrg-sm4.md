@@ -9,7 +9,7 @@
 {{sections/04-computing.md}}
 {{sections/05-key.md}}
 {{sections/06-round-function.md}}
-{{sections/07-calculation.md}}
+{{sections/07-algorithm.md}}
 {{sections/08-modes.md}}
 {{sections/09-oid.md}}
 {{sections/10-security.md}}
