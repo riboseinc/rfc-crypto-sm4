@@ -28,7 +28,7 @@ C_j
 : block j of ciphertext bitstring C
 
 NBlocks(B, b)
-: Number of blocks of size $$b$$-bits in bitstring B
+: Number of blocks of size $$b$$-bit in bitstring B
 
 IV
 : Initialization vector
@@ -59,7 +59,7 @@ block. As described in [@NIST.SP.800-38A], this mode should be avoided if
 this property is undesirable.
 
 This mode requires input plaintext to be a multiple of the block size,
-which in this case of SM4 it is 128-bits. It also allows multiple blocks
+which in this case of SM4 it is 128-bit. It also allows multiple blocks
 to be computed in parallel.
 
 
@@ -114,7 +114,7 @@ P = P_1 || ... || P_n
 
 
 SM4-CBC is similar to SM4-ECB that the input plaintext **MUST** be a multiple
-of the block size, which is 128-bits in SM4. SM4-CBC requires
+of the block size, which is 128-bit in SM4. SM4-CBC requires
 an additional input, the IV, that is unpredictable for a particular
 execution of the encryption process.
 
@@ -362,7 +362,7 @@ P = P_1 || ... || P_n
 
 <!-- SMS4-CTR，由于SMS4软实现性能较低，因此在后续的优化中会首先提供经过Intel AVX2指令集优化的CTR实现。 -->
 
-SM4-CTR is an implementation of a stream cipher through a block cipher
+SM4-CTR is an implementation of a stream cipher through a blockcipher
 primitive. It generates a "keystream" of keys that are used to
 encrypt successive blocks, with the keystream created from the input key,
 a nonce (the IV) and an incremental counter. The counter could be any
