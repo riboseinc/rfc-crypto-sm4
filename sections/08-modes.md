@@ -256,7 +256,7 @@ Output:
 
 - P#, plaintext, length is multiple of $$s$$
 
-P is defined as follows.
+P# is defined as follows.
 
 ```
 n = NBlocks(P#, s)

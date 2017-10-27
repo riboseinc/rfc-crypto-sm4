@@ -14,7 +14,7 @@
 
 The encryption algorithm consists of 32 rounds and 1 reverse transform $$R$$.
 
-Given a 128-bit plaintext input, where each $$X_i$$ is a 32-bit word:
+Given a 128-bit plaintext input, where each $$X_i$$ is 32-bit wide:
 
 $$
 (X_0, X_1, X_2, X_3)
@@ -24,7 +24,7 @@ $$
 (X_0, X_1, X_2, X_3) element-of (Z_2^32)^4
 $$ -->
 
-The output is a 128-bit ciphertext, where each $$Y_i$$ is a 32-bit word:
+The output is a 128-bit ciphertext, where each $$Y_i$$ is 32-bit wide:
 
 $$
 (Y_0, Y_1, Y_2, Y_3)
@@ -34,7 +34,7 @@ $$
 (Y_0, Y_1, Y_2, Y_3) element-of (Z_2^32)^4
 $$ -->
 
-Each round key is designated as $$rk_i$$, where each $$rk_i$$ is a 32-bit word
+Each round key is designated as $$rk_i$$, where each $$rk_i$$ is 32-bit wide
 and $$i = 0, 1, 2, ..., 31$$.
 
 <!-- $$
@@ -95,7 +95,7 @@ $$
 
 Round keys used during encryption are derived from the encryption key.
 
-Specifically, given the encryption key $$MK$$, where each $$MK_i$$ is 32 bits
+Specifically, given the encryption key $$MK$$, where each $$MK_i$$ is 32-bit
 wide:
 
 $$

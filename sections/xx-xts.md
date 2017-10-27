@@ -33,7 +33,7 @@ For the use of CBC mode in ESP with 64-bit ciphers, see [CBC]. -->
 
 [@IEEE.1619-2007] defines XTS-AES
 
-This standard defines the XTS-AES tweakable block cipher and its use for encryption of sector-based storage. XTS-AES is a tweakable block cipher that acts on data units of 128 bits or more and uses the AES block cipher as a subroutine. The key material for XTS-AES consists of a data encryption key (used by the AES block cipher) as well as a “tweak key” that is used to incorporate the logical position of the data block into the encryption. XTS-AES is a concrete instantiation of the class of tweakable block ciphers described in reference [XEX04]. The XTS-AES addresses threats such as copy-and-paste and dictionary attacks, while allowing parallelization and pipelining in cipher implementations.
+This standard defines the XTS-AES tweakable blockcipher and its use for encryption of sector-based storage. XTS-AES is a tweakable blockcipher that acts on data units of 128 bits or more and uses the AES blockcipher as a subroutine. The key material for XTS-AES consists of a data encryption key (used by the AES blockcipher) as well as a “tweak key” that is used to incorporate the logical position of the data block into the encryption. XTS-AES is a concrete instantiation of the class of tweakable blockciphers described in reference [XEX04]. The XTS-AES addresses threats such as copy-and-paste and dictionary attacks, while allowing parallelization and pipelining in cipher implementations.
 
 
 10 This standard defines specific elements of an architecture for cryptographically protecting data stored in
@@ -78,7 +78,7 @@ that use of fixed length “data units,” as defined in Ref. [2]. Note that oth
 cryptographic algorithms continue to be approved for such devices. The XTS-AES mode was
 not designed for other purposes, such as the encryption of data in transit.
 The XTS-AES mode is an instantiation of Rogaway’s XEX (XOR Encrypt XOR) tweakable
-block cipher [3], supplemented with a method called “ciphertext stealing” to extend the domain
+blockcipher [3], supplemented with a method called “ciphertext stealing” to extend the domain
 of possible input data strings. In particular, XEX can only encrypt sequences of complete
 blocks, i.e., any data string that is an integer multiple of 128 bits; whereas for XTS-AES, the data
 string may also consist of one or more complete blocks followed by a single, non-empty partial
