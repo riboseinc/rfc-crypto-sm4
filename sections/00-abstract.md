@@ -2,7 +2,7 @@
 
 <!-- No references allowed in the Abstract -->
 
-This document describes the SM4 symmetric blockcipher algorithm
+This document describes the SM4 symmetric block cipher algorithm
 published as GB/T 32907-2016 by the Organization of State Commercial
 Administration of China (OSCCA).
 

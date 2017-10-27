@@ -95,7 +95,7 @@ $$
 
 Round keys used during encryption are derived from the encryption key.
 
-Specifically, given the encryption key $$MK$$, where each $$MK_i$$ is 32 bits
+Specifically, given the encryption key $$MK$$, where each $$MK_i$$ is 32-bit
 wide:
 
 $$

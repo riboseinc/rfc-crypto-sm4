@@ -5,7 +5,7 @@ issued by the Organization of State Commercial Administration of China [@OSCCA]
 as an authorized cryptographic algorithm for the use within China.
 The algorithm is published in public.
 
-SM4 is a symmetric encryption algorithm, specifically a blockcipher,
+SM4 is a symmetric encryption algorithm, specifically a block cipher,
 designed for data encryption.
 
 ## Purpose

@@ -4,10 +4,10 @@
   [@OSCCA]; they must be explicitly approved or certified by the OSCCA before being
   allowed to be sold or used in China.
 
-* SM4 is a blockcipher symmetric algorithm with key length of 128 bits. It is
+* SM4 is a block cipher symmetric algorithm with key length of 128 bits. It is
   considered as an alternative to AES-128 [@NIST.FIPS.197].
 
-* SM4 [@!GBT.32907-2016] is a blockcipher certified by the OSCCA [@OSCCA].
+* SM4 [@!GBT.32907-2016] is a block cipher certified by the OSCCA [@OSCCA].
   No formal proof of security is provided. There are no known feasible
   attacks against SM4 algorithm by the time of publishing this document, but
   there are security concerns with regards to side-channel attacks when the
