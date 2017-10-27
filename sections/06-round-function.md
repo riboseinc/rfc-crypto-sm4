@@ -21,8 +21,8 @@ $$
 
 Where:
 
-* Each $$X_i$ is 32 bits wide.
-* The round key $$rk$$ is 32 bits wide.
+* Each $$X_i$ is 32-bit wide.
+* The round key $$rk$$ is 32-bit wide.
 
 <!-- $$
 (X_0, X_1, X_2, X_3)
@@ -46,7 +46,7 @@ $$
 <!-- Transformation T
 𝑇: 𝑍43 → 𝑍43是一个可逆变换，由非线性变换𝜏和线性变换𝐿复合而成，即𝑇 ⋅ = 𝐿 𝜏 ⋅ 。 33 -->
 
-$$T$$ is a reversible permutation that outputs 32 bits from an input of 32 bits.
+$$T$$ is a reversible permutation that outputs 32 bits from a 32-bit input.
 
 <!-- $$
 T: Z_2^32 -> Z_2^32

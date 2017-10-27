@@ -6,7 +6,7 @@
 The SM4 algorithm is a blockcipher, with block size of 128 bits and a key
 length of 128 bits.
 
-Both encryption and key expansion uses 32 rounds of a nonlinear key schedule
+Both encryption and key expansion use 32 rounds of a nonlinear key schedule
 per block. Each round processes one of the four 32-bit words that constitute
 the block.
 
