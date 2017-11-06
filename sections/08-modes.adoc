@@ -1,61 +1,62 @@
-#  Modes of Operation {#sm4-modes}
+[#sm4-modes]
+= Modes of Operation
 
 This document defines multiple modes of operation for the SM4 blockcipher
 algorithm.
 
 The CBC (Cipher Block Chaining), ECB (Electronic CodeBook), CFB (Cipher
 FeedBack), OFB (Output FeedBack) and CTR (Counter) modes are defined in
-[@NIST.SP.800-38A] and utilized with the SM4 algorithm in the following
+<<NIST.SP.800-38A>> and utilized with the SM4 algorithm in the following
 sections.
 
-## Variables And Primitives
+== Variables And Primitives
 
 Hereinafter we define:
 
-SM4Encrypt(P, K)
-: The SM4 algorithm that encrypts plaintext P with key K, described in (#sm4-encryption)
+SM4Encrypt(P, K)::
+  The SM4 algorithm that encrypts plaintext P with key K, described in <<sm4-encryption>>
 
-SM4Decrypt(C, K)
-: The SM4 algorithm that decrypts ciphertext C with key K, described in (#sm4-decryption)
+SM4Decrypt(C, K)::
+  The SM4 algorithm that decrypts ciphertext C with key K, described in <<sm4-decryption>>
 
-b
-: block size in bits, defined as 128 for SM4
+b::
+  block size in bits, defined as 128 for SM4
 
-P_j
-: block j of ciphertext bitstring P
+P_j::
+  block j of ciphertext bitstring P
 
-C_j
-: block j of ciphertext bitstring C
+C_j::
+  block j of ciphertext bitstring C
 
-NBlocks(B, b)
-: Number of blocks of size $$b$$-bit in bitstring B
+NBlocks(B, b)::
+  Number of blocks of size $$b$$-bit in bitstring B
 
-IV
-: Initialization vector
+IV::
+  Initialization vector
 
-LSB(b, S)
-: Least significant $$b$$ bits of the bitstring $$S$$
+LSB(b, S)::
+  Least significant $$b$$ bits of the bitstring $$S$$
 
-MSB(b, S)
-: Most significant $$b$$ bits of the bitstring $$S$$
+MSB(b, S)::
+  Most significant $$b$$ bits of the bitstring $$S$$
 
 
-## Initialization Vectors
+== Initialization Vectors
 
 The CBC, CFB and OFB modes require an additional input to the encryption process,
 called the initialization vector (IV). The identical IV is used in the input
 of encryption as well as the decryption of the corresponding ciphertext.
 
 Generation of IV values **MUST** take into account of the considerations
-in (#security-considerations) recommended by [@BC-EVAL].
+in <<security-considerations>> recommended by <<BC-EVAL>>.
 
 
-## SM4-ECB
+== SM4-ECB
 
 In SM4-ECB, the same key is utilized to create a
 fixed assignment for a plaintext block with a ciphertext block, meaning
 that a given plaintext block always gets encrypted to the same ciphertext
-block. As described in [@NIST.SP.800-38A], this mode should be avoided if
+block. As described in <<NIST.SP.800-38A>>, this mode should be avoided if
 this property is undesirable.
 
 This mode requires input plaintext to be a multiple of the block size,
@@ -63,7 +64,7 @@ which in this case of SM4 it is 128-bit. It also allows multiple blocks
 to be computed in parallel.
 
 
-### SM4-ECB Encryption
+=== SM4-ECB Encryption
 
 Inputs:
 
@@ -76,7 +77,8 @@ Output:
 
 C is defined as follows.
 
-```
+[source]
+----
 n = NBlocks(P, b)
 
 for i = 1 to n
@@ -84,9 +86,9 @@ for i = 1 to n
 end for
 
 C = C_1 || ... || C_n
-```
+----
 
-### SM4-ECB Decryption
+=== SM4-ECB Decryption
 
 Inputs:
 
@@ -99,7 +101,8 @@ Output:
 
 P is defined as follows.
 
-```
+[source]
+----
 n = NBlocks(C, b)
 
 for i = 1 to n
@@ -107,10 +110,10 @@ for i = 1 to n
 end for
 
 P = P_1 || ... || P_n
-```
+----
 
 
-## SM4-CBC
+== SM4-CBC
 
 
 SM4-CBC is similar to SM4-ECB that the input plaintext **MUST** be a multiple
@@ -124,7 +127,7 @@ since ciphertext blocks are already available, CBC parallel decryption is
 possible.
 
 
-### SM4-CBC Encryption
+=== SM4-CBC Encryption
 
 Inputs:
 
@@ -138,7 +141,8 @@ Output:
 
 C is defined as follows.
 
-```
+[source]
+----
 n = NBlocks(P, b)
 
 C_1 = SM4Encrypt(P_1 xor IV, K)
@@ -148,9 +152,9 @@ for i = 2 to n
 end for
 
 C = C_1 || ... || C_n
-```
+----
 
-### SM4-CBC Decryption
+=== SM4-CBC Decryption
 
 Inputs:
 
@@ -164,7 +168,8 @@ Output:
 
 P is defined as follows.
 
-```
+[source]
+----
 n = NBlocks(C, b)
 
 P_1 = SM4Decrypt(C_1, K) xor IV
@@ -174,11 +179,11 @@ for i = 2 to n
 end for
 
 P = P_1 || ... || P_n
-```
+----
 
 
 
-## SM4-CFB
+== SM4-CFB
 
 SM4-CFB relies on feedback provided by successive ciphertext segments to
 generate output blocks. The plaintext given must be a multiple of the block
@@ -195,7 +200,7 @@ In SM4-CFB, since the input block to each forward cipher function depends
 on the output of the previous block (except the first that depends on the IV),
 encryption is not parallelizable. Decryption, however, can be parallelized.
 
-### SM4-CFB Variants
+=== SM4-CFB Variants
 
 <!-- SMS4-CFB，根据输出比特序列的长度，包含SMS4-CFB1、SMS4-CFB8和SMS4-CFB128三个实现。 -->
 
@@ -209,7 +214,7 @@ various $$s$$:
 - SM4-CFB-128, the 128-bit SM4-CFB mode, where $$s$$ is set to 128.
 
 
-### SM4-CFB Encryption
+=== SM4-CFB Encryption
 
 Inputs:
 
@@ -224,7 +229,8 @@ Output:
 
 C# is defined as follows.
 
-```
+[source]
+----
 n = NBlocks(P#, s)
 
 I_1 = IV
@@ -241,9 +247,9 @@ for i = 1 to n
 end for
 
 C# = C#_1 || ... || C#_n
-```
+----
 
-### SM4-CFB Decryption
+=== SM4-CFB Decryption
 
 Inputs:
 
@@ -258,7 +264,8 @@ Output:
 
 P# is defined as follows.
 
-```
+[source]
+----
 n = NBlocks(P#, s)
 
 I_1 = IV
@@ -275,11 +282,11 @@ for i = 1 to n
 end for
 
 P# = P#_1 || ... || P#_n
-```
+----
 
 
 
-## SM4-OFB
+== SM4-OFB
 
 SM4-OFB is the application of SM4 through the Output Feedback mode.
 This mode requires that the IV is a nonce, meaning that the IV **MUST**
@@ -293,7 +300,7 @@ blocks could be generated prior to the input of plaintext (encryption)
 or ciphertext (decryption).
 
 
-### SM4-OFB Encryption
+=== SM4-OFB Encryption
 
 Inputs:
 
@@ -307,7 +314,8 @@ Output:
 
 C is defined as follows.
 
-```
+[source]
+----
 n = NBlocks(P, b)
 
 I_1 = IV
@@ -323,9 +331,9 @@ end for
 C_n = P_n xor MSB(u, O_n)
 
 C = C_1 || ... || C_n
-```
+----
 
-### SM4-OFB Decryption
+=== SM4-OFB Decryption
 
 Inputs:
 
@@ -339,7 +347,8 @@ Output:
 
 C is defined as follows.
 
-```
+[source]
+----
 n = NBlocks(C, b)
 
 I_1 = IV
@@ -355,12 +364,12 @@ end for
 P_n = C_n xor MSB(u, O_n)
 
 P = P_1 || ... || P_n
-```
+----
 
 
-## SM4-CTR
+== SM4-CTR
 
-<!-- SMS4-CTR，由于SMS4软实现性能较低，因此在后续的优化中会首先提供经过Intel AVX2指令集优化的CTR实现。 -->
+//<!-- SMS4-CTR，由于SMS4软实现性能较低，因此在后续的优化中会首先提供经过Intel AVX2指令集优化的CTR实现。 -->
 
 SM4-CTR is an implementation of a stream cipher through a blockcipher
 primitive. It generates a "keystream" of keys that are used to
@@ -371,7 +380,7 @@ sequence that does not repeat within the block size.
 Both SM4-CTR encryption and decryption routines could be parallelized, and
 random access is also possible.
 
-### SM4-CTR Encryption
+=== SM4-CTR Encryption
 
 
 Inputs:
@@ -387,7 +396,8 @@ Output:
 
 C is defined as follows.
 
-```
+[source]
+----
 n = NBlocks(P, b)
 
 for i = 1 to n
@@ -401,9 +411,9 @@ end for
 C_n = P_n xor MSB(u, O_n)
 
 C = C_1 || ... || C_n
-```
+----
 
-### SM4-CTR Decryption
+=== SM4-CTR Decryption
 
 
 Inputs:
@@ -419,7 +429,8 @@ Output:
 
 P is defined as follows.
 
-```
+[source]
+----
 n = NBlocks(C, b)
 
 for i = 1 to n
@@ -433,5 +444,5 @@ end for
 P_n = C_n xor MSB(u, O_n)
 
 C = C_1 || ... || C_n
-```
+----
 

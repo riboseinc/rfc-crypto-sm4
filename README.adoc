@@ -33,7 +33,7 @@ pip install xml2rfc
 [source,sh]
 ----
 make all
-# or
+= or
 export ID_NAME=ribose-cfrg-sm4
 make draft-${ID_NAME}.txt
 ----

@@ -1,0 +1,52 @@
+= The SM4 Blockcipher Algorithm And Its Modes Of Operations
+:doctype: internet-draft
+:name: draft-ribose-cfrg-sm4-02
+:abbrev: SM4 Blockcipher Algorithm
+:status: info
+:ipr: trust200902
+:submissionType: IRTF
+:area: cfrg
+:intended-series: full-standard
+:workgroup: Crypto Forum Research Group
+:revdate: 2017-10-18T00:00:00Z
+:fullname: Ronald Henry Tse
+:lastname: Tse
+:forename_initials: R. H.
+:organization: Ribose
+:street: Suite 1111, 1 Pedder Street
+:city: Central
+:region: Hong Kong
+:country: People's Republic of China
+:uri: https://www.ribose.com
+:email: ronald.tse@ribose.com
+:fullname_2: Dr. Wai Kit Wong
+:lastname_2: Wong
+:forename_initials_2: W. K.
+:organization_2: Hang Seng Management College
+:street_2: Hang Shin Link, Siu Lek Yuen
+:city_2: Shatin
+:region_2: Hong Kong
+:country_2: People's Republic of China
+:uri_2: https://www.hsmc.edu.hk
+:email_2: wongwk@hsmc.edu.hk
+//:bibliography-database: my_database.bib
+
+include::sections/00-abstract.adoc[leveloffset=+1]
+
+include::sections/01-intro.adoc[leveloffset=+1]
+include::sections/02-conventions.adoc[leveloffset=+1]
+include::sections/03-symbols.adoc[leveloffset=+1]
+include::sections/04-computing.adoc[leveloffset=+1]
+include::sections/05-key.adoc[leveloffset=+1]
+include::sections/06-round-function.adoc[leveloffset=+1]
+include::sections/07-algorithm.adoc[leveloffset=+1]
+include::sections/08-modes.adoc[leveloffset=+1]
+include::sections/09-oid.adoc[leveloffset=+1]
+include::sections/10-security.adoc[leveloffset=+1]
+include::sections/11-iana.adoc[leveloffset=+1]
+
+// must give references before appendix!
+
+include::sections/98-references.adoc[leveloffset=+1]
+include::sections/97-examples.adoc[leveloffset=+1]
+include::sections/99-acknowledgements.adoc[leveloffset=+1]

@@ -5,7 +5,7 @@ XTS (XEX-based tweaked-codebook mode with ciphertext stealing)
 
 SMS4-WRAP，将SMS4用于加密密钥，其中被加密的数据为密钥，而SMS4的密钥为KEK (Key Encryption Key)。
 
-[@RFC3602]
+<<RFC3602>>
 
 NIST has defined 5 modes of operation for AES and other FIPS-approved
 ciphers [MODES]: CBC (Cipher Block Chaining), ECB (Electronic
@@ -29,9 +29,9 @@ For the use of CBC mode in ESP with 64-bit ciphers, see [CBC]. -->
 
 <!-- ## SM4-XTS
 
-[@NIST.SP.800-38E]
+<<NIST.SP.800-38E>>
 
-[@IEEE.1619-2007] defines XTS-AES
+<<IEEE.1619-2007>> defines XTS-AES
 
 This standard defines the XTS-AES tweakable blockcipher and its use for encryption of sector-based storage. XTS-AES is a tweakable blockcipher that acts on data units of 128 bits or more and uses the AES blockcipher as a subroutine. The key material for XTS-AES consists of a data encryption key (used by the AES blockcipher) as well as a “tweak key” that is used to incorporate the logical position of the data block into the encryption. XTS-AES is a concrete instantiation of the class of tweakable blockciphers described in reference [XEX04]. The XTS-AES addresses threats such as copy-and-paste and dictionary attacks, while allowing parallelization and pipelining in cipher implementations.
 

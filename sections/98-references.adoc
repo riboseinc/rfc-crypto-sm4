@@ -1,3 +1,70 @@
+
+[bibliography]
+= Normative References
+
+//bibliography::norm[]
+++++
+
+<reference anchor='GBT.32907-2016' target='http://www.gb688.cn/bzgk/gb/newGbInfo?hcno=7803DE42D3BC5E80B0C3E5D8E873D56A'>
+<!--http://www.sac.gov.cn/SACSearch/search?channelid=97779&templet=gjcxjg_detail.jsp&searchword=STANDARD_CODE=%27GB/T%2032907-2016%27 -->
+  <front>
+    <title>GB/T 32907-2016: Information security technology -- SM4 block cipher algorithm</title>
+    <author>
+      <organization>Standardization Administration of the People's Republic of China</organization>
+      <address>
+        <postal>
+         <street>No. 9 Madian Donglu, Haidian District</street>
+         <city>Beijing</city>
+         <region>Beijing</region>
+         <code>100088</code>
+         <country>People's Republic of China</country>
+        </postal>
+        <phone>+86 (0)10 8226-2609</phone>
+        <!--<email>contact@oscca.gov.cn</email>-->
+        <uri>http://www.sac.gov.cn</uri>
+      </address>
+    </author>
+    <date day='29' month='August' year='2016'/>
+  </front>
+</reference>
+
+<reference anchor='ISO.IEC.18033-3.AMD2' target='https://www.iso.org/standard/54531.html'>
+  <front>
+    <title>ISO/IEC WD1 18033-3/AMD2 -- Encryption algorithms -- Part 3: Block ciphers -- Amendment 2</title>
+    <author>
+      <organization>International Organization for Standardization</organization>
+      <address>
+        <postal>
+          <street>BIBC II</street>
+          <street>Chemin de Blandonnet 8</street>
+          <street>CP 401</street>
+          <city>Vernier</city>
+          <region>Geneva</region>
+          <code>1214</code>
+          <country>Switzerland</country>
+        </postal>
+        <phone>+41 22 749 01 11</phone>
+        <email>central@iso.org</email>
+        <uri>https://www.iso.org/</uri>
+      </address>
+    </author>
+    <date day='13' month='June' year='2017'/>
+  </front>
+</reference>
+
+include::../reference.RFC.2119.xml[lines=3..-1]
+
+++++
+
+
+[bibliography]
+= Informative References
+
+//bibliography::info[]
+++++
+
+
+
 <reference anchor='GMT-0002-2012' target='http://www.oscca.gov.cn/Column/Column_32.htm'>
   <front>
     <title>GM/T 0002-2012: SM4 block cipher algorithm</title>
@@ -62,29 +129,6 @@
       </address>
     </author>
     <date month='January' year='2006'/>
-  </front>
-</reference>
-
-<reference anchor='GBT.32907-2016' target='http://www.gb688.cn/bzgk/gb/newGbInfo?hcno=7803DE42D3BC5E80B0C3E5D8E873D56A'>
-<!--http://www.sac.gov.cn/SACSearch/search?channelid=97779&templet=gjcxjg_detail.jsp&searchword=STANDARD_CODE=%27GB/T%2032907-2016%27 -->
-  <front>
-    <title>GB/T 32907-2016: Information security technology -- SM4 block cipher algorithm</title>
-    <author>
-      <organization>Standardization Administration of the People's Republic of China</organization>
-      <address>
-        <postal>
-         <street>No. 9 Madian Donglu, Haidian District</street>
-         <city>Beijing</city>
-         <region>Beijing</region>
-         <code>100088</code>
-         <country>People's Republic of China</country>
-        </postal>
-        <phone>+86 (0)10 8226-2609</phone>
-        <!--<email>contact@oscca.gov.cn</email>-->
-        <uri>http://www.sac.gov.cn</uri>
-      </address>
-    </author>
-    <date day='29' month='August' year='2016'/>
   </front>
 </reference>
 
@@ -791,29 +835,6 @@ http://dx.doi.org/10.14257/ijsia.2016.10.9.01 -->
   </front>
 </reference>
 
-<reference anchor='ISO.IEC.18033-3.AMD2' target='https://www.iso.org/standard/54531.html'>
-  <front>
-    <title>ISO/IEC WD1 18033-3/AMD2 -- Encryption algorithms -- Part 3: Block ciphers -- Amendment 2</title>
-    <author>
-      <organization>International Organization for Standardization</organization>
-      <address>
-        <postal>
-          <street>BIBC II</street>
-          <street>Chemin de Blandonnet 8</street>
-          <street>CP 401</street>
-          <city>Vernier</city>
-          <region>Geneva</region>
-          <code>1214</code>
-          <country>Switzerland</country>
-        </postal>
-        <phone>+41 22 749 01 11</phone>
-        <email>central@iso.org</email>
-        <uri>https://www.iso.org/</uri>
-      </address>
-    </author>
-    <date day='13' month='June' year='2017'/>
-  </front>
-</reference>
 
 <reference anchor='BC-EVAL' target='http://web.cs.ucdavis.edu/&tilde;rogaway/papers/modes.pdf'>
   <front>
@@ -877,3 +898,4 @@ http://dx.doi.org/10.14257/ijsia.2016.10.9.01 -->
     <date day='18' month='October' year='2017'/>
   </front>
 </reference>
+++++

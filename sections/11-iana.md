@@ -1,3 +1,0 @@
-#  IANA Considerations
-
-This document does not require any action by IANA.
