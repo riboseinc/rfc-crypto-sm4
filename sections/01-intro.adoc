@@ -23,9 +23,11 @@ published in 2016. Sections 1 to 7 of this document directly map to the
 corresponding sections numbers of the <<GBT.32907-2016>> standard for
 convenience of the reader.
 
-This document also provides additional information on the practical usage and
-implementation of SM4, specifying multiple modes of operations that are known
-to be used with SM4 and providing the SM4 OIDs.
+This document also provides additional information on the design
+considerations of the algorithm <<SM4-Details>>, practical usage and
+implementation of SM4 specifying modes of operations that are known
+to be used with SM4 (see <<sm4-modes>>), and providing the
+SM4 OIDs (see <<sm4-oids>>).
 
 
 == History
@@ -63,36 +65,3 @@ Information Science & Technology (BAIST):
 * Ying-Ying Mao
 * Zhen-Hua Liu
 
-
-== Applications
-
-SM4 (and SMS4) has prevalent hardware implementations <<SM4-FPGA>>
-<<SM4-VLSI>>, due to its being the only OSCCA-approved symmetric encryption
-algorithm allowed for use in China.
-
-SM4 can be used with multiple modes (See <<sm4-modes>>).
-
-
-[#cryptanalysis]
-== Cryptanalysis
-
-A number of attacks have been attempted on SM4, such as <<SM4-Analysis>>
-<<SM4-Linear>>, but there are no known feasible attacks against the
-SM4 algorithm by the time of publishing this document.
-
-There are, however, security concerns with regards to side-channel attacks
-<<SideChannel>> when the SM4 algorithm is implemented in a hardware device
-<<SM4-Power>>.
-
-For instance, <<SM4-Power>> illustrated an attack by measuring the power
-consumption of the device. A chosen ciphertext attack, assuming a fixed
-correlation between the round keys and data mask, is able to recover the round
-key successfully. When the SM4 algorithm is implemented in hardware, the
-parameters and keys **SHOULD** be randomly generated without fixed correlation.
-
-There have been improvements to the hardware embodiment design for SM4, such
-as <<SM4-VLSI>>, that may resist such attacks.
-
-In order to improve security of the SM4 cryptographic process, secure white-box
-implementations such as <<SM4-WhiteBox>> have been proposed. Speed enhancements,
-such as <<SM4-HiSpeed>>, have also been proposed.

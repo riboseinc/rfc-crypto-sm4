@@ -79,6 +79,8 @@ C is defined as follows.
 
 [source]
 ----
+_____________________________________________________________________
+
 n = NBlocks(P, b)
 
 for i = 1 to n
@@ -86,6 +88,7 @@ for i = 1 to n
 end for
 
 C = C_1 || ... || C_n
+_____________________________________________________________________
 ----
 
 === SM4-ECB Decryption
@@ -103,6 +106,8 @@ P is defined as follows.
 
 [source]
 ----
+_____________________________________________________________________
+
 n = NBlocks(C, b)
 
 for i = 1 to n
@@ -110,6 +115,7 @@ for i = 1 to n
 end for
 
 P = P_1 || ... || P_n
+_____________________________________________________________________
 ----
 
 
@@ -143,6 +149,7 @@ C is defined as follows.
 
 [source]
 ----
+_____________________________________________________________________
 n = NBlocks(P, b)
 
 C_1 = SM4Encrypt(P_1 xor IV, K)
@@ -152,6 +159,7 @@ for i = 2 to n
 end for
 
 C = C_1 || ... || C_n
+_____________________________________________________________________
 ----
 
 === SM4-CBC Decryption
@@ -170,6 +178,8 @@ P is defined as follows.
 
 [source]
 ----
+_____________________________________________________________________
+
 n = NBlocks(C, b)
 
 P_1 = SM4Decrypt(C_1, K) xor IV
@@ -179,6 +189,7 @@ for i = 2 to n
 end for
 
 P = P_1 || ... || P_n
+_____________________________________________________________________
 ----
 
 
@@ -202,7 +213,7 @@ encryption is not parallelizable. Decryption, however, can be parallelized.
 
 === SM4-CFB Variants
 
-<!-- SMS4-CFB，根据输出比特序列的长度，包含SMS4-CFB1、SMS4-CFB8和SMS4-CFB128三个实现。 -->
+// SMS4-CFB，根据输出比特序列的长度，包含SMS4-CFB1、SMS4-CFB8和SMS4-CFB128三个实现。
 
 SM4-CFB takes an integer $$s$$ to determine segment size in its encryption and
 decryption routines. We define the following variants of SM4-CFB for
@@ -221,7 +232,7 @@ Inputs:
 - P#, plaintext, length **MUST** be multiple of $$s$$
 - K, SM4 128-bit encryption key
 - IV, 128-bit, unpredictable, initialization vector
-- s, an integer 1 <= $$s$$ <= $$b$$ that defines segment size
+- s, an integer $$1 <= s <= b$$ that defines segment size
 
 Output:
 
@@ -231,6 +242,8 @@ C# is defined as follows.
 
 [source]
 ----
+_____________________________________________________________________
+
 n = NBlocks(P#, s)
 
 I_1 = IV
@@ -247,6 +260,7 @@ for i = 1 to n
 end for
 
 C# = C#_1 || ... || C#_n
+_____________________________________________________________________
 ----
 
 === SM4-CFB Decryption
@@ -266,6 +280,8 @@ P# is defined as follows.
 
 [source]
 ----
+_____________________________________________________________________
+
 n = NBlocks(P#, s)
 
 I_1 = IV
@@ -282,6 +298,7 @@ for i = 1 to n
 end for
 
 P# = P#_1 || ... || P#_n
+_____________________________________________________________________
 ----
 
 
@@ -316,6 +333,8 @@ C is defined as follows.
 
 [source]
 ----
+_____________________________________________________________________
+
 n = NBlocks(P, b)
 
 I_1 = IV
@@ -331,6 +350,7 @@ end for
 C_n = P_n xor MSB(u, O_n)
 
 C = C_1 || ... || C_n
+_____________________________________________________________________
 ----
 
 === SM4-OFB Decryption
@@ -349,6 +369,8 @@ C is defined as follows.
 
 [source]
 ----
+_____________________________________________________________________
+
 n = NBlocks(C, b)
 
 I_1 = IV
@@ -364,12 +386,13 @@ end for
 P_n = C_n xor MSB(u, O_n)
 
 P = P_1 || ... || P_n
+_____________________________________________________________________
 ----
 
 
 == SM4-CTR
 
-//<!-- SMS4-CTR，由于SMS4软实现性能较低，因此在后续的优化中会首先提供经过Intel AVX2指令集优化的CTR实现。 -->
+// SMS4-CTR，由于SMS4软实现性能较低，因此在后续的优化中会首先提供经过Intel AVX2指令集优化的CTR实现。
 
 SM4-CTR is an implementation of a stream cipher through a blockcipher
 primitive. It generates a "keystream" of keys that are used to
@@ -398,6 +421,8 @@ C is defined as follows.
 
 [source]
 ----
+_____________________________________________________________________
+
 n = NBlocks(P, b)
 
 for i = 1 to n
@@ -411,6 +436,7 @@ end for
 C_n = P_n xor MSB(u, O_n)
 
 C = C_1 || ... || C_n
+_____________________________________________________________________
 ----
 
 === SM4-CTR Decryption
@@ -418,19 +444,21 @@ C = C_1 || ... || C_n
 
 Inputs:
 
-- C, ciphertext, composed of (n - 1) blocks of size b, with the last block C_n of size 1 <= u <= b
+- C, ciphertext, composed of (n - 1) blocks of size b, with the last block C_n of size $$1 <= u <= b$$
 - K, SM4 128-bit encryption key
 - IV, a nonce (a unique value for each execution per given key)
 - T, a sequence of counters from T_1 to T_n
 
 Output:
 
-- P, plaintext, composed of (n - 1) blocks of size b, with the last block P_n of size 1 <= u <= b
+- P, plaintext, composed of (n - 1) blocks of size b, with the last block P_n of size $$1 <= u <= b$$
 
 P is defined as follows.
 
 [source]
 ----
+_____________________________________________________________________
+
 n = NBlocks(C, b)
 
 for i = 1 to n
@@ -444,5 +472,6 @@ end for
 P_n = C_n xor MSB(u, O_n)
 
 C = C_1 || ... || C_n
+_____________________________________________________________________
 ----
 

@@ -1,6 +1,6 @@
 = The SM4 Blockcipher Algorithm And Its Modes Of Operations
 :doctype: internet-draft
-:name: draft-ribose-cfrg-sm4-02
+:name: draft-ribose-cfrg-sm4-03
 :abbrev: SM4 Blockcipher Algorithm
 :status: info
 :ipr: trust200902
@@ -8,7 +8,7 @@
 :area: cfrg
 :intended-series: full-standard
 :workgroup: Crypto Forum Research Group
-:revdate: 2017-10-18T00:00:00Z
+:revdate: 2017-11-08T00:00:00Z
 :fullname: Ronald Henry Tse
 :lastname: Tse
 :forename_initials: R. H.
@@ -42,8 +42,10 @@ include::sections/06-round-function.adoc[leveloffset=+1]
 include::sections/07-algorithm.adoc[leveloffset=+1]
 include::sections/08-modes.adoc[leveloffset=+1]
 include::sections/09-oid.adoc[leveloffset=+1]
-include::sections/10-security.adoc[leveloffset=+1]
-include::sections/11-iana.adoc[leveloffset=+1]
+include::sections/10-design.adoc[leveloffset=+1]
+include::sections/11-cryptanalysis.adoc[leveloffset=+1]
+include::sections/12-security.adoc[leveloffset=+1]
+include::sections/13-iana.adoc[leveloffset=+1]
 
 // must give references before appendix!
 

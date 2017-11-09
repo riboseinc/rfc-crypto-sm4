@@ -2,6 +2,7 @@
 
 // <!-- 7 算法描述 -->
 
+
 [#sm4-encryption]
 == Encryption
 
@@ -19,9 +20,9 @@ The encryption algorithm consists of 32 rounds and 1 reverse transform $$R$$.
 
 Given a 128-bit plaintext input, where each $$X_i$$ is 32-bit wide:
 
-$$
+----
 (X_0, X_1, X_2, X_3)
-$$
+----
 
 ////
 <!--$$
@@ -31,9 +32,9 @@ $$ -->
 
 The output is a 128-bit ciphertext, where each $$Y_i$$ is 32-bit wide:
 
-$$
+----
 (Y_0, Y_1, Y_2, Y_3)
-$$
+----
 
 ////
 <!-- $$
@@ -52,24 +53,73 @@ $$
 ////
 
 a. 32 rounds of calculation
++
+----
+i = 0, 1, ..., 31
 
-  $$i = 0, 1, ..., 31$$
-
-  $$
-  X_{i+4} = F(X_i, X_{i+1}, X_{i+2}, X_{i+3}, rk_i)
-  $$
+X_{i+4} = F(X_i, X_{i+1}, X_{i+2}, X_{i+3}, rk_i)
+----
 
 b. reverse transformation
++
+----
+(Y_0, Y_1, Y_2, Y_3) = R(X_32, X_33, X_34, X_35)
 
-  $$
-  (Y_0, Y_1, Y_2, Y_3) = R(X_32, X_33, X_34, X_35)
-  $$
-
-  $$
-  R(X_32, X_33, X_34, X_35) = (X_35, X_34, X_33, X_32)
-  $$
+R(X_32, X_33, X_34, X_35) = (X_35, X_34, X_33, X_32)
+----
 
 Please refer to <<appendix-a>> for sample calculations.
+
+A flow of the calculation is given in this diagram.
+
+[source]
+----
+
+                   128-bits plaintext
+              \___________________________/
+                            |
+                            v
+               X_0     X_1     X_2     X_3
+                |       |       |       |
+                v       v       v       v
+              +---------------------------+
+  Round 1     |      Round Function       | <--rk_0
+              +---------------------------+
+                |       |       |       |
+               X_1     X_2     X_3     X_4
+                |       |       |       |
+                v       v       v       v
+              +---------------------------+
+  Round 2     |      Round Function       | <--rk_1
+              +---------------------------+
+                |       |       |       |
+               X_2     X_3     X_4     X_5
+                |       |       |       |
+                v       v       v       v
+                           ...
+
+               X_31    X_32    X_33    X_34
+                |       |       |       |
+                v       v       v       v
+              +---------------------------+
+  Round 32    |      Round Function       | <--rk_31
+              +---------------------------+
+                |       |       |       |
+               X_32    X_33    X_34    X_35
+                |       |       |       |
+                v       v       v       v
+              +---------------------------+
+              | Reverse Transformation R  |
+              +---------------------------+
+                |       |       |       |
+               Y_0     Y_1     Y_2     Y_3
+
+              \___________________________/
+                            |
+                            v
+                   128-bits ciphertext
+
+----
 
 
 [#sm4-decryption]
@@ -85,9 +135,9 @@ the order of the round key sequence.
 
 During decryption, the round key sequence is:
 
-$$
+----
 (rk_31, rk_30, ..., rk_0)
-$$
+----
 
 == Key Schedule
 
@@ -112,9 +162,9 @@ Round keys used during encryption are derived from the encryption key.
 Specifically, given the encryption key $$MK$$, where each $$MK_i$$ is 32-bit
 wide:
 
-$$
+----
 MK = (MK_0, MK_1, MK_2, MK_3)
-$$
+----
 
 ////
 <!-- $$
@@ -124,35 +174,58 @@ $$ -->
 
 Each round key $$rk_i$$ is created as follows, where $$i = 0, 1, ..., 31$$.
 
-$$
+----
 (K_0, K_1, K_2, K_3)
         = (MK_0 xor FK_0, MK_1 xor FK_1, MK_2 xor FK_2, MK_3 xor FK_3)
-$$
 
-$$
 rk_i = K_{i + 4}
-$$
 
-$$
 K_{i + 4} = K_i xor T' (K_{i + 1} xor K_{i + 2} xor K_{i + 3} xor CK_i)
-$$
-
+----
 
 Since the decryption key is identical to the encryption key, the round keys
 used in the decryption process are derived from the decryption key through
 the identical process to that of during encryption.
+
+Figure X depicts the i-th round of SM4.
+
+.Figure X
+[source]
+----
+
+  X_i                 rk_i  X_{i+1} X_{i+2} X_{i+3}
+   |                   |      |       |       |
+   |                   |      |       |       |
+   |                   v      |       |       |
+ +---+     +---+     +---+    |       |       |
+ | X |     |   |     | X | <--+       |       |
+ | O | <-- | T | <-- | O | <----------+       |
+ | R |     |   |     | R | <------------------+
+ +---+     +---+     +---+    |       |       |
+   |                         /       /       /
+   |                        /       /       /
+   |                       /       /       /
+    \----------------------------------------=
+                         /       /       /    \
+                        /       /       /     |
+     /-----------------/       /       /      |
+    |                         |       |       |
+ X_{i+1}                   X_{i+2} X_{i+3} X_{i+4}
+
+----
 
 
 === Family Key $$FK$$
 
 Family key $$FK$$ given in hexadecimal notation, is:
 
-$$
+[source]
+----
 FK_0 = A3B1BAC6
 FK_1 = 56AA3350
 FK_2 = 677D9197
 FK_3 = B27022DC
-$$
+----
 
 === Constant Key $$CK$$
 
@@ -162,9 +235,9 @@ Let $$ck_{i, j}$$ be the $$j$$-th byte ($$i = 0, 1, ..., 31; j = 0, 1, 2, 3$$) o
 
 Therefore, each $$ck_{i, j}$$ is a 8-bit string, and each $$CK_i$$ a 32-bit word.
 
-$$
+----
 CK_i = (ck_{i, 0}, ck_{i, 1}, ck_{i, 2}, ck_{i, 3})
-$$
+----
 
 ////
 <!-- $$
@@ -172,9 +245,9 @@ CK_i element-of (Z_2^8)^4
 $$ -->
 ////
 
-$$
+----
 ck_{i, j} = (4i + j) x 7 (mod 256)
-$$
+----
 
 
 ////

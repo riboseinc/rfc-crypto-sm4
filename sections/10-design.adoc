@@ -1,0 +1,321 @@
+= Design Considerations
+
+//2 SM4算法设计原理
+
+== Basic Transformation
+
+// 2.1基础置换
+
+//混乱原则和扩散原则是分组密码设计的2个基本原则.一个设计精良的分组密码体制应该以一类密码学特征良好的基础置换为主体来构造, 其单轮运算应当基于一类密码学特征良好的基础置换.基础置换的密码学性质决定明密文变换的效率.
+
+The chaos principle and the diffusion principle are two basic principles of block cipher design. A well-designed blockcipher algorithm should be based on a cryptographically sound basic transformation structure, with its round calculation based on a cryptographically sound basic transformation.
+
+The cryptographic properties of the basic transformation determines the efficiency of the resulting encryption transformation.
+
+//SM4算法是基于正形置换[8]构造的，SM4算法的单轮变换构成正形置换，其密码特性可以由正形置换的性质推出.
+
+The SM4 algorithm is structured on orthomorphic permutation. Its round transformation is an orthomorphic permutation, and its cryptographic properties can be deduced from the characteristics of orthomorphic permutations.
+
+//设SM4分组密码算法的单轮置换为P，对于任意给定的明文X，如果密钥 K' != K, 则 P(X，K') != P(X,K).
+
+Let the single round of the SM4 block cipher algorithm be P, for any given plaintext $$X, P (X, K ')! = P (X, K)$$ if the key $$K'! = K$$.
+
+//该结论表明，如果以X为行变量，以K为列变量，则方阵P(X，K)构成拉丁方.在密码学性质上包含了2个结论：
+The conclusion shows that if $$X$$ is a row variable and $$K$$ is a column variable, the square $$P(X, K)$$ forms a Latin square. There are two conclusions about the nature of cryptography:
+
+//1. SM4分组密码算法在不同密钥作用下的轮变换必然不同；
+//2. SM4分组密码算法的单轮变换在不同的密钥作用下，输入明文相同而输出必然不同.
+
+1. The SM4 blockcipher algorithm will produce different round transformations given different keys.
+
+2. The SM4 blockcipher algorithm, within a single round, will produce a different output given the same input with different keys.
+
+
+== Non-Linear Transformation
+
+//2.2非线性变换
+
+//S盒本质上可以看作映射:
+An S-box can be viewed as a bijection:
+
+$$S(X) = (f_1(X), f_2(X), ... , f_m(X)) : F_2^n -> F_2^m$$.
+
+//其中，SCr)    付可表示为一个n元输入m元
+
+Where $$S(x): F_2^n -> F_2^m$$ can be represented as a multi-output boolean function with n-bit input and m-bit output, or a $$n x m$$ S-box (an S-box with n inputs and m outputs), usually realized as a substitution that takes an n-bit input and produces a m-bit output. In SM4, the S-box takes $$n = m = 8$$.
+
+//输出的多输出布尔函数，也可简称S是一个
+//的S盒(n进m出的S盒），通常采用72比特输入到m比特输出的替代表来表示或实现，对于SM4 分组密码算法中的S盒，n=m=8.
+
+In many blockciphers, the S-box is the sole element providing non-linearity, for the purpose of mixing, in order to reduce linearity and to hide its variable structure.
+//S盒是很多分组密码算法中的唯一非线性模块，用于提供混淆作用，可提高算法的非线性性，隐藏其代数结构.
+
+The cryptographic properties of the S-box directly affects the resulting cryptographic strength of the blockcipher. When designing a blockcipher, the cryptographic strength of the S-box must be taken into account. The cryptographic strength of an S-box can be generally measured by factors such as its non-linearity and differential distribution.
+
+//S盒的密码性质直接影响了整个分组密码算法的安全强度. 分组密码算法的设计必须充分考量S盒的密码强度，通常可用非线性度、差分均勻 性等指标来衡量S盒的安全强度.
+
+=== S-box algebraic expression
+
+//1) S盒代数表达式
+
+//为防止插入攻击，通常要求密码变换的代数式具有足够高的次数和复杂度.用拉格朗日插值多项 式可求得SM4算法S盒的代数表达式.这是一个 254次、255项的多项式，具有最高的复杂程度[9].
+
+In order to prevent insertion attacks, the algebraic formula used for cryptographic substitution should be a high degree polynomial and contain a large number of terms.
+
+The algebraic expression of the SM4 S-box [9] is determined through Lagrange's interpolation to be a polynomial of the 254th degree with 255 terms, providing the highest level of complexity based on its size:
+
+
+----
+f(x) : sum_{i=0}^{255} y_i
+                PI_{j!=i, j=0}^255 ((x - x_j) / (x_i - x_j))
+----
+
+
+=== Algebraic degree and distribution of terms
+
+Any n boolean function f(x): F_2^n -> F_2 can be represented
+uniquely in the following algebraic normal form:
+
+//2. 代数次数及项数分布 文献<<BC-Design>>提到任何n元布尔函数/(X):朽― F2都可以唯一地表示成如下的代数正规形式：
+
+----
+f(X) = a_0 + sum_{1<=i_i<...<i_k<=n, 1<=k<=n}
+                      a_{i_1 i_2 ... i_k} x_{i_1} x_{i_2} ... x_{i_k}
+
+X = (x_1, x_2, ..., x_n)
+
+a_0, a_{i_1, i_2, ... i_k} element-of F_2
+----
+
+The "algebraic degree" of the n-boolean function f(X) is defined to be the algebraic degree of the highest algebraic degree of its terms with a nonzero coefficient in its ANF representation. The constant of the i-th term of f(x) in ANF representation is called the i-th term of f(X), the total number of all i-th (0<=i<=n) terms is called the "number of terms" of f(X).
+
+//文献<<BC-Design>>给出了 n元布尔函数代数项数及次 数的定义:代数正规形式中的最髙项的次数称为 /(X)的次数;它的代数正规形式中的f次项的个 数称为/〇〇的f次项数;所有次项数 之和称为/〇〇的项数.
+
+S(X) can be represented as a m-component function $$S(X) = (f_1(X), f_2(X), ... f_m(X)): F_2^n -> F_2^m$$. Consider S(X) to be a random substitution, each of its component functions would be best to have algebraic degree of n-1, each component function i-th coefficient should be near C_n^i/2. If the algebraic degree is too low, for example, each component function has a degree of 2, then the algorithm can be easily attacked by advanced differential cryptanalysis. If the number of terms are insufficient, then it may improve the success probability of insert attacks.
+
+//S(X)可以表示为m个分量函数S(X) = (/\ 〇〇，/2 Q〇，…，/w 〇〇 ):巧―F?，若将 S(X) 看成一个随机置换，它的每个分量函数的代数次 数最佳为n — 1，每个分量函数的i次项数应接 近于Ci/2.若代数次数太低，例如，每个分量函数 的次数都是2,则算法易受高阶差分密码分析的攻 击.若项数太少，有可能提高插值攻击的成功率.
+
+The algebraic degrees and number of terms of the SM4 S-box are described below:
+//SM4算法S盒的代数次数及项数分布如表2 所示：
+
+----
++---------------------------------------------------------+
+| Component |            Algebraic degree                 |
+|  Function +---------------------------------------------+
+|           |  8  |  7 |  6 |  5 |  4 |  3 |  2 | 1 |  0  |
++---------------------------------------------------------+
+|   Y_0     |  0  |  3 | 15 | 31 | 28 | 29 | 14 | 3 |  1  |
+|   Y_1     |  0  |  3 | 12 | 34 | 40 | 33 | 12 | 4 |  1  |
+|   Y_2     |  0  |  5 | 17 | 24 | 40 | 24 | 11 | 3 |  0  |
+|   Y_3     |  0  |  2 | 11 | 31 | 34 | 27 | 15 | 5 |  1  |
+|   Y_4     |  0  |  5 | 15 | 28 | 33 | 24 | 13 | 5 |  0  |
+|   Y_5     |  0  |  5 | 11 | 25 | 41 | 25 | 16 | 4 |  1  |
+|   Y_6     |  0  |  4 | 15 | 29 | 27 | 32 | 18 | 4 |  1  |
+|   Y_7     |  0  |  4 | 14 | 32 | 35 | 30 | 16 | 3 |  0  |
++---------------------------------------------------------+
+| Expected  | 1/2 |  4 | 14 | 28 | 35 | 28 | 14 | 4 | 1/2 |
+|    Value  |     |    |    |    |    |    |    |   |     |
++--------------------------------------------------------+
+----
+
+//表2 SM4算法S盒的代数次数及项数分布
+
+=== Differential Distribution
+
+//3)差分均勻性
+The definition of differential distribution is given in <<BC-Design>>.
+
+Differential cryptanalysis is a chosen-plaintext attack, with the understanding that analysis of selected plaintexts of differentials can retrive the most probable key. Differential distribution is an attribute to measure the resistance of a cryptographic function against differential cryptanalysis.
+
+//文献<<BC-Design>>给出了差分均匀性的定义.差分密码分析是一种选择明文攻击，其基本思想是通过 分析特定明文差对相应密文差的影响来获得可能性最大的密钥.差分均匀性是针对差分密码分析 而引入的，用来度量一个密码函数抗击差分密码分析的能力.令：
+
+----
+delta_S = 1/2^n max_{a in F_2^n, a!=0} max_{beta in F_2^m} |
+  { X in F_2^n : S(X and alpha) - S(X) = beta } |
+----
+
+`delta_S` is the differential distribution of the S-box `S`.
+
+According to the definition of differential distribution, $$2^{-m} <= delta_S <= 2^{m-n}$$,
+if there is a $$delta_S = 2^{m-n}$$ then S is considered a fully non-linear function from $$F_2^n to F_2^m$$. For resistance against differential cryptanalysis, the differential distribution should be as low as possible.
+
+//根据差分均勻性的定义，可以得到 ，如有& = 则称S是从打到F?的完全 非线性函数.为了抵抗差分密码攻击，差分均勻度应该越低越好.
+
+The highest differential distribution of the SM4 S-box is $$2^{-6}$$, meaning it has a good resistance against differential cryptanalysis.
+
+//SM4算法S盒的最大差分概率仅为2_6，具 有较好的抗差分分析特性.
+
+=== Non-Linearity
+
+//4) 非线性度
+
+The non-linearity of an S-box is described by <<BC-Design>>.
+// http://www.cse.ust.hk/faculty/cding/JOURNALS/ffa071.pdf
+
+Let $$S(X) = (f_1(X), f_2(X), ... , f_m(X)) : F_2^n -> F_2^m$$ be a multi-output function. The non-linearity of S(X) is defined as $$N_S = min_{l in L_n, 0 != u in F_2^m} d_H (u . S(X), l(X))$$. L_n is the group of all n-boolean functions, d_H(f, l) is the Hamming distance between f and l. The nonlinearity of the S-box is in fact the minimum Hamming distance between all the Boolean functions and all affine functions.
+
+The upper-bound of nonlinearity is known to be $$2^{n-1} - 2^{n/2 - 1}$$, where a Boolean function that reaches this bound is called a "bent function".
+
+The nonlinearity of a Boolean function is used to measure resistance against linear attacks. The higher the nonlinearity, the higher resistance that the Boolean function f(x) has against linear attacks. On the contrary, the lower the nonlinearity, the Boolean function f(x) has lower resistance against linear attacks.
+
+The nonlinearity of the SM4 S-box is 112.
+
+////
+文献<<BC-Design>>给出了 S盒的非线性度定义：令 S(X) = (/i (X), /2 (X), -, fm (X)) ：    ^
+
+—"多输出函数，称 iVs= min (w • S(^〇，/(X))
+
+设Ln
+
+为S(X)的非线性度.其中“表示全体n元仿射 函数集合，心(/，0表示/与Z之间的汉明距离. 从定义可以看出，S盒的非线性度就是输出位的任 意线性组合和所有关于输入的仿射函数的最小汉 明距离.可以证明，非线性度的上界为—2^4. 达到上界的布尔函数称为Bent函数.
+
+布尔函数的非线性度是用来衡量抵抗“线性 攻击”能力的一个非线性准则，非线性度越大，则 布尔函数/(x)抵抗“线性攻击”的能力越强；反 之，非线性度越小，则布尔函数抵抗“线性攻击”的 能力越弱.
+
+SM4算法S盒非线性度为112.
+////
+
+=== Maximum Linearity Advantage
+
+//5) 最大线性优势
+
+Linear approximation of a S-box is defined in <<BC-Design>>. Given a S-box with n inputs and m outputs, any linear approximation can be represented as : $$a . X = b . Y$$, where $$a in F_2^n$$, $$b in F_2^m$$.
+
+The probability $$p$$ that satisfies $$a . X = b . Y$$ is
+
+$$| p - 1/2 | <= 1/2 - N_S / 2^n$$, where $$| p - 1/2 |$$ is the advantage of the linear approximation equation, $$lambda_S = 1/2 - N_s / 2^n$$ is the maximum advantage of the S-box.
+
+The maximum advantage of the SM4 S-box is $$2^{-4}$$.
+
+////
+文献<<BC-Design>>给出了 S盒的线性逼近的定义:假 设一个〃进m出的S盒，其任意线性逼近都可以 表示为:a • X = 6 • Y，其中 aeF?，6eF?. a •
+Y成立的概率 > 满足p—營，
+P—~^称为线性追近等式的优势，= j—
+为S盒的最佳优势.
+SM4算法的最佳优势为2-4.
+////
+
+=== Balance
+
+//6) 平衡性
+
+A S-box $$S(X) = (f_1(X), f_2(X), ... , f_m(X)) : F_2^n -> F_2^m$$ is considered "balanced" if for any $$beta in F_2^m$$, there are $$2^{n-m}$$ $$x in F_2^n$$, so that $$S(x) = beta$$.
+
+The SM4 S-box is balanced.
+
+////
+文献[11]提到 so) = (, 〇)，/2 (x)，…， 九(X)):朽―PT是平衡的，若对任意的斤FT，恰 好有个:rGF?，使得S(x)=/?.满足平衡性质 的S盒也被称为是正交的.
+
+SM4算法S盒满足平衡性.
+////
+
+=== Completness and Avalanche Effect
+
+//7) 完全性及雪崩效应
+
+A S-box $$S(X) = (f_1(X), f_2(X), ... , f_m(X)) : F_2^n -> F_2^m$$ is considered "complete" if every input bit directly correlates to an output bit. In algebraic expression, each component function contains the unknown variables x_1, x_2, ... x_n, such that for any $$(s, t) in { (i, j) | 1 <= i <= n, 1 <= j <= m}$$, there is an X that S(X) and S(X and e_s) would contain a different bit $$t$$.
+
+Avalanche effect refers to a single bit change in the input would correspond to a change of half of the output bits.
+
+The SM4 S-box satisfies completness and the avalanche effect.
+
+////
+文献<<BC-Design>>给出了 S盒完全性的定义:S(X)= (，ao，/2 (x)，…，/w (x)): fi—ft 是完全的， 是指输出的任一比特和输入的每一比特有关.体 现在代数表达式中，是指每个分量函数的代数表 达式包含所有未知变量A，心，…，而.也就是说对
+
+任意0,0 6{(^)|1<1<仏1</<771}，存在叉， 使得SQO和S(X㊉心）的第f比特不同.
+
+雪崩效应[1°]是指改变输入的1 b，大约有一半 输出比特改变.
+
+SM4算法的S盒满足完全性及雪崩效应.
+////
+
+
+== Linear Transform
+
+//2.3 线性变换
+////
+线性变换用于提供扩散作用.分组密码算法通常采用若干 $$m x m$$ 的S盒并置构成混淆层，一 个S盒输出的m比特仅与其输入的m比特有关，与其他S盒的输入无关，此时引入线性变换可以 将这些S盒的输出打乱、混合，使得输出的m比特数据尽可能地与其他S盒的输入相关.好的线性 变换设计使得S盒的输出得到扩散，使得密码算法能够抵抗差分分析和线性分析.衡量一个线性 变换的扩散性的重要指标是分支数.
+////
+
+Linear transformation is used to provide diffusion in SM4. A blockcipher algorithm often adopts $$m x m$$ S-boxes to form an obfuscation layer.
+
+Since the m-bits output by one S-box are only related to the m bits of its input and are irrelevant to the input of other S boxes, the introduction of a linear transform would disrupt and mix the output m-bits so that they seem correlating to the other S-box inputs.
+
+A sound linear transform design will diffuse the S-box output, allowing the blockcipher to resist differential and linear cryptanalysis.
+
+An important measure of the diffusivity of a linear transform is its branch number.
+
+//文献<<BC-Design>>给出了分支数的定义：
+The "branch number" of a linear transform is defined in <<BC-Design>>:
+
+----
+B(theta) = min_{x!=0} w_b(x) + w_b(theta(x))
+----
+
+Where B(theta) is the branch number of transform $$theta$$, w_b(x) is a non-zero integer x_i (1 <= i <= m), and $$x_i$$ is called the "bundle weight".
+
+//称B⑷为变换0的分支数，其中Wb 〇r)表示非零 的个数，称为力的包重量（bundle weight).
+
+//分支数的概念可用于量化分组密码算法对差分密码分析及线性密码分析的抵抗能力，针对差分密码分析及线性密码分析，可类似地定义 theta 的差分分支数:
+
+The branch number can be used to quantify the resistance of the block cipher algorithm to differential cryptanalysis and linear cryptanalysis.
+
+Similar to differential cryptanalysis and linear cryptanalysis, the differential branch number and linear branch number of theta can be defined as follows.
+
+The differential branch number of theta is:
+
+----
+B_d(theta) = min_{x, x!= x*} (w_b(x and x*) + w_b(theta(x)) and theta(x*))
+----
+
+The linear branch number of theta is:
+
+----
+B_l(theta) = min_{a, b, c (x . alpha^t , theta(x) . beta) != 0} (w_b(alpha) + w_b(beta))
+----
+
+where $$c (x . a^t , theta(x) . beta) = 2 X Pr(x . alpha^t = theta(x) . beta) - 1$$, $$x . alpha^t$$ is a matrix multiplication.
+
+The branch number in a linear transformation reflects its diffusivity. The higher the branch number, the better the diffusion effect.
+
+This means that the larger the differential branch number or linear branch number, the more known plaintexts will be required for differential or linear cryptanalysis respectively.
+
+The linear transform differential branch number and linear branch number of SM4 are both 5.
+
+////
+对于线性变换，分支数的概念反映了其扩散性的好坏，分支数越大，扩散效果越好.线性变换的差分(线性)分支数越大，差分 (线性)密码分析所需的选择(已知)明文数越多.
+
+SM4分组密码算法线性变换的差分分支数及线性分支数均为5.
+////
+
+== Key Expansion Algorithm
+
+The SM4 key schedule is designed to fulfill the security requirements of the encryption algorithm and achieve ease of implementation for performance reasons.
+
+All subkeys are derived from the encryption key, and therefore, subkeys are always statistically relevant. In the context of a blockcipher, it is not possible to have non-statistical-correlated subkeys, but the designer can only aim to have subkeys achieve near statistical independence <<BC-Design>>.
+
+The purpose of the key schedule, generated through the key expansion algorithm, is to mask the statistical correlation between subkeys to make this relationship difficult to exploit.
+
+The SM4 key expansion algorithm satisfies the following design criteria:
+
+1. There are no obvious statistical correlation between subkeys;
+2. There are no weak subkeys;
+3. The speed of key expansion is not slower than the encryption algorithm, and uses less resources;
+4. Every subkey can be directly generated from the encryption key.
+
+////
+2.4密钥扩展算法
+
+密钥扩展算法的设计充分考虑了加密算法对密钥扩展算法的安全需求及其实现的便利性，尽可能使算法达到更高的性能.
+
+子密钥是由加密密钥派生的，理论上子密钥总是统计相关的，文献<<BC-Design>>也提到，在实用密码算法的设计中，子密钥统计独立是不可能做到的，设计者只是尽可能使得子密钥趋近于统计独立.
+
+密钥扩展算法的目的就是使子密钥间的统计相关性不易被破解利用，或者说使子密钥看上去更像是 统计独立的.
+
+在密钥扩展算法的设计上SM4分组密码算法满足以下准则：
+
+1) 子密钥间不存在明显的统计相关性；
+2) 没有弱密钥；
+3) 密钥扩展的速度不低于加密算法的速度，且资源占用少；
+4) 由加密密钥可以直接生成任何一个子密钥
+
+////
