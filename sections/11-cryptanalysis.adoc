@@ -234,13 +234,14 @@ S盒数 0 1 2 2 4 6 8 9 10 <=14
 | Method
 | Rounds
 3+| Complexity
+| Reference
 
 |
 |
 | Time
 | Data
 | Memory
-
+|
 
 | Differential
 | 23
