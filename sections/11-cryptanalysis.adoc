@@ -230,6 +230,7 @@ S盒数 0 1 2 2 4 6 8 9 10 <=14
 
 [cols="5*"]
 |===
+
 | Method
 | Rounds
 3+| Complexity
@@ -240,7 +241,6 @@ S盒数 0 1 2 2 4 6 8 9 10 <=14
 | Data
 | Memory
 
-|---
 
 | Differential
 | 23
