@@ -228,7 +228,7 @@ S盒数 0 1 2 2 4 6 8 9 10 <=14
 
 == Strongest Attacks Against SM4
 
-[cols="5*"]
+[cols="6*"]
 |===
 
 | Method
