@@ -1,0 +1,225 @@
+<reference anchor='AES-BC' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='AES-CA' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='AES-RKC' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='AutoDC' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='MISTY1-270' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='MISTY1-IC' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='SM4-AAEr' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='SM4-AAJi' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='SM4-DiffZhang3' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='SM4-ICLiu' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='SM4-ICZhong' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='SM4-IDCLu' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='SM4-IDCToz' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='SM4-IDCWang' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='SM4-LinearDong' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='SM4-LinearEtrog' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='SM4-LinearLiu' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='SM4-MLCho' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='SM4-MLLiu' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='SM4-MLLiu2' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='SM4-MatrixShe' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='SM4-MatrixWei' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='SM4-SLC' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='SM4-SLDC' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
+<reference anchor='SM4-ZCLC' target=''>
+  <front>
+    <title>TODO</title>
+    <author>
+      <organization>TODO</organization>
+    </author>
+    <date day="1" month="January" year="2001" />
+  </front>
+</reference>
