@@ -1,0 +1,8 @@
+[#sample-implementation]
+= Sample Implementation In C
+
+.sm4.c
+[source,c]
+----
+include::sm4_reference.c[]
+----
