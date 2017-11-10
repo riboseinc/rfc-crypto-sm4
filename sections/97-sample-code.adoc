@@ -4,5 +4,7 @@
 .sm4.c
 [source,c]
 ----
+<CODE BEGINS>
 include::sm4_reference.c[]
+<CODE ENDS>
 ----

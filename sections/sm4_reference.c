@@ -1,5 +1,5 @@
 
-/* SM4 Reference Implementation */
+/* A Simple SM4 Implementation */
 
 #ifndef SM4_ROTL32
 #define SM4_ROTL32(buf, n) (((buf) << n) | ((buf) >> (32 - n)))

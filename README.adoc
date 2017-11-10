@@ -1,4 +1,10 @@
-= Internet Draft: SM4
+= Internet-Draft: SM4
+
+image:https://img.shields.io/travis/riboseinc/rfc-crypto-sm4/master.svg[
+	Build Status, link="https://travis-ci.org/riboseinc/rfc-crypto-sm4"]
+
+This Internet-Draft is written in pure AsciiDoc using the excellent
+https://github.com/riboseinc/asciidoctor-rfc[`asciidoctor-rfc` gem].
 
 == Fetching the document
 
@@ -7,49 +13,44 @@
 git clone https://github.com/riboseinc/rfc-crypto-sm4
 ----
 
+== Installing Build Tools
 
-== Prerequisites
+You will need Ruby, `xml2rfc` and `idnits` (for submission preflight).
 
-You will need `mmark`, `xml2rfc` and `idnits` (for submission preflight).
-
-If you're on macOS you can run:
+=== On macOS
 
 [source,sh]
 ----
-brew install mmark
 brew install idnits
-----
-
-[source,sh]
-----
 brew install python
 easy_install pip
-pip install xml2rfc
+pip install -r requirements.txt
+bundle install
 ----
 
-
-== Building the document
+== Building The Document
 
 [source,sh]
 ----
 make all
-= or
+# or
 export ID_NAME=ribose-cfrg-sm4
 make draft-${ID_NAME}.txt
 ----
 
-== Checking against idnits
+== Checking Against idnits
 
 https://tools.ietf.org/tools/idnits/[idnits] is the RFC checking tool prior to
 submissions.
 
+The `make` target finds exactly the document name from the `:name:` document
+attribute and puts the file in the right place before calling `idnits` to
+prevent it complaining about the location.
+
 [source,sh]
 ----
 export ID_NAME=ribose-cfrg-sm4
-export ID_VERSION=00
-make draft-${ID_NAME}.txt
-mv draft-${ID_NAME}{,-${ID_VERSION}}.txt
-idnits --verbose draft-${ID_NAME}-${ID_VERSION}.txt
+make draft-${ID_NAME}.nits
 ----
 
 == Checking for invalid / unicode characters
@@ -67,3 +68,4 @@ pcregrep --color='auto' -n "[\x80-\xFF]" draft-${ID_NAME}.xml
 export ID_NAME=ribose-cfrg-sm4
 make clean all; open draft-${ID_NAME}.txt
 ----
+

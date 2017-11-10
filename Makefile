@@ -8,6 +8,7 @@ XML  := $(patsubst %.adoc,%.xml,$(SRC))
 HTML := $(patsubst %.adoc,%.html,$(SRC))
 NITS := $(patsubst %.adoc,%.nits,$(SRC))
 
+SHELL := /bin/bash
 # Ensure the xml2rfc cache directory exists locally
 IGNORE := $(shell mkdir -p $(HOME)/.cache/xml2rfc)
 
@@ -26,7 +27,11 @@ clean:
 	xml2rfc --html $^ $@
 
 %.nits: %.txt
-	idnits --verbose $^ > $@ && cat $@
+	VERSIONED_NAME=`grep :name: $*.adoc | cut -f 2 -d ' '`; \
+	cp $^ $${VERSIONED_NAME}.txt && \
+	idnits --verbose $${VERSIONED_NAME}.txt > $@ && \
+	cp $@ $${VERSIONED_NAME}.nits && \
+	cat $${VERSIONED_NAME}.nits
 
 open:
 	open *.txt

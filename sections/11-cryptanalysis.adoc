@@ -408,5 +408,7 @@ especially compared to other blockciphers adopted in <<ISO.IEC.18033-3>> that
 already have full-round attacks, including MISTY1 <<MISTY1-IC>> <<MISTY1-270>>
 and AES <<AES-CA>> <<AES-BC>> <<AES-RKC>>.
 
-//从公开的研究结果可以看出，目前还没有一种分析方法能够在理论上攻破24轮的SM4算法.因此，从传统的分析方法来看，SM4算法具有较强的安全冗余度.尤其是对比MISTY1，AES等已有全轮攻击方案的分组密码算法，SM4算法具备一定的安全性优势.
+// 从公开的研究结果可以看出，目前还没有一种分析方法能够在理论上攻破24轮的SM4算法.因此，
+//从传统的分析方法来看，SM4算法具有较强的安全冗余度.尤其是对比MISTY1，
+//AES等已有全轮攻击方案的分组密码算法，SM4算法具备一定的安全性优势.
 
