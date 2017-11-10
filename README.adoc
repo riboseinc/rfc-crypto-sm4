@@ -25,6 +25,7 @@ brew install idnits
 brew install python
 easy_install pip
 pip install -r requirements.txt
+gem install bundler
 bundle install
 ----
 
