@@ -126,8 +126,8 @@ Liu等人[25]给出了SM4的13轮积分分析，需要的数据复杂度为216�
 
 == Algebraic Attack
 
-SM4-AAJi
-<<SM4-AAEr>> Ji et al. and [28] Erickson et al. utilized algebraic methods such as XL, Groebner base and SAT
+
+Ji et al. <<SM4-AAJi>> and Erickson et al. <<SM4-AAEr>> utilized algebraic methods such as XL, Groebner base and SAT
 to analyze the resistance of SM4 against algebraic attacks. The results demonstrate that SM4 is safe against algebraic attacks, and specifically, has a higher resistance against algebraic attacks than AES.
 
 ////
@@ -231,66 +231,66 @@ S盒数 0 1 2 2 4 6 8 9 10 <=14
 [cols="6*"]
 |===
 
-| Method
-| Rounds
-3+| Complexity
-| Reference
+|Method
+|Rounds
+3+|Complexity
+|Reference
 
 |
 |
-| Time
-| Data
-| Memory
+|Time
+|Data
+|Memory
 |
 
-| Differential
-| 23
-| $$2^126.7$$
-| $$2^117$$
-| $$2^120.7$$
-| <<SM4-DiffSu>>
+|Differential
+|23
+|$$2^126.7$$
+|$$2^117$$
+|$$2^120.7$$
+|<<SM4-DiffSu>>
 
-| Linear
-| 24
-| $$2^122.6$$
-| $$2^122.6$$
-| $$2^85$$
-| <<SM4-NLC>>
+|Linear
+|24
+|$$2^122.6$$
+|$$2^122.6$$
+|$$2^85$$
+|<<SM4-NLC>>
 
-| Multi-dimensional Linear
-| 23
-| $$2^122.7$$
-| $$2^122.6$$
-| $$2^120.6$$
-| <<SM4-MLLiu2>>
+|Multi-dimensional Linear
+|23
+|$$2^122.7$$
+|$$2^122.6$$
+|$$2^120.6$$
+|<<SM4-MLLiu2>>
 
-| Impossible Differential
-| 17
-| $$2^132$$
-| $$2^117$$
-| -
-| <<SM4-IDCWang>>
+|Impossible Differential
+|17
+|$$2^132$$
+|$$2^117$$
+|-
+|<<SM4-IDCWang>>
 
-| Zero-correlation Linear
-| 14
-| $$2^120.7$$
-| $$2^123.5$$
-| $$2^73$$
-| SM4-ZCLC
+|Zero-correlation Linear
+|14
+|$$2^120.7$$
+|$$2^123.5$$
+|$$2^73$$
+|SM4-ZCLC
 
-| Integral
-| 14
-| $$2^96.5$$
-| $$2^32$$
-| -
-| <<SM4-ICZhong>>
+|Integral
+|14
+|$$2^96.5$$
+|$$2^32$$
+|-
+|<<SM4-ICZhong>>
 
-| Matrix
-| 18
-| $$2^110.77$$
-| $$2^127$$
-| $$2^130$$
-| <<SM4-MatrixShe>>
+|Matrix
+|18
+|$$2^110.77$$
+|$$2^127$$
+|$$2^130$$
+|<<SM4-MatrixShe>>
 
 |===
 
