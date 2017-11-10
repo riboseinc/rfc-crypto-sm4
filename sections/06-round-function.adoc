@@ -56,7 +56,7 @@ $$
  -->
 ////
 
-It consists of a non-linear transform $$tau$$ and linear transform $$L$$.
+It consists of a nonlinear transform $$tau$$ and linear transform $$L$$.
 
 $$
 T(.) = L(tau(.))
@@ -71,7 +71,7 @@ T'(.) = L'(tau(.))
 $$
 
 
-=== Non-linear Transformation tau
+=== Nonlinear Transformation tau
 
 ////
 <!-- (1) 非线性变换 𝜏 -->
@@ -128,7 +128,7 @@ $$
 33 𝐶=𝐿𝐵 =𝐵⨁𝐵⋘2⨁𝐵⋘10⨁𝐵⋘18⨁𝐵⋘24.
 ////
 
-The output of non-linear transformation function $$tau$$ is used as input
+The output of nonlinear transformation function $$tau$$ is used as input
 to linear transformation function $$L$$.
 
 Given $$B$$, a 32-bit input.
@@ -167,7 +167,7 @@ $$
 
 === S-box $$S$$
 
-The S-box $$S$$ used in non-linear transformation $$tau$$ is given in this
+The S-box $$S$$ used in nonlinear transformation $$tau$$ is given in this
 lookup table in hexadecimal form:
 
 ////

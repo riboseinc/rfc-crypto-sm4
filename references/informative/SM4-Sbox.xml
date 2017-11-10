@@ -1,0 +1,57 @@
+<reference anchor='SM4-Sbox' target='http://www.cnki.com.cn/Article/CJFDTotal-JSJC200805057.htm'>
+  <front>
+    <title>Cryptographic Properties of S-box in SMS4</title>
+    <author initials="J." surname="Liu" fullname="Jia Liu">
+      <organization>Department of Electronic and Communications Engineering, Sun Yat-Sen University</organization>
+      <address>
+        <postal>
+          <street>Building 3, Gezhi Yuan</street>
+          <street>132 Outer Ring East Road</street>
+          <street>University City </street>
+          <street>Punyu District</street>
+          <city>Guangzhou</city>
+          <region>Guangdong</region>
+          <code>510275</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://sece.sysu.edu.cn</uri>
+      </address>
+    </author>
+    <author initials="B." surname="Wei" fullname="Baodian Wei">
+      <organization>Department of Electronic and Communications Engineering, Sun Yat-Sen University</organization>
+      <address>
+        <postal>
+          <street>Building 3, Gezhi Yuan</street>
+          <street>132 Outer Ring East Road</street>
+          <street>University City </street>
+          <street>Punyu District</street>
+          <city>Guangzhou</city>
+          <region>Guangdong</region>
+          <code>510275</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://sece.sysu.edu.cn</uri>
+      </address>
+    </author>
+    <author initials="X." surname="Dai" fullname="Xianhua Dai">
+      <organization>Department of Electronic and Communications Engineering, Sun Yat-Sen University</organization>
+      <address>
+        <postal>
+          <street>Building 3, Gezhi Yuan</street>
+          <street>132 Outer Ring East Road</street>
+          <street>University City </street>
+          <street>Punyu District</street>
+          <city>Guangzhou</city>
+          <region>Guangdong</region>
+          <code>510275</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://sece.sysu.edu.cn</uri>
+      </address>
+    </author>
+    <date day='11' month='January' year='2011'/>
+  </front>
+</reference>
+
+
+

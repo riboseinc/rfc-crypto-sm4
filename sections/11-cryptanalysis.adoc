@@ -48,22 +48,42 @@ such as <<SM4-HiSpeed>>, have also been proposed.
 
 == Differential Cryptanalysis
 
-<<SM4-DiffZhang1>> gave a 21-round differential analysis with data complexity $$2^188$$, time complexity $$2^126.8$$ encryptions.
+<<SM4-DiffZhang1>> gave a 21-round differential analysis with data complexity
+$$2^188$$, time complexity $$2^126.8$$ encryptions.
 
-<<SM4-DiffZhang2>> gave a 18-round differential characteristics with an attack that reaches the 22nd round, with data complexity $$2^117$$ and time complexity $$2^112.3$$.
+<<SM4-DiffZhang2>> gave a 18-round differential characteristics with an attack
+that reaches the 22nd round, with data complexity $$2^117$$ and time complexity
+$$2^112.3$$.
 
-<<SM4-DiffZhang3>> utilized 18-round differential characteristics for the 22nd round with $$2^117$$ chosen plaintexts with time complexity $$2^123$$ encryptions, storage complexity of $$2^112$$.
+<<SM4-DiffZhang3>> utilized 18-round differential characteristics for the 22nd
+round with $$2^117$$ chosen plaintexts with time complexity $$2^123$$
+encryptions, storage complexity of $$2^112$$.
 
-<<SM4-DiffSu>> In 2011, Su Bozan gave a 19 round differential characteristics and pushed their attack to the 23rd round, with data complexity of $$2^118$$ chosen plaintexts, time complexity $$2^126.7$$ encryptions, and storage complexity $$2^120.7$$.
+<<SM4-DiffSu>> In 2011, Su Bozan gave a 19 round differential characteristics
+and pushed their attack to the 23rd round, with data complexity of $$2^118$$
+chosen plaintexts, time complexity $$2^126.7$$ encryptions, and storage
+complexity $$2^120.7$$.
 
 
 == Linear Cryptanalysis
 
-<<SM4-LinearEtrog>> 2008 Etrog et al. presented a linear analysis result for 22 rounds of SM4, the data complexity is given as $$2^188.4$$ known plaintexts, time complexity $$2^117$$ encrypt operations.
+<<SM4-LinearEtrog>> 2008 Etrog et al. presented a linear analysis result for 22
+rounds of SM4, the data complexity is given as $$2^188.4$$ known plaintexts,
+time complexity $$2^117$$ encrypt operations.
 
-<<SM4-LinearDong>> 2011 Dong presented a linear analysis result for 20 rounds, $$2^110.4$$ known ciphertexts, $$2^106.8$$ encryption operations, storage complexity 2^90.
+<<SM4-LinearDong>> 2011 Dong presented a linear analysis result for 20 rounds,
+$$2^110.4$$ known ciphertexts, $$2^106.8$$ encryption operations, storage
+complexity $$2^90$$.
 
-<<SM4-LinearLiu>> 2014 Liu et al. presented a result for 23-rounds of SM4 linear analysis, time complexity $$2^112$$ encryption operations, data complexity $$2^126.54$$ known ciphertexts, storage complexity $$2^116$$.
+<<SM4-LinearLiu>> 2014 Liu et al. presented a result for 23-rounds of SM4
+linear analysis, time complexity $$2^112$$ encryption operations, data
+complexity $$2^126.54$$ known ciphertexts, storage complexity $$2^116$$.
+
+<<SM4-NLC>> in 2017 Liu et  al. presented a result for 24-rounds of linear
+cryptanalysis for SM4, with time complexity of $$2^122.6$$ encryptions,
+data complexity of $$2^122.6$$ known ciphertexts, and
+storage complexity of $$2^85$$. As of the publishing of this document this
+represents the highest number of rounds achieved.
 
 ////
 2) 线性密码分析
@@ -73,11 +93,20 @@ such as <<SM4-HiSpeed>>, have also been proposed.
 
 == Multi-dimensional Linear Cryptanalysis
 
-<<SM4-MLLiu>> In 2010, Liu et al. constructed a series of 18 rounds of linear traces based on a 5-round circular linear trace, capable of attacking 22 rounds of SM4. The required data complexity was $$2^112$$ known plaintexts, time complexity $$2^124.21$$ encryption operations, with storage complexity of $$2^118.83$$.
+<<SM4-MLLiu>> In 2010, Liu et al. constructed a series of 18 rounds of linear
+traces based on a 5-round circular linear trace, capable of attacking 22 rounds
+of SM4. The required data complexity was $$2^112$$ known plaintexts, time
+complexity $$2^124.21$$ encryption operations, with storage complexity of
+$$2^118.83$$.
 
-<<SM4-MLCho>> In 2010 Cho et al. gave a linear analysis of 23 rounds of SM4 with a data complexity of $$2^126.7$$ known plaintexts and a time complexity of $$2^127$$, storage complexity of $$2^120.7$$.
+<<SM4-MLCho>> In 2010 Cho et al. gave a linear analysis of 23 rounds of SM4
+with a data complexity of $$2^126.7$$ known plaintexts and a time complexity of
+$$2^127$$, storage complexity of $$2^120.7$$.
 
-<<SM4-MLLiu2>> In 2014, Liu et al. gave the results of multi-dimensional linear analysis of 23 rounds of SM4 algorithm. The time complexity was $$2^122.7$$, data complexity was $$2^122.6$$ known plaintext with storage complexity $$2^120.6$$.
+<<SM4-MLLiu2>> In 2014, Liu et al. gave the results of multi-dimensional linear
+analysis of 23 rounds of SM4 algorithm. The time complexity was $$2^122.7$$,
+data complexity was $$2^122.6$$ known plaintext with storage complexity
+$$2^120.6$$.
 
 ////
 3) 多维线性密码分析
@@ -87,11 +116,19 @@ such as <<SM4-HiSpeed>>, have also been proposed.
 
 == Impossible Differential Cryptanalysis
 
-<<SM4-IDCLu>> Lu et al. first presented 16 rounds of impossible differential analysis of SM4 with the required data complexity $$2^105$$ chosen plaintexts, time complexity $$2^107$$ encryption operations.
+<<SM4-IDCLu>> Lu et al. first presented 16 rounds of impossible differential
+analysis of SM4 with the required data complexity $$2^105$$ chosen plaintexts,
+time complexity $$2^107$$ encryption operations.
 
-<<SM4-IDCToz>> Toz et al. revised the results of [21], that the data complexity is actually $$2^117.05$$ chosen plaintexts, time complexity $$2^132.06$$ memory queries, but since the complexity is already beyond the $$2^128$$ limit, meaning that if 16-rounds SM4 encryption can be completed in 16 memory queries, the attack results become invalid.
+<<SM4-IDCToz>> Toz et al. revised the results of [21], that the data complexity
+is actually $$2^117.05$$ chosen plaintexts, time complexity $$2^132.06$$ memory
+queries, but since the complexity is already beyond the $$2^128$$ limit,
+meaning that if 16-rounds SM4 encryption can be completed in 16 memory queries,
+the attack results become invalid.
 
-<<SM4-IDCWang>> In 2010 Wang et. al. pushed the impossible differential cryptanalysis to 17 rounds of SM4, the data complexity is $$2^117$$ chosen ciphertexts, time complexity $$2^132$$ memory queries.
+<<SM4-IDCWang>> In 2010 Wang et. al. pushed the impossible differential
+cryptanalysis to 17 rounds of SM4, the data complexity is $$2^117$$ chosen
+ciphertexts, time complexity $$2^132$$ memory queries.
 
 
 ////
@@ -104,7 +141,10 @@ Lu等人首先给出了 SM4的16轮不可能 差分分析，需要的数据量�
 
 == Zero-correlation Linear Cryptanalysis
 
-<<SM4-ZCLC>> gives the results of multi-dimensional zero-correlation linear cryptanalysis of a 14-round SM4 algorithm. The required data complexity is $$2^123.5$$ known plaintexts, time complexity is $$2^120.7$$ encryption operations and storage complexity of $$2^73$$ blocks.
+<<SM4-ZCLC>> gives the results of multi-dimensional zero-correlation linear
+cryptanalysis of a 14-round SM4 algorithm. The required data complexity is
+$$2^123.5$$ known plaintexts, time complexity is $$2^120.7$$ encryption
+operations and storage complexity of $$2^73$$ blocks.
 
 ////
 5) 零相关线性分析
@@ -114,43 +154,63 @@ Lu等人首先给出了 SM4的16轮不可能 差分分析，需要的数据量�
 
 == Integral Cryptanalysis
 
-<<SM4-ICLiu>> Liu et al. gave a 13-round integral analysis of SM4, which required $$2^16$$ chosen plaintexts and time complexity of $$2^114$$ encryption operations.
+<<SM4-ICLiu>> Liu et al. gave a 13-round integral analysis of SM4, which
+required $$2^16$$ chosen plaintexts and time complexity of $$2^114$$ encryption
+operations.
 
-<<SM4-ICZhong>> Zhong et al. constructed a 12-round distinguisher of SM4 to attack 14-round SM4, with data complexity of $$2^32$$ chosen plaintexts and time complexity $$2^96.5$$ encryptions.
+<<SM4-ICZhong>> Zhong et al. constructed a 12-round distinguisher of SM4 to
+attack 14-round SM4, with data complexity of $$2^32$$ chosen plaintexts and
+time complexity $$2^96.5$$ encryptions.
 
 ////
 6) 积分密码分析
 
-Liu等人[25]给出了SM4的13轮积分分析，需要的数据复杂度为216个选择明文，时间复杂度为 2114次加密.钟名富等人[26]构造了 12轮积分区分器，能够攻击M轮SM4算法，需要的数据复杂度 为232个选择明文，时间复杂度为296’5次算法加密•
+Liu等人[25]给出了SM4的13轮积分分析，需要的数据复杂度为216个选择明文，时间复杂度为
+2114次加密.钟名富等人[26]构造了
+12轮积分区分器，能够攻击M轮SM4算法，需要的数据复杂度
+为232个选择明文，时间复杂度为296’5次算法加密•
 ////
 
 == Algebraic Attack
 
 
-Ji et al. <<SM4-AAJi>> and Erickson et al. <<SM4-AAEr>> utilized algebraic methods such as XL, Groebner base and SAT
-to analyze the resistance of SM4 against algebraic attacks. The results demonstrate that SM4 is safe against algebraic attacks, and specifically, has a higher resistance against algebraic attacks than AES.
+Ji et al. <<SM4-AAJi>> and Erickson et al. <<SM4-AAEr>> utilized algebraic
+methods such as XL, Groebner base and SAT to analyze the resistance of SM4
+against algebraic attacks. The results demonstrate that SM4 is safe against
+algebraic attacks, and specifically, has a higher resistance against algebraic
+attacks than AES.
 
 ////
 7) 代数攻击
 
-ji等人[27]和Erickson等人_分别使用了XL方法、Groebner基方法以及SAT方法等不同的代 数方法对SM4抵抗代数攻击的能力进行了评估， 结果表明SM4在代数攻击下是安全的.特别地， 在XL方法下，SM4抗代数攻击的能力比AES还 要好•
+ji等人[27]和Erickson等人_分别使用了XL方法、Groebner基方法以及SAT方法等不同的代
+数方法对SM4抵抗代数攻击的能力进行了评估，
+结果表明SM4在代数攻击下是安全的.特别地， 在XL方法下，SM4抗代数攻击的能力比AES还
+要好•
 ////
 
 == Matrix Attack
 
-<<SM4-MatrixLu>> Lu et al. provided a matrix attack against 14-round SM4, with data complexity $$2^121.82$$
-chosen plaintexts, time complexity $$2^116.66$$ encryptions.
+<<SM4-MatrixLu>> Lu et al. provided a matrix attack against 14-round SM4, with
+data complexity $$2^121.82$$ chosen plaintexts, time complexity $$2^116.66$$
+encryptions.
 
-<<SM4-MatrixToz>> In 2008 Toz et al. lowered both data and time complexity of the aformentioned attack to $$2^106.89$$ chosen ciphertexts and time complexity of $$2^107.89$$.
+<<SM4-MatrixToz>> In 2008 Toz et al. lowered both data and time complexity of
+the aformentioned attack to $$2^106.89$$ chosen ciphertexts and time complexity
+of $$2^107.89$$.
 
-SM4-MatrixZhang
-<<SM4-DiffZhang1>>. In 2008, Zhang et all. provided a matrix attack against 16-round SM4, which required a data complexity of $$2^125$$ chosen plaintexts and time complexity of $$2^116$$ encryptions.
+In 2008, Zhang et al. <<SM4-MatrixZhang>> provided a matrix
+attack against 16-round SM4, which required a data complexity of $$2^125$$
+chosen plaintexts and time complexity of $$2^116$$ encryptions.
 
-SM4-MatrixShe
-<<SM4-MatrixShe>> She's Master dissertation provided a SM4 16-round matrix distinguisher which can attack 18-round SM4, with data complexity of $$2^127$$ chosen plaintexts and time complexity $$2^110.77$$ encryptions with memory storage of $$2^130$$.
+<<SM4-MatrixShe>> She's Master dissertation provided a SM4
+16-round matrix distinguisher which can attack 18-round SM4, with data
+complexity of $$2^127$$ chosen plaintexts and time complexity $$2^110.77$$
+encryptions with memory storage of $$2^130$$.
 
-SM4-MatrixWei
-<<SM4-MatrixWei>> Wei et al. applied differential analysis and algebraic attack techniques on 20-round SM4 and discovered that the combined attack results on 20-round SM4 are superior than using pure differential cryptanalysis.
+<<SM4-MatrixWei>> Wei et al. applied differential analysis and algebraic attack
+techniques on 20-round SM4 and discovered that the combined attack results on
+20-round SM4 are superior than using pure differential cryptanalysis.
 
 ////
 8) 矩阵攻击
@@ -160,16 +220,17 @@ SM4-MatrixWei
 
 == Provable Security Against Differential And Linear Cryptanalysis
 
-SM4 uses a novel structure differing from the general Feistel and SP structures.
+SM4 uses a novel structure differing from the general Feistel and SP
+structures.
 
-SM4-Random
-<<SM4-Random>> has proven that the SM4 non-balanced Feistel structure is pseudo-random.
+<<SM4-Random>> has proven that the SM4 non-balanced Feistel structure is
+pseudo-random.
 
-SM4-SLDC
-<<SM4-SLDC>> analyzes the SM4 non-balanced Feistel structure on its resistance against
-differential and linear cryptanalysis techniques. Under SP type round functions
-with branch number 5, it is proven that in a 27-round SM4 guarantees at least 22
-active S-boxes, therefore SM4 is secure against differential attacks.
+<<SM4-SLDC>> analyzes the SM4 non-balanced Feistel structure on its resistance
+against differential and linear cryptanalysis techniques. Under SP type round
+functions with branch number 5, it is proven that in a 27-round SM4 guarantees
+at least 22 active S-boxes, therefore SM4 is secure against differential
+attacks.
 
 <<SM4-SLC>> analyzes resistance of SM4 against linear cryptanalysis.
 
@@ -181,13 +242,19 @@ SM4结构与之前的Feistel结构、SP结构等相比，是一种新型的结�
 
 == Provable Security Against Related-Key Differential Cryptanalysis
 
-Related-key differential cryptanalysis is related to the encryption algorithm and key schedule. When performing a related-key attack, the attacker simultaneously insert differences in both the key and the message.
+Related-key differential cryptanalysis is related to the encryption algorithm
+and key schedule. When performing a related-key attack, the attacker
+simultaneously insert differences in both the key and the message.
 
-In <<AutoDC>>, Sun et al. proposed an automated differential route search method based on MILP (mixed-integer linear programming) that can be used to assess the security bounds of a blockcipher under (related-key) differential cryptanalysis.
+In <<AutoDC>>, Sun et al. proposed an automated differential route search
+method based on MILP (mixed-integer linear programming) that can be used to
+assess the security bounds of a blockcipher under (related-key) differential
+cryptanalysis.
 
 // These are newer results than those in SM4-Details
 
-<<SM4-RKDC>> describes the lower bounds of active S-boxes within SM4 as follows:
+<<SM4-RKDC>> describes the lower bounds of active S-boxes within SM4 as
+follows:
 
 [source]
 ----
@@ -207,9 +274,13 @@ Related Key  | 22 | -  | -  | -  | -  | -  | -  | -
 ("-" denotes unknown)
 ----
 
-As the maximal probability of the SM4 S-box is $$2−6$$, when the minimum active S-boxes reach 22 the differential characteristics will have probability $$2^132$$, which is higher than enumeration ($$2^128$$).
+As the maximal probability of the SM4 S-box is $$2−6$$, when the minimum active
+S-boxes reach 22 the differential characteristics will have probability
+$$2^132$$, which is higher than enumeration ($$2^128$$).
 
-This indicates that 19 rounds and 23 rounds under related key and single key settings will provide a minimum of 22 active S-boxes and is able to resist related-key differential attacks.
+This indicates that 19 rounds and 23 rounds under related key and single key
+settings will provide a minimum of 22 active S-boxes and is able to resist
+related-key differential attacks.
 
 ////
 10) 抗相关密钥差分密码分析的可证明安全性
@@ -298,9 +369,13 @@ S盒数 0 1 2 2 4 6 8 9 10 <=14
 |===
 ////
 
-As of the publication of this document, no open research results have provided a method to successfully attack beyond 24 rounds of SM4.
+As of the publication of this document, no open research results have provided
+a method to successfully attack beyond 24 rounds of SM4.
 
-The traditional view suggests that SM4 provides an extra safety margin especially compared to other blockciphers adopted in <<ISO.IEC.18033-3>> that already have full-round attacks, including MISTY1 <<MISTY1-IC>> <<MISTY1-270>> and AES <<AES-CA>> <<AES-BC>> <<AES-RKC>>.
+The traditional view suggests that SM4 provides an extra safety margin
+especially compared to other blockciphers adopted in <<ISO.IEC.18033-3>> that
+already have full-round attacks, including MISTY1 <<MISTY1-IC>> <<MISTY1-270>>
+and AES <<AES-CA>> <<AES-BC>> <<AES-RKC>>.
 
 //从公开的研究结果可以看出，目前还没有一种分析方法能够在理论上攻破24轮的SM4算法.因此，从传统的分析方法来看，SM4算法具有较强的安全冗余度.尤其是对比MISTY1，AES等已有全轮攻击方案的分组密码算法，SM4算法具备一定的安全性优势.
 
