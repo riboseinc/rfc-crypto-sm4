@@ -1,0 +1,23 @@
+<reference anchor='SM4' target='http://www.oscca.gov.cn/UpFile/200621016423197990.pdf'>
+<!-- <reference anchor='SM4' target='http://info.dacas.cn/sharedimages/ARTICLES/SMAlgorithms/SM4.pdf'> -->
+  <front>
+    <title>SMS4 Cryptographic Algorithm For Wireless LAN Products</title>
+    <author>
+      <organization>Organization of State Commercial Administration of China</organization>
+      <address>
+        <postal>
+         <street>7 Dian Chang Lu, Fengtai Qu</street>
+         <city>Beijing</city>
+         <region>Beijing</region>
+         <code>100036</code>
+         <country>People's Republic of China</country>
+        </postal>
+        <phone>+86 (0)10 5970-3789</phone>
+        <!--<email>contact@oscca.gov.cn</email>-->
+        <uri>http://www.oscca.gov.cn</uri>
+      </address>
+    </author>
+    <date month='January' year='2006'/>
+  </front>
+</reference>
+

@@ -1,0 +1,51 @@
+<reference anchor='SM4-WhiteBox' target='http://dx.doi.org/10.1002/sec.1394'>
+  <!-- @article {SEC:SEC1394,
+  author = {Bai, Kunpeng and Wu, Chuankun},
+  title = {A secure white-box SM4 implementation},
+  journal = {Security and Communication Networks},
+  volume = {9},
+  number = {10},
+  issn = {1939-0122},
+  url = {http://dx.doi.org/10.1002/sec.1394},
+  doi = {10.1002/sec.1394},
+  pages = {996-1006},
+  keywords = {white-box cryptography, SM4, secure implementation, lookup tables, obfuscation},
+  year = {2016},
+  note = {sec.1394},
+  } -->
+  <front>
+    <title>A secure white-box SM4 implementation</title>
+    <author initials="K." surname="Bai" fullname="Kunpeng Bai">
+      <organization>State Key Laboratory of Information Security, Institute of Information Engineering, Chinese Academy of Sciences</organization>
+      <address>
+        <postal>
+          <street>Institute of Software, Chinese Academy of Sciences</street>
+          <street>No. 4 South Fourth Street</street>
+          <city>Zhong Guan Cun</city>
+          <region>Beijing</region>
+          <code>100190</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.is.cas.cn/</uri>
+      </address>
+    </author>
+    <author initials="C." surname="Wu" fullname="Chuankun Wu">
+      <organization>State Key Laboratory of Information Security, Institute of Information Engineering, Chinese Academy of Sciences</organization>
+      <address>
+        <postal>
+          <street>Institute of Software, Chinese Academy of Sciences</street>
+          <street>No. 4 South Fourth Street</street>
+          <city>Zhong Guan Cun</city>
+          <region>Beijing</region>
+          <code>100190</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <email>ckwu@iie.ac.cn</email>
+        <uri>http://www.is.cas.cn/</uri>
+      </address>
+    </author>
+    <date day='15' month='May' year='2008'/>
+  </front>
+</reference>
+
+

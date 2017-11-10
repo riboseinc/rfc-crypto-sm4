@@ -1,0 +1,21 @@
+
+<reference anchor='NIST.SP.800-38E' target='http://dx.doi.org/10.6028/NIST.SP.800-38E'>
+  <front>
+    <title>NIST Special Publication 800-38E: Recommendation for Block Cipher Modes of Operation: the XTS-AES Mode for Confidentiality on Storage Devices</title>
+    <author initials="M." surname="Dworkin" fullname="Morris Dworkin">
+      <organization>National Institute of Standards and Technology</organization>
+      <address>
+        <postal>
+          <street>100 Bureau Drive</street>
+          <city>Gaithersburg</city>
+          <region>MD</region>
+          <code>20899-8930</code>
+          <country>United States</country>
+        </postal>
+        <uri>http://www.nist.gov/</uri>
+      </address>
+    </author>
+    <date month='January' year='2010'/>
+  </front>
+</reference>
+

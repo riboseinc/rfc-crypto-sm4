@@ -1,0 +1,23 @@
+<reference anchor='ISO.IEC.18033-3' target='https://www.iso.org/standard/54531.html'>
+  <front>
+    <title>ISO/IEC 18033-3:2010 -- Encryption algorithms -- Part 3: Block ciphers</title>
+    <author>
+      <organization>International Organization for Standardization</organization>
+      <address>
+        <postal>
+          <street>BIBC II</street>
+          <street>Chemin de Blandonnet 8</street>
+          <street>CP 401</street>
+          <city>Vernier</city>
+          <region>Geneva</region>
+          <code>1214</code>
+          <country>Switzerland</country>
+        </postal>
+        <phone>+41 22 749 01 11</phone>
+        <email>central@iso.org</email>
+        <uri>https://www.iso.org/</uri>
+      </address>
+    </author>
+    <date day='1' month='December' year='2017'/>
+  </front>
+</reference>

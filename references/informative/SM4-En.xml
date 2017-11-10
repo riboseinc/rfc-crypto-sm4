@@ -1,0 +1,38 @@
+
+<reference anchor='SM4-En' target='https://www.iacr.org/cryptodb/data/paper.php?pubkey=18006'>
+  <front>
+    <!-- https://www.iacr.org/cryptodb/data/paper.php?pubkey=18006 -->
+    <title>SMS4 Encryption Algorithm for Wireless Networks</title>
+    <author initials="W." surname="Diffie" fullname="Whitfield Diffie">
+      <organization>Sun Microsystems</organization>
+      <address>
+        <postal>
+          <street>4150 Network Circle</street>
+          <city>Santa Clara</city>
+          <region>CA</region>
+          <code>95054</code>
+          <country>United States of America</country>
+        </postal>
+        <email>whitfielddiffie@gmail.com</email>
+        <uri>https://cisac.fsi.stanford.edu/</uri>
+      </address>
+    </author>
+    <author initials="G." surname="Ledin" fullname="George Ledin">
+      <organization>Sonoma State University</organization>
+      <address>
+        <postal>
+          <street>Darwin 116, 1801 East Cotati Ave.</street>
+          <city>Rohnert Park</city>
+          <region>CA</region>
+          <code>94928</code>
+          <country>United States of America</country>
+        </postal>
+        <email>george.ledin@sonoma.edu</email>
+        <uri>http://www.cs.sonoma.edu/</uri>
+      </address>
+    </author>
+    <date day='15' month='May' year='2008'/>
+  </front>
+</reference>
+
+

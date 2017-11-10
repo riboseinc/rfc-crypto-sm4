@@ -1,0 +1,19 @@
+<reference anchor='BOTAN' target='https://botan.randombit.net'>
+  <front>
+    <title>Botan: Crypto and TLS for C++11</title>
+    <author initials="J. E." surname="Lloyd" fullname="Jack E. Lloyd">
+      <organization>Botan Project</organization>
+      <address>
+        <postal>
+          <street></street>
+          <country>United States of America</country>
+        </postal>
+        <email>jack@randombit.net</email>
+        <uri>https://botan.randombit.net</uri>
+      </address>
+    </author>
+    <date day='18' month='October' year='2017'/>
+  </front>
+</reference>
+
+

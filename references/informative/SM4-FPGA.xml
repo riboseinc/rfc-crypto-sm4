@@ -1,0 +1,87 @@
+<reference anchor='SM4-FPGA' target='https://www.researchgate.net/publication/287081686_Improvements_of_SM4_algorithm_and_application_in_Ethernet_encryption_system_based_on_FPGA'>
+  <front>
+    <!-- article{article,
+    author = {Cheng, H and Zhai, S and Fang, L and Ding, Q and Huang, C},
+    year = {2014},
+    month = {07},
+    pages = {518-526},
+    title = {Improvements of SM4 algorithm and application in Ethernet encryption system based on FPGA},
+    volume = {5},
+    booktitle = {Journal of Information Hiding and Multimedia Signal Processing}
+    } -->
+    <!-- Cryptology ePrint Archive, Report 2013/626 -->
+    <title>Improvements of SM4 Algorithm and Application in Ethernet Encryption System Based on FPGA</title>
+    <author initials="H." surname="Cheng" fullname="Hai Cheng">
+      <organization>Key Laboratory of Electronic Engineering, University of Heilongjiang</organization>
+      <address>
+        <postal>
+          <street>74 Xuefu Road</street>
+          <city>Harbin</city>
+          <region>Heilongjiang</region>
+          <code>150080</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <email>chengh@hlju.edu.cn</email>
+        <uri>httphttp://www.hlju.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="S." surname="Zhai" fullname="Shuxia Zhai">
+      <organization>Key Laboratory of Electronic Engineering, University of Heilongjiang</organization>
+      <address>
+        <postal>
+          <street>74 Xuefu Road</street>
+          <city>Harbin</city>
+          <region>Heilongjiang</region>
+          <code>150080</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>httphttp://www.hlju.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="L." surname="Fang" fullname="Lianzhong Fang">
+      <organization>Key Laboratory of Electronic Engineering, University of Heilongjiang</organization>
+      <address>
+        <postal>
+          <street>74 Xuefu Road</street>
+          <city>Harbin</city>
+          <region>Heilongjiang</region>
+          <code>150080</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <email>chengh@hlju.edu.cn</email>
+        <uri>httphttp://www.hlju.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="Q." surname="Ding" fullname="Qun Ding">
+      <organization>Key Laboratory of Electronic Engineering, University of Heilongjiang</organization>
+      <address>
+        <postal>
+          <street>74 Xuefu Road</street>
+          <city>Harbin</city>
+          <region>Heilongjiang</region>
+          <code>150080</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <email>qunding@aliyun.cn</email>
+        <uri>httphttp://www.hlju.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="C." surname="Huang" fullname="Chunguang Huang">
+      <organization>Key Laboratory of Electronic Engineering, University of Heilongjiang</organization>
+      <address>
+        <postal>
+          <street>74 Xuefu Road</street>
+          <city>Harbin</city>
+          <region>Heilongjiang</region>
+          <code>150080</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <email>chenghdahuangr@163.com</email>
+        <uri>http://www.hlju.edu.cn/</uri>
+      </address>
+    </author>
+    <date day='01' month='July' year='2014'/>
+  </front>
+</reference>
+
+

@@ -1,0 +1,25 @@
+<reference anchor='BC-EVAL' target='http://web.cs.ucdavis.edu/&tilde;rogaway/papers/modes.pdf'>
+  <front>
+    <title>Evaluation of Some Blockcipher Modes of Operation</title>
+    <author initials="P." surname="Rogaway" fullname="Phillip Rogaway">
+      <organization>University of California, Davis</organization>
+      <address>
+        <postal>
+          <street>Dept. of Computer Science</street>
+          <street>Kemper Hall of Engineering, #3009</street>
+          <street>One Shields Avenue</street>
+          <city>Davis</city>
+          <region>California</region>
+          <code>95616-8562</code>
+          <country>United States of America</country>
+        </postal>
+        <phone>+1 530 752 7583</phone>
+        <email>rogaway@cs.ucdavis.edu</email>
+        <uri>http://www.cs.ucdavis.edu/&tilde;rogaway</uri>
+      </address>
+    </author>
+    <date day='10' month='February' year='2011'/>
+  </front>
+</reference>
+
+

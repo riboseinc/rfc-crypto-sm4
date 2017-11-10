@@ -1,0 +1,23 @@
+<reference anchor='OSCCA' target='http://www.oscca.gov.cn'>
+  <front>
+    <title>Organization of State Commercial Administration of China</title>
+    <author>
+      <organization>Organization of State Commercial Administration of China</organization>
+      <address>
+        <postal>
+         <street>7 Dian Chang Lu, Fengtai Qu</street>
+         <city>Beijing</city>
+         <region>Beijing</region>
+         <code>100036</code>
+         <country>People's Republic of China</country>
+        </postal>
+        <phone>+86 (0)10 5970-3789</phone>
+        <!--<email>contact@oscca.gov.cn</email>-->
+        <uri>http://www.oscca.gov.cn</uri>
+      </address>
+    </author>
+    <date month='May' year='2017'/>
+  </front>
+</reference>
+
+

@@ -1,0 +1,20 @@
+<reference anchor='NIST.SP.800-38A' target='http://dx.doi.org/10.6028/NIST.SP.800-38A'>
+  <front>
+    <title>NIST Special Publication 800-38A: Recommendation for Block Cipher Modes of Operation -- Methods and Techniques</title>
+    <author initials="M." surname="Dworkin" fullname="Morris Dworkin">
+      <organization>National Institute of Standards and Technology</organization>
+      <address>
+        <postal>
+          <street>100 Bureau Drive</street>
+          <city>Gaithersburg</city>
+          <region>MD</region>
+          <code>20899-8930</code>
+          <country>United States</country>
+        </postal>
+        <uri>http://www.nist.gov/</uri>
+      </address>
+    </author>
+    <date month='December' year='2001'/>
+  </front>
+</reference>
+

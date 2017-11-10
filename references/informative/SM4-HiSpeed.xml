@@ -1,0 +1,53 @@
+<reference anchor='SM4-HiSpeed' target='http://dx.doi.org/10.14257/ijsia.2016.10.9.01'>
+<!-- International Journal of Security and its Applications
+Vol. 10, No. 9 (2016), pp.1-8
+http://dx.doi.org/10.14257/ijsia.2016.10.9.01 -->
+  <front>
+    <title>High-speed Encryption &amp; Decryption System Based on SM4</title>
+    <author initials="Q." surname="Lv" fullname="Qian Lv">
+      <organization>Binzhou Polytechnic</organization>
+      <address>
+        <postal>
+          <street>391 Huanghe Road</street>
+          <city>Binzhou</city>
+          <region>Shandong</region>
+          <code>256600</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <email>ihappylucy@outlook.com</email>
+        <uri>http://www.bzu.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="L." surname="Li" fullname="Li Li">
+      <organization>Binzhou Polytechnic</organization>
+      <address>
+        <postal>
+          <street>391 Huanghe Road</street>
+          <city>Binzhou</city>
+          <region>Shandong</region>
+          <code>256600</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <email>lili_thesky@163.com</email>
+        <uri>http://www.bzu.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="Y." surname="Cao" fullname="Yan-yan Cao">
+      <organization>Binzhou Polytechnic</organization>
+      <address>
+        <postal>
+          <street>391 Huanghe Road</street>
+          <city>Binzhou</city>
+          <region>Shandong</region>
+          <code>256600</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <email>yaya_sd@163.com</email>
+        <uri>http://www.bzu.edu.cn/</uri>
+      </address>
+    </author>
+    <date day='22' month='July' year='2016'/>
+  </front>
+</reference>
+
+

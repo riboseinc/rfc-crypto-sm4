@@ -1,0 +1,73 @@
+<reference anchor='SM4-LDA' target='https://eprint.iacr.org/2008/281'>
+  <front>
+    <!-- Cryptology ePrint Archive, Report 2008/281 -->
+    <title>Linear and Differential Cryptanalysis of Reduced SMS4 Block Cipher</title>
+    <author initials="T." surname="Kim" fullname="Taehyun Kim">
+      <organization>Center for Information Security Technologies (CIST), Korea University</organization>
+      <address>
+        <postal>
+          <street>Room 615, International Center for Conversing Technology Building</street>
+          <street>Anam Campus(Science), Korea University</street>
+          <street>145 Anam-ro</street>
+          <city>Seongbuk-gu</city>
+          <region>Seoul</region>
+          <code>02841</code>
+          <country>Republic of Korea</country>
+        </postal>
+        <email>kimth714@cist.korea.ac.kr</email>
+        <uri>http://gss.korea.edu/</uri>
+      </address>
+    </author>
+    <author initials="J." surname="Kim" fullname="Jongsung Kim">
+      <organization>Center for Information Security Technologies (CIST), Korea University</organization>
+      <address>
+        <postal>
+          <street>Room 615, International Center for Conversing Technology Building</street>
+          <street>Anam Campus(Science), Korea University</street>
+          <street>145 Anam-ro</street>
+          <city>Seongbuk-gu</city>
+          <region>Seoul</region>
+          <code>02841</code>
+          <country>Republic of Korea</country>
+        </postal>
+        <email>joshep@cist.korea.ac.kr</email>
+        <uri>http://gss.korea.edu/</uri>
+      </address>
+    </author>
+    <author initials="S." surname="Kim" fullname="Seokhie Kim">
+      <organization>Center for Information Security Technologies (CIST), Korea University</organization>
+      <address>
+        <postal>
+          <street>Room 615, International Center for Conversing Technology Building</street>
+          <street>Anam Campus(Science), Korea University</street>
+          <street>145 Anam-ro</street>
+          <city>Seongbuk-gu</city>
+          <region>Seoul</region>
+          <code>02841</code>
+          <country>Republic of Korea</country>
+        </postal>
+        <email>hsh@cist.korea.ac.kr</email>
+        <uri>http://gss.korea.edu/</uri>
+      </address>
+    </author>
+    <author initials="J." surname="Sung" fullname="Jaechul Sung">
+      <organization>Department of Mathematics, University of Seoul</organization>
+      <address>
+        <postal>
+          <street>Department of Mathematical Sciences</street>
+          <street>Seoul National University</street>
+          <street>1 Gwan Ak-ro</street>
+          <city>Gwanak-gu</city>
+          <region>Seoul</region>
+          <code>08826</code>
+          <country>Republic of Korea</country>
+        </postal>
+        <email>jcsung@uos.ac.kr</email>
+        <uri>http://uos.ac.kr/</uri>
+      </address>
+    </author>
+    <date day='22' month='June' year='2008'/>
+  </front>
+</reference>
+
+

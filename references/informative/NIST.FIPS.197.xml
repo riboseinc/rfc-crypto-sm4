@@ -1,0 +1,20 @@
+<reference anchor='NIST.FIPS.197' target='https://doi.org/10.6028/NIST.FIPS.197'>
+  <front>
+    <title>NIST FIPS 197: Advanced Encryption Standard (AES)</title>
+    <author>
+      <organization>National Institute of Standards and Technology</organization>
+      <address>
+        <postal>
+          <street>100 Bureau Drive</street>
+          <city>Gaithersburg</city>
+          <region>MD</region>
+          <code>20899-8900</code>
+          <country>United States</country>
+        </postal>
+        <uri>http://www.nist.gov/</uri>
+      </address>
+    </author>
+    <date month='November' year='2001'/>
+  </front>
+</reference>
+

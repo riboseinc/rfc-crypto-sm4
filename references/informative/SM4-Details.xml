@@ -1,0 +1,66 @@
+<reference anchor='SM4-Details' target='http://ris.sic.gov.cn/EN/Y2016/V2/I11/995'>
+  <front>
+    <title>Overview on SM4 Algorithm</title>
+    <author initials="S." surname="Lu" fullname="Shuwang Lu">
+      <organization>Data Assurance &amp; Communication Security Center, Chinese Academy of Science</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>Beijing</city>
+          <code>100093</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <email>swlu@ustc.edu.cn</email>
+      </address>
+    </author>
+    <author initials="B." surname="Su" fullname="Bozhan Su">
+      <organization>State Key Laboratory of Cryptology</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>Beijing</city>
+          <code>100878</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <email>subozhan@163.com</email>
+      </address>
+    </author>
+    <author initials="P." surname="Peng" fullname="Peng Wang">
+      <organization>Institute of InformationEngineering, Chinese Academy of Science</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>Beijing</city>
+          <code>100093</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <email>wp@is.ac.cn</email>
+      </address>
+    </author>
+    <author initials="Y." surname="Miao" fullname="Yingying Mao">
+      <organization>Commercial Cryptography Testing Center</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>Beijing</city>
+          <code>100036</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <email>maoyy2000@163.com</email>
+      </address>
+    </author>
+    <author initials="L." surname="Huo" fullname="Lili Huo">
+      <organization>Commercial Cryptography Testing Center</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>Beijing</city>
+          <code>100093</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <email>lily.home.hao@163.com</email>
+      </address>
+    </author>
+    <date day='25' month='October' year='2016'/>
+  </front>
+</reference>

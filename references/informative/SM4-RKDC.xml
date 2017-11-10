@@ -1,0 +1,47 @@
+<reference anchor='SM4-RKDC' target='http://doi.org/10.1007/978-3-319-49151-6_5'>
+  <front>
+    <title>Security of SM4 Against (Related-Key) Differential Cryptanalysis</title>
+    <author initials="J." surname="Zhang" fullname="Jian Zhang">
+      <organization>Institute of Software, Chinese Academy of Sciences</organization>
+      <address>
+        <postal>
+         <street>4 South Fourth Street, Zhong Guan Cun</street>
+         <city>Beijing</city>
+         <region>Beijing</region>
+         <code>100190</code>
+         <country>People's Republic of China</country>
+        </postal>
+        <email>zhangjian@tca.iscas.ac.cn</email>
+      </address>
+    </author>
+    <author initials="W." surname="Wu" fullname="Wenling Wu">
+      <organization>Institute of Software, Chinese Academy of Sciences</organization>
+      <address>
+        <postal>
+         <street>4 South Fourth Street, Zhong Guan Cun</street>
+         <city>Beijing</city>
+         <region>Beijing</region>
+         <code>100190</code>
+         <country>People's Republic of China</country>
+        </postal>
+        <email>wwl@tca.iscas.ac.cn</email>
+      </address>
+    </author>
+    <author initials="Y." surname="Zheng" fullname="Yafei Zheng">
+      <organization>Institute of Software, Chinese Academy of Sciences</organization>
+      <address>
+        <postal>
+         <street>4 South Fourth Street, Zhong Guan Cun</street>
+         <city>Beijing</city>
+         <region>Beijing</region>
+         <code>100190</code>
+         <country>People's Republic of China</country>
+        </postal>
+        <email>zhengyafei@tca.iscas.ac.cn</email>
+      </address>
+    </author>
+    <date day='16' month='November' year='2016'/>
+  </front>
+</reference>
+
+

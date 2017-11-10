@@ -1,0 +1,61 @@
+<reference anchor='SM4-Power' target='http://dx.doi.org/10.6028/NIST.FIPS.180-4'>
+  <front>
+    <!-- Journal on Communications Vol. 36 No 10. -->
+    <title>Improved chosen-plaintext power analysis attack against SM4 at the round-output</title>
+    <author initials="Z." surname="Du" fullname="Zhibo Du">
+      <organization>College of Information Security Engineering, Chengdu University of Information Technology</organization>
+      <address>
+        <postal>
+          <street>No. 24 Block 1, Xuefu Road</street>
+          <city>Chengdu</city>
+          <region>MD</region>
+          <code>610225</code>
+          <country>China</country>
+        </postal>
+        <uri>http://www.cuit.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="Z." surname="Wu" fullname="Zhen Wu">
+      <organization>College of Information Security Engineering, Chengdu University of Information Technology</organization>
+      <address>
+        <postal>
+          <street>No. 24 Block 1, Xuefu Road</street>
+          <city>Chengdu</city>
+          <region>MD</region>
+          <code>610225</code>
+          <country>China</country>
+        </postal>
+        <uri>http://www.cuit.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="M." surname="Wang" fullname="Min Wang">
+      <organization>College of Information Security Engineering, Chengdu University of Information Technology</organization>
+      <address>
+        <postal>
+          <street>No. 24 Block 1, Xuefu Road</street>
+          <city>Chengdu</city>
+          <region>MD</region>
+          <code>610225</code>
+          <country>China</country>
+        </postal>
+        <uri>http://www.cuit.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="J." surname="Rao" fullname="Jin-tao Rao">
+      <organization>College of Information Security Engineering, Chengdu University of Information Technology</organization>
+      <address>
+        <postal>
+          <street>No. 24 Block 1, Xuefu Road</street>
+          <city>Chengdu</city>
+          <region>MD</region>
+          <code>610225</code>
+          <country>China</country>
+        </postal>
+        <uri>http://www.cuit.edu.cn/</uri>
+      </address>
+    </author>
+    <date month='October' year='2015'/>
+  </front>
+</reference>
+
+

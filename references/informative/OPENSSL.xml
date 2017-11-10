@@ -1,0 +1,22 @@
+<reference anchor='OPENSSL' target='https://www.openssl.org'>
+  <front>
+    <title>OpenSSL: Cryptography and SSL/TLS Toolkit</title>
+    <author>
+      <organization>OpenSSL Software Foundation</organization>
+      <address>
+        <postal>
+          <street>20-22 Wenlock Road</street>
+          <city>London</city>
+          <code>N1 7GU</code>
+          <country>United Kingdom</country>
+        </postal>
+        <phone>+44 17 8550 8015</phone>
+        <email>info@opensslfoundation.org</email>
+        <uri>https://www.openssl.org</uri>
+      </address>
+    </author>
+    <date day='18' month='October' year='2017'/>
+  </front>
+</reference>
+
+

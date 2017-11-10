@@ -1,0 +1,77 @@
+<reference anchor='SM4-VLSI' target='https://doi.org/10.3233/JIFS-169011'>
+<!-- Journal of Intelligent & Fuzzy Systems 31 (2016) 795–803
+DOI:10.3233/JIFS-169011
+IOS Press -->
+  <front>
+    <title>A VLSI implementation of an SM4 algorithm resistant to power analysis</title>
+    <author initials="S." surname="Yu" fullname="Siyang Yu">
+      <organization>College of Information Science and Engineering, Hunan University</organization>
+      <address>
+        <postal>
+          <street>Lushan Road S, Yuelu District</street>
+          <city>Changsha</city>
+          <region>Hunan</region>
+          <code>410082</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <email>nickysy@hnu.edu.cn</email>
+        <uri>http://www.hnu.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="K." surname="Li" fullname="Kenli Li">
+      <organization>Department of Computer Science, New Platz, State University of New York</organization>
+      <address>
+        <postal>
+          <street>SUNY New Paltz, 1 Hawk Drive</street>
+          <city>New Paltz</city>
+          <region>NY</region>
+          <code>12561</code>
+          <country>United States of America</country>
+        </postal>
+        <uri>http://www.hnu.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="K." surname="Li" fullname="Keqin Li">
+      <organization>College of Information Science and Engineering, Hunan University</organization>
+      <address>
+        <postal>
+          <street>Lushan Road S, Yuelu District</street>
+          <city>Changsha</city>
+          <region>Hunan</region>
+          <code>410082</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.hnu.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="Y." surname="Qin" fullname="Yunchuan Qin">
+      <organization>College of Information Science and Engineering, Hunan University</organization>
+      <address>
+        <postal>
+          <street>Lushan Road S, Yuelu District</street>
+          <city>Changsha</city>
+          <region>Hunan</region>
+          <code>410082</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.hnu.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="Z." surname="Tong" fullname="Zhao Tong">
+      <organization>College of Mathematics and Computer Science, Performance Computing and Stochastic Information Processing, (Ministry of Education of China), Hunan Normal University</organization>
+      <address>
+        <postal>
+          <street>36 Lushan Rd., Yuelu District</street>
+          <city>Changsha</city>
+          <region>Hunan</region>
+          <code>410081</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.hunnu.edu.cn/</uri>
+      </address>
+    </author>
+    <date day='22' month='July' year='2016'/>
+  </front>
+</reference>
+
+

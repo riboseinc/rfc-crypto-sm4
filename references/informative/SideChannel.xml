@@ -1,0 +1,100 @@
+<reference anchor='SideChannel' target='https://doi.org/10.1109/CIS.2015.102'>
+  <!-- 2015 11th International Conference on Computational Intelligence and Security (CIS), Shenzhen, 2015, pp. 398-401. -->
+  <front>
+    <title>Software Hardware Co-design for Side-Channel Analysis Platform on Security Chips</title>
+    <author initials="Q." surname="Lei" fullname="Qian Lei">
+      <organization>Tsinghua National Laboratory for Information Science and Technology, Tsinghua University</organization>
+      <address>
+        <postal>
+          <street>Tsinghua University</street>
+          <city>Haidian</city>
+          <region>Beijing</region>
+          <code>100190</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.sist.tsinghua.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="L." surname="Wu" fullname="Liji Wu">
+      <organization>Tsinghua National Laboratory for Information Science and Technology, Tsinghua University</organization>
+      <address>
+        <postal>
+          <street>Tsinghua University</street>
+          <city>Haidian</city>
+          <region>Beijing</region>
+          <code>100190</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.sist.tsinghua.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="S." surname="Zhang" fullname="Shaohui Zhang">
+      <organization>Tsinghua National Laboratory for Information Science and Technology, Tsinghua University</organization>
+      <address>
+        <postal>
+          <street>Tsinghua University</street>
+          <city>Haidian</city>
+          <region>Beijing</region>
+          <code>100190</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.sist.tsinghua.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="X." surname="Zhang" fullname="Xiangmin Zhang">
+      <organization>Tsinghua National Laboratory for Information Science and Technology, Tsinghua University</organization>
+      <address>
+        <postal>
+          <street>Tsinghua University</street>
+          <city>Haidian</city>
+          <region>Beijing</region>
+          <code>100190</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.sist.tsinghua.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="X." surname="Li" fullname="Xiangyu Li">
+      <organization>Tsinghua National Laboratory for Information Science and Technology, Tsinghua University</organization>
+      <address>
+        <postal>
+          <street>Tsinghua University</street>
+          <city>Haidian</city>
+          <region>Beijing</region>
+          <code>100190</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.sist.tsinghua.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="L." surname="Pan" fullname="Liyang Pan">
+      <organization>Tsinghua National Laboratory for Information Science and Technology, Tsinghua University</organization>
+      <address>
+        <postal>
+          <street>Tsinghua University</street>
+          <city>Haidian</city>
+          <region>Beijing</region>
+          <code>100190</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.sist.tsinghua.edu.cn/</uri>
+      </address>
+    </author>
+    <author initials="Z." surname="Dong" fullname="Zhimeng Dong">
+      <organization>Tsinghua National Laboratory for Information Science and Technology, Tsinghua University</organization>
+      <address>
+        <postal>
+          <street>Tsinghua University</street>
+          <city>Haidian</city>
+          <region>Beijing</region>
+          <code>100190</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.sist.tsinghua.edu.cn/</uri>
+      </address>
+    </author>
+    <date day='1' month='December' year='2015'/>
+  </front>
+</reference>
+
+

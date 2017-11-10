@@ -1,0 +1,21 @@
+<reference anchor='IEEE.1619-2007' target='http://ieeexplore.ieee.org/document/4493450/'>
+  <front>
+    <title>IEEE P1619-2007: The XTS-AES Tweakable Block Cipher</title>
+    <author>
+      <organization>Institute of Electrical and Electronics Engineers, Inc</organization>
+      <address>
+        <postal>
+          <street>Three Park Avenue</street>
+          <city>New York</city>
+          <region>NY</region>
+          <code>10016-5997</code>
+          <country>United States</country>
+        </postal>
+        <uri>http://www.ieee.org/</uri>
+      </address>
+    </author>
+    <date day='18' month='April' year='2008'/>
+  </front>
+</reference>
+
+

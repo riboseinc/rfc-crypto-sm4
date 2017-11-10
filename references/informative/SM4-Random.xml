@@ -1,0 +1,36 @@
+<reference anchor='SM4-Random' target='http://www.cnki.com.cn/Article/CJFDTOTAL-JSJX200907008.htm'>
+  <!-- 张立廷，吴文玲.使用压缩函数的非平衡Feistel结构的伪随机性和超伪随机性[J].计算机学报，2009, 32(7): 1320-1330) -->
+  <front>
+    <title>Pseudorandomness and Super-pseudorandomness of a non-balanced Feistel Structure using compressed functions</title>
+    <author initials="L." surname="Zhang" fullname="Liyen Zhang">
+      <organization>State Key Laboratory of Information Security, Institute of Information Engineering, Chinese Academy of Sciences</organization>
+      <address>
+        <postal>
+          <street>Institute of Software, Chinese Academy of Sciences</street>
+          <street>No. 4 South Fourth Street</street>
+          <city>Zhong Guan Cun</city>
+          <region>Beijing</region>
+          <code>100190</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <email>liyen.zhang@is.cas.cn</email>
+        <uri>http://www.is.cas.cn/</uri>
+      </address>
+    </author>
+    <author initials="W." surname="Wu" fullname="Wenling Wu">
+      <organization>State Key Laboratory of Information Security, Institute of Information Engineering, Chinese Academy of Sciences</organization>
+      <address>
+        <postal>
+          <street>Institute of Software, Chinese Academy of Sciences</street>
+          <street>No. 4 South Fourth Street</street>
+          <city>Zhong Guan Cun</city>
+          <region>Beijing</region>
+          <code>100190</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.is.cas.cn/</uri>
+      </address>
+    </author>
+    <date day='1' month='January' year='2009'/>
+  </front>
+</reference>

@@ -1,0 +1,57 @@
+<reference anchor='SM4-NLC' target='https://doi.org/10.1155/2017/1461520'>
+  <front>
+    <title>New Linear Cryptanalysis of Chinese Commercial Block Cipher Standard SM4</title>
+    <author initials="Y." surname="Liu" fullname="Yu Liu">
+      <organization>Key Laboratory of Cryptologic Technology and Information Security, Ministry of Education, Shandong University</organization>
+      <address>
+        <postal>
+         <street>27 Shan Da Nan Lu, Licheng Qu</street>
+         <city>Jinan</city>
+         <region>Shandong</region>
+         <code>250100</code>
+         <country>People's Republic of China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials="H." surname="Liang" fullname="Huicong Liang">
+      <organization>Key Laboratory of Cryptologic Technology and Information Security, Ministry of Education, Shandong University</organization>
+      <address>
+        <postal>
+         <street>27 Shan Da Nan Lu, Licheng Qu</street>
+         <city>Jinan</city>
+         <region>Shandong</region>
+         <code>250100</code>
+         <country>People's Republic of China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials="W." surname="Wang" fullname="Wei Wang">
+      <organization>Key Laboratory of Cryptologic Technology and Information Security, Ministry of Education, Shandong University</organization>
+      <address>
+        <postal>
+         <street>27 Shan Da Nan Lu, Licheng Qu</street>
+         <city>Jinan</city>
+         <region>Shandong</region>
+         <code>250100</code>
+         <country>People's Republic of China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials="M." surname="Wang" fullname="Meiqin Wang">
+      <organization>Key Laboratory of Cryptologic Technology and Information Security, Ministry of Education, Shandong University</organization>
+      <address>
+        <postal>
+         <street>27 Shan Da Nan Lu, Licheng Qu</street>
+         <city>Jinan</city>
+         <region>Shandong</region>
+         <code>250100</code>
+         <country>People's Republic of China</country>
+        </postal>
+        <email>mqwang@sdu.edu.cn</email>
+      </address>
+    </author>
+    <date day='8' month='June' year='2017'/>
+  </front>
+</reference>
+
+

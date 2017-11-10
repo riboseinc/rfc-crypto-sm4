@@ -16,7 +16,7 @@ clean:
 	rm -f $(TXT) $(HTML) $(XML)
 
 %.xml: %.adoc
-	bundle exec asciidoctor -r asciidoctor-rfc -b rfc2 $^ --trace > $@
+	bundle exec asciidoctor -r ./lib/glob-include-processor.rb -r asciidoctor-rfc -b rfc2 $^ --trace > $@
 
 %.txt: %.xml
 	xml2rfc --text $^ $@

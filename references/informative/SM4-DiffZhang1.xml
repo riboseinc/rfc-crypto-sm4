@@ -1,0 +1,51 @@
+<reference anchor='SM4-DiffZhang1' target='https://doi.org/10.1007/978-3-540-70500-0_16'>
+  <front>
+    <title>Cryptanalysis of Reduced-Round SMS4 Block Cipher</title>
+    <author initials="L." surname="Zhang" fullname="Lei Zhang">
+      <organization>State Key Laboratory of Information Security, Institute of Information Engineering, Chinese Academy of Sciences</organization>
+      <address>
+        <postal>
+          <street>Institute of Software, Chinese Academy of Sciences</street>
+          <street>No. 4 South Fourth Street</street>
+          <city>Zhong Guan Cun</city>
+          <region>Beijing</region>
+          <code>100190</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.is.cas.cn/</uri>
+      </address>
+    </author>
+    <author initials="W." surname="Zhang" fullname="Wentao Zhang">
+      <organization>State Key Laboratory of Information Security, Institute of Information Engineering, Chinese Academy of Sciences</organization>
+      <address>
+        <postal>
+          <street>Institute of Software, Chinese Academy of Sciences</street>
+          <street>No. 4 South Fourth Street</street>
+          <city>Zhong Guan Cun</city>
+          <region>Beijing</region>
+          <code>100190</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.is.cas.cn/</uri>
+      </address>
+    </author>
+    <author initials="W." surname="Wu" fullname="Wenling Wu">
+      <organization>State Key Laboratory of Information Security, Institute of Information Engineering, Chinese Academy of Sciences</organization>
+      <address>
+        <postal>
+          <street>Institute of Software, Chinese Academy of Sciences</street>
+          <street>No. 4 South Fourth Street</street>
+          <city>Zhong Guan Cun</city>
+          <region>Beijing</region>
+          <code>100190</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <uri>http://www.is.cas.cn/</uri>
+      </address>
+    </author>
+    <date day='7' month='July' year='2009'/>
+  </front>
+</reference>
+
+
+
