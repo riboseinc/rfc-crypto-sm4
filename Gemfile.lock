@@ -11,9 +11,9 @@ GIT
 
 GIT
   remote: https://github.com/riboseinc/asciidoctor-rfc
-  revision: 0cd4cfad496294e7e0a07e514f311282ae30cba6
+  revision: 42d8951cb92178618c212835c9b1154a4ae44581
   specs:
-    asciidoctor-rfc (0.2.0)
+    asciidoctor-rfc (0.8.0)
       asciidoctor (~> 1.5.6)
       htmlentities (~> 4.3.4)
       nokogiri (~> 1.8.1)
@@ -25,7 +25,7 @@ GEM
     asciidoctor (1.5.6.1)
     bibtex-ruby (4.4.4)
       latex-decode (~> 0.0)
-    citeproc (1.0.5)
+    citeproc (1.0.6)
       namae (~> 0.8)
     citeproc-ruby (1.1.8)
       citeproc (>= 1.0.4, < 2.0)
@@ -52,4 +52,4 @@ DEPENDENCIES
   asciidoctor-rfc!
 
 BUNDLED WITH
-   1.15.4
+   1.16.0
