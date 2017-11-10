@@ -228,6 +228,9 @@ S盒数 0 1 2 2 4 6 8 9 10 <=14
 
 == Strongest Attacks Against SM4
 
+////
+// TODO: ENABLE
+
 [cols="6*"]
 |===
 
@@ -293,6 +296,7 @@ S盒数 0 1 2 2 4 6 8 9 10 <=14
 |<<SM4-MatrixShe>>
 
 |===
+////
 
 As of the publication of this document, no open research results have provided a method to successfully attack beyond 24 rounds of SM4.
 
