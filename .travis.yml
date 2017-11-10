@@ -5,8 +5,10 @@ rvm:
 before_install: gem install bundler -v 1.16.0
 install:
   - curl -SL https://tools.ietf.org/tools/idnits/idnits-2.15.00.tgz | tar xzv
-  - mv idnits-2.15.00/idnits /usr/bin
+  - mkdir -p ~/bin/
+  - mv idnits-2.15.00/idnits ~/bin/
   - pip install -r requirements.txt
   - bundle install --path vendor/bundle
 script:
   - make clean all
+  - idnits draft-*.txt
