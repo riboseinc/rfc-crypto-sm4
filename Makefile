@@ -5,12 +5,13 @@
 SRC  := $(wildcard draft-*.adoc)
 TXT  := $(patsubst %.adoc,%.txt,$(SRC))
 XML  := $(patsubst %.adoc,%.xml,$(SRC))
-HTML  := $(patsubst %.adoc,%.html,$(SRC))
+HTML := $(patsubst %.adoc,%.html,$(SRC))
+NITS := $(patsubst %.adoc,%.nits,$(SRC))
 
 # Ensure the xml2rfc cache directory exists locally
 IGNORE := $(shell mkdir -p $(HOME)/.cache/xml2rfc)
 
-all: $(TXT) $(HTML) $(XML)
+all: $(TXT) $(HTML) $(XML) $(NITS)
 
 clean:
 	rm -f $(TXT) $(HTML) $(XML)
@@ -24,5 +25,9 @@ clean:
 %.html: %.xml
 	xml2rfc --html $^ $@
 
+%.nits: %.txt
+	idnits --verbose $^ > $@ && cat $@
+
 open:
 	open *.txt
+

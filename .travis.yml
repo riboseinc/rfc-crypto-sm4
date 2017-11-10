@@ -10,4 +10,3 @@ install:
   - bundle install --path vendor/bundle
 script:
   - make clean all
-  - idnits draft-*.txt
