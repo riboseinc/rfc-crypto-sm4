@@ -1,0 +1,41 @@
+<reference anchor='SM4-AAEr' target='https://doi.org/10.1007/978-3-642-14423-3_6'>
+  <front>
+    <title>Algebraic Cryptanalysis of SMS4: Gröbner Basis Attack and SAT Attack Compared</title>
+    <author initials='J.' surname='Erickson' fullname='Jeremy Erickson'>
+      <organization> The University of North Carolina at Chapel Hill</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>Chapel Hill</city>
+          <region>NC</region>
+          <country>United States of America</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='J.' surname='Ding' fullname='Jintai Ding'>
+      <organization>Department of Mathematical Sciences</organization>
+      <address>
+        <postal>
+          <street>University of Cincinnati</street>
+          <city>Cincinnati</city>
+          <region>OH</region>
+          <code>45221</code>
+          <country>United States of America</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='C.' surname='Christensen' fullname='Chris Christensen'>
+      <organization>Northern Kentucky University</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city></city>
+          <country>United States of America</country>
+        </postal>
+      </address>
+    </author>
+    <date year='2010' />
+  </front>
+</reference>
+
+

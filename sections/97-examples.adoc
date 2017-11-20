@@ -1,5 +1,5 @@
 [#appendix-a]
-= Appendix A: Example Calculations {#appendix-a}
+= Appendix A: Example Calculations
 
 //<!-- 附录A 运算示例 -->
 == Examples From GB/T 32907-2016

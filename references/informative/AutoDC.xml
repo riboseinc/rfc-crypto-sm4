@@ -1,0 +1,68 @@
+<reference anchor='AutoDC' target='https://doi.org/10.1007/978-3-662-45611-8_9'>
+  <front>
+    <title>Automatic Security Evaluation and (Related-key) Differential Characteristic Search: Application to SIMON, PRESENT, LBlock, DES(L) and Other Bit-Oriented Block Ciphers</title>
+    <author initials='S.' surname='Siwei' fullname='Siwei Sun'>
+      <organization>State Key Laboratory of Information Security</organization>
+      <address>
+        <postal>
+          <street>Chinese Academy of Sciences</street>
+          <city>Beijing</city>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='L.' surname='Hu' fullname='Lei Hu'>
+      <organization>State Key Laboratory of Information Security</organization>
+      <address>
+        <postal>
+          <street>Chinese Academy of Sciences</street>
+          <city>Beijing</city>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='P.' surname='Wang' fullname='Peng Wang'>
+      <organization>State Key Laboratory of Information Security</organization>
+      <address>
+        <postal>
+          <street>Chinese Academy of Sciences</street>
+          <city>Beijing</city>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='K.' surname='Qiao' fullname='Kexin Qiao'>
+      <organization>State Key Laboratory of Information Security</organization>
+      <address>
+        <postal>
+          <street>Chinese Academy of Sciences</street>
+          <city>Beijing</city>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='X.' surname='Ma' fullname='Xiaoshuang Ma'>
+      <organization>State Key Laboratory of Information Security</organization>
+      <address>
+        <postal>
+          <street>Chinese Academy of Sciences</street>
+          <city>Beijing</city>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='L.' surname='Song' fullname='Ling Song'>
+      <organization>State Key Laboratory of Information Security</organization>
+      <address>
+        <postal>
+          <street>Chinese Academy of Sciences</street>
+          <city>Beijing</city>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <date year='2014' />
+  </front>
+</reference>
+
+

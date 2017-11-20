@@ -1,0 +1,28 @@
+<reference anchor='SM4-IDCToz' target='https://doi.org/10.1007/978-3-540-88625-9_10'>
+  <front>
+    <title>Analysis of Two Attacks on Reduced-Round Versions of the SMS4</title>
+    <author initials='D.' surname='Toz' fullname='Deniz Toz'>
+      <organization>Institute of Applied Mathematics</organization>
+      <address>
+        <postal>
+          <street>Middle East Technical University</street>
+          <city>Ankara</city>
+          <country>Turkey</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='O.' surname='Dunkelman' fullname='Orr Dunkelman'>
+      <organization>Department of Electronical Engineering ESAT SDC-COSIC and Interdisciplinary Institute for BroadBand Technology</organization>
+      <address>
+        <postal>
+          <street>Katholieke Universiteit Leuven</street>
+          <city>Leuven-Heverlee</city>
+          <country>Belgium</country>
+        </postal>
+      </address>
+    </author>
+    <date year='2008' />
+  </front>
+</reference>
+
+

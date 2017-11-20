@@ -1,0 +1,42 @@
+<reference anchor='SM4-MLLiu' target='http://citeseerx.ist.psu.edu/viewdoc/summary?doi=10.1.1.215.8314'>
+  <front>
+    <title>Multiple Linear Cryptanalysis of Reduced-Round SMS4 Block Cipher</title>
+    <author initials='L.' surname='Zhiqiang' fullname='Liu Zhiqiang'>
+      <organization>Department of Computer Science and Engineering</organization>
+      <address>
+        <postal>
+          <street>Shanghai Jiao Tong University</street>
+          <city>Shanghai</city>
+          <code>200240</code>
+          <country>China</country>
+        </postal>
+        <email>ilu_zq@sjtu.edu.cn</email>
+      </address>
+    </author>
+    <author initials='G.' surname='Dawu' fullname='Gu Dawu'>
+      <organization>Department of Computer Science and Engineering</organization>
+      <address>
+        <postal>
+          <street>Shanghai Jiao Tong University</street>
+          <city>Shanghai</city>
+          <code>200240</code>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='Z.' surname='Jing' fullname='Zhang Jing'>
+      <organization>Department of Computer Science and Engineering</organization>
+      <address>
+        <postal>
+          <street>Shanghai Jiao Tong University</street>
+          <city>Shanghai</city>
+          <code>200240</code>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <date year='2010' />
+  </front>
+</reference>
+
+

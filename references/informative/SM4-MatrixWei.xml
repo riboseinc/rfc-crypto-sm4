@@ -1,0 +1,17 @@
+<reference anchor='SM4-MatrixWei' target='http://www.cnki.com.cn/Article/CJFDTotal-CDDD201202017.htm'>
+  <!-- [30] 魏航，崔会丽，吕晓庆.SM4分组密码算法的差分-代数分析[J].成都大学学报：自然科学版，2012, 31(2): 158-160 -->
+  <front>
+    <title>Differential-Algebraic Analysis of the SMS4 Block Cipher</title>
+    <author initials='H' surname='Wei' fullname='Hang Wei'>
+      <organization>Chengdu University of Technology</organization>
+    </author>
+    <author initials='H.' surname='Cui' fullname='Huili Cui'>
+      <organization>Chengdu University of Technology</organization>
+    </author>
+    <author initials='X.' surname='Lu' fullname='Xiaoxing Lu'>
+      <organization>Chengdu University of Technology</organization>
+    </author>
+    <date year="2012"/>
+  </front>
+</reference>
+

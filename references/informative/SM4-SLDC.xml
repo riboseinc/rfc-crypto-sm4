@@ -1,0 +1,49 @@
+<reference anchor='SM4-SLDC' target='http://www.ajetr.org/vol15/no1/n09.pdf'>
+  <front>
+    <title>Practically Secure against Differential Cryptanalysis for Block Cipher SMS4</title>
+    <author initials='M.' surname='Zhang' fullname='Meiling Zhang'>
+      <organization>School of Communication and Information Engineering</organization>
+      <address>
+        <postal>
+          <street>Xi'an University of Post and Telecommunications</street>
+          <city>Xi'an</city>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='Y.' surname='Liu' fullname='Yuanhua Liu'>
+      <organization>School of Communication and Information Engineering</organization>
+      <address>
+        <postal>
+          <street>Xi'an University of Post and Telecommunications</street>
+          <city>Xi'an</city>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='J.' surname='Liu' fullname='Jingmei Liu'>
+      <organization>National Key Lab of Integrated Service Networks</organization>
+      <address>
+        <postal>
+          <street>Xidian University</street>
+          <city>Xi'an</city>
+          <code>710071</code>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='X.' surname='Min' fullname='Min Xiangshen'>
+      <organization>School of Communication and Information Engineering</organization>
+      <address>
+        <postal>
+          <street>Xi'an University of Post and Telecommunications</street>
+          <city>Xi'an</city>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <date year='2011' />
+  </front>
+</reference>
+
+

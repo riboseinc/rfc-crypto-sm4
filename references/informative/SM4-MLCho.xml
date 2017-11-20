@@ -1,0 +1,26 @@
+<reference anchor='SM4-MLCho' target='https://scholar.google.com.hk/scholar?cluster=13432379689578293076'>
+  <front>
+    <title>Improved linear cryptanalysis of SM4 block cipher</title>
+    <author initials='J.Y.' surname='Cho'>
+      <address>
+        <postal>
+          <street></street>
+          <city>Vienna</city>
+          <country>Austria</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='K.' surname='Nyberg'>
+      <address>
+        <postal>
+          <street></street>
+          <city>Vienna</city>
+          <country>Austria</country>
+        </postal>
+      </address>
+    </author>
+    <date year='2010' />
+  </front>
+</reference>
+
+

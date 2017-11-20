@@ -1,0 +1,42 @@
+<reference anchor='SM4-DiffZhang3' target='http://www.airitilibrary.com/Publication/alDetailedMesh?docid=05296579-201003-201004120040-201004120040-43-47'>
+  <!-- 张美玲，刘景美，王新梅.22-轮SM4的差分分析[J].中 山大学学报：自然科学版，2010，49(2): 43-47 -->
+  <front>
+    <title>22-Round SMS4 Differential Cryptanalysis</title>
+    <author initials='M.' surname='Zhang' fullname='Meiling Zhang'>
+      <organization>National Key Lab of Integrated Service Networks</organization>
+      <address>
+        <postal>
+          <street>Xidian University</street>
+          <city>Xi'an</city>
+          <code>710071</code>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='J.' surname='Liu' fullname='Jingmei Liu'>
+      <organization>National Key Lab of Integrated Service Networks</organization>
+      <address>
+        <postal>
+          <street>Xidian University</street>
+          <city>Xi'an</city>
+          <code>710071</code>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='X.' surname='Wang' fullname='Xinmei Wang'>
+      <organization>National Key Lab of Integrated Service Networks</organization>
+      <address>
+        <postal>
+          <street>Xidian University</street>
+          <city>Xi'an</city>
+          <code>710071</code>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <date year='2010'/>
+  </front>
+</reference>
+
+

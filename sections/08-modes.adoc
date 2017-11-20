@@ -150,6 +150,7 @@ C is defined as follows.
 [source]
 ----
 _____________________________________________________________________
+
 n = NBlocks(P, b)
 
 C_1 = SM4Encrypt(P_1 xor IV, K)

@@ -1,0 +1,52 @@
+<reference anchor='SM4-ZCLC' target='http://www.jcr.cacrnet.org.cn:8080/mmxb/CN/abstract/abstract105.shtml'>
+  <front>
+    <title>Multidimensional Zero-correlation Linear Cryptanalysis on SMS4 Algorithm</title>
+    <author initials='M.' surname='Ma' fullname='Meng Ma'>
+      <organization>State Key Laboratory of Mathematical Engineering and Advanced Computing</organization>
+      <address>
+        <postal>
+          <street>Information Engineering University</street>
+          <city>Zhengzhou</city>
+          <code>450001</code>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='Y.' surname='Zhao' fullname='Yaqun Zhao'>
+      <organization>State Key Laboratory of Mathematical Engineering and Advanced Computing</organization>
+      <address>
+        <postal>
+          <street>Information Engineering University</street>
+          <city>Zhengzhou</city>
+          <code>450001</code>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='Q.' surname='Liu' fullname='Qingcong Liu'>
+      <organization>State Key Laboratory of Mathematical Engineering and Advanced Computing</organization>
+      <address>
+        <postal>
+          <street>Information Engineering University</street>
+          <city>Zhengzhou</city>
+          <code>450001</code>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='F.' surname='Liu' fullname='Fengmei Liu'>
+      <organization>Science and Technology on Information Assurance Laboratory</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>Beijing</city>
+          <code>100072</code>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <date year="2015" month="September" day="15" />
+  </front>
+</reference>
+
+

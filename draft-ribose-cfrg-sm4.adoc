@@ -1,6 +1,6 @@
 = The SM4 Blockcipher Algorithm And Its Modes Of Operations
 :doctype: internet-draft
-:name: draft-ribose-cfrg-sm4-03
+:name: draft-ribose-cfrg-sm4-04
 :abbrev: SM4 Blockcipher Algorithm
 :status: info
 :ipr: trust200902
@@ -8,7 +8,7 @@
 :area: cfrg
 :intended-series: full-standard
 :workgroup: Crypto Forum Research Group
-:revdate: 2017-11-08T00:00:00Z
+:revdate: 2017-11-20T00:00:00Z
 :fullname: Ronald Henry Tse
 :lastname: Tse
 :forename_initials: R. H.
@@ -19,7 +19,7 @@
 :country: People's Republic of China
 :uri: https://www.ribose.com
 :email: ronald.tse@ribose.com
-:fullname_2: Dr. Wai Kit Wong
+:fullname_2: Wai Kit Wong
 :lastname_2: Wong
 :forename_initials_2: W. K.
 :organization_2: Hang Seng Management College

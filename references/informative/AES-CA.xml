@@ -1,0 +1,83 @@
+<reference anchor='AES-CA' target='https://doi.org/10.1007/3-540-44706-7_15'>
+  <front>
+    <title>Improved Cryptanalysis of Rijndael</title>
+    <author initials='N.' surname='Ferguson' fullname='Niels Ferguson'>
+      <organization>Counterpane Internet Security, Inc.</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>San Jose</city>
+          <region>CA</region>
+          <country>USA</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='J.' surname='Kelsey' fullname='John Kelsey'>
+      <organization>Counterpane Internet Security, Inc.</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>San Jose</city>
+          <region>CA</region>
+          <country>USA</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='S.' surname='Lucks' fullname='Stephan Lucks'>
+      <organization>University of Mannheim</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>Mannheim</city>
+          <country>Germany</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='B.' surname='Schneier' fullname='Bruce Schneier'>
+      <organization>Counterpane Internet Security, Inc.</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>San Jose</city>
+          <region>CA</region>
+          <country>USA</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='M.' surname='Stay' fullname='Mike Stay'>
+      <organization>Access Data Corp.</organization>
+      <address>
+        <postal>
+          <street>2500 N. University</street>
+          <city>Provo</city>
+          <region>UT</region>
+          <country>USA</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='D.' surname='Wagner' fullname='David Wagner'>
+      <organization>University of California Berkeley</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>Berkeley</city>
+          <region>CA</region>
+          <country>USA</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='D.' surname='Whiting' fullname='Doug Whiting'>
+      <organization>Hi/fn, Inc.</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>Carlsbad</city>
+          <country>USA</country>
+        </postal>
+      </address>
+    </author>
+    <date day='18' month='Jan' year='2002' />
+  </front>
+</reference>
+
+

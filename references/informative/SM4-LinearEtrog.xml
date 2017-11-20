@@ -1,0 +1,28 @@
+<reference anchor='SM4-LinearEtrog' target='https://doi.org/10.1007/978-3-642-04159-4_4'>
+  <front>
+    <title>The Cryptanalysis of Reduced-Round SMS4</title>
+    <author initials='J.' surname='Etrog' fullname='Jonathan Etrog'>
+      <organization>Orange Labs</organization>
+      <address>
+        <postal>
+          <street>Issy les Moulineaux</street>
+          <city>Cedex</city>
+          <country>France</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='M.' surname='Robshaw' fullname='Matt J.B. Robshaw'>
+      <organization>Orange Labs</organization>
+      <address>
+        <postal>
+          <street>Issy les Moulineaux</street>
+          <city>Cedex</city>
+          <country>France</country>
+        </postal>
+      </address>
+    </author>
+    <date year='2009' />
+  </front>
+</reference>
+
+

@@ -1,0 +1,14 @@
+<reference anchor='AES-RKC' target='https://doi.org/10.1007/978-3-642-10366-7_1'>
+  <front>
+    <title>Related-Key Cryptanalysis of the Full AES-192 and AES-256</title>
+    <author initials='A.' surname='Biryukov' fullname='Alex Biryukov'>
+      <organization>University of Luxembourg</organization>
+    </author>
+    <author initials='D.' surname='Khovratovich' fullname='Dmitry Khovratovich'>
+      <organization>University of Luxembourg</organization>
+    </author>
+    <date year='2009' />
+  </front>
+</reference>
+
+

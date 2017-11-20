@@ -1,0 +1,30 @@
+<reference anchor='MISTY1-270' target='https://doi.org/10.1007/978-3-662-53018-4_16'>
+  <front>
+    <title>A 2^{70} Attack on the Full MISTY1</title>
+    <author initials='A.' surname='Bar-On' fullname='Achiya Bar-On'>
+      <organization>Bar Ilan University</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>Ramat Gan</city>
+          <country>Israel</country>
+        </postal>
+        <email>abo1000@gmail.com</email>
+      </address>
+    </author>
+    <author initials='N.' surname='Keller' fullname='Nathan Keller'>
+      <organization>Bar Ilan University</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>Ramat Gan</city>
+          <country>Israel</country>
+        </postal>
+        <email>abo1000@gmail.com</email>
+      </address>
+    </author>
+    <date year='2016' />
+  </front>
+</reference>
+
+

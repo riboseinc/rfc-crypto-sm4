@@ -1,0 +1,19 @@
+<reference anchor='MISTY1-IC' target='https://doi.org/10.1007/s00145-016-9240-x'>
+  <front>
+    <title>Integral Cryptanalysis on Full MISTY1</title>
+    <author initials='Y.' surname='Todo' fullname='Yosuke Todo'>
+      <organization>NTT Secure Platform Laboratories</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>Tokyo</city>
+          <country>Japan</country>
+        </postal>
+        <email>todo.yosuke@lab.ntt.co.jp</email>
+      </address>
+    </author>
+    <date year='2015' />
+  </front>
+</reference>
+
+

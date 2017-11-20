@@ -1,0 +1,20 @@
+<reference anchor='SM4-MatrixShe' target='http://cdmd.cnki.com.cn/Article/CDMD-10422-1012464969.htm'>
+  <!-- 薛萍.分组密码算法SMS4的矩形攻击[D].济南：山东大学，2012 -->
+  <front>
+    <title>Matrix Attack On Blockcipher SMS4</title>
+    <author initials='S.' surname='Ping' fullname='She Ping'>
+      <organization>Shandong University</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>Jinan</city>
+          <region>Shandong</region>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <date year='2012' />
+  </front>
+</reference>
+
+

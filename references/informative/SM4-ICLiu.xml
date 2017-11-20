@@ -1,0 +1,89 @@
+<reference anchor='SM4-ICLiu' target='https://doi.org/10.1007/978-3-540-73458-1_13'>
+  <front>
+    <title>Analysis of the SMS4 Block Cipher</title>
+    <author initials='F.' surname='Liu' fullname='Fen Liu'>
+      <organization>State Key Laboratory of Information Security</organization>
+      <address>
+        <postal>
+          <street>Graduate School of Chinese Academy of Sciences</street>
+          <city>Beijing</city>
+          <code>100049</code>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='W.' surname='Ji' fullname='Wen Ji'>
+      <organization>State Key Laboratory of Information Security</organization>
+      <address>
+        <postal>
+          <street>Graduate School of Chinese Academy of Sciences</street>
+          <city>Beijing</city>
+          <code>100049</code>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='L.' surname='Hu' fullname='Lei Hu'>
+      <organization>State Key Laboratory of Information Security</organization>
+      <address>
+        <postal>
+          <street>Graduate School of Chinese Academy of Sciences</street>
+          <city>Beijing</city>
+          <code>100049</code>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='J.' surname='Ding' fullname='Jintai Ding'>
+      <organization>Department of Mathematical Sciences</organization>
+      <address>
+        <postal>
+          <street>University of Cincinnati</street>
+          <city>Cincinnati</city>
+          <region>OH</region>
+          <code>45221</code>
+          <country>USA</country>
+        </postal>
+        <email></email>
+      </address>
+    </author>
+    <author initials='S.' surname='Lv' fullname='Shuwang Lv'>
+      <organization>State Key Laboratory of Information Security</organization>
+      <address>
+        <postal>
+          <street>Graduate School of Chinese Academy of Sciences</street>
+          <city>Beijing</city>
+          <code>100049</code>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='A.' surname='Pyshkin' fullname='Andrei Pyshkin'>
+      <organization>Fachbereich Informatik</organization>
+      <address>
+        <postal>
+          <street>Technische Universität Darmstadt</street>
+          <city>Darmstadt</city>
+          <code>64289</code>
+          <country>Germany</country>
+        </postal>
+        <email></email>
+      </address>
+    </author>
+    <author initials='R.P.' surname='Weinmann' fullname='Ralf-Philipp Weinmann'>
+      <organization>Fachbereich Informatik</organization>
+      <address>
+        <postal>
+          <street>Technische Universität Darmstadt</street>
+          <city>Darmstadt</city>
+          <code>64289</code>
+          <country>Germany</country>
+        </postal>
+        <email></email>
+      </address>
+    </author>
+    <date year='2007' />
+  </front>
+</reference>
+
+

@@ -20,7 +20,7 @@ A summary of cryptanalysis results are presented in the following
 sections.
 
 A number of attacks have been attempted on SM4, such as <<SM4-LDA>>
-<<SM4-Linear>>.
+<<SM4-LinearLiu>>.
 
 There are, however, security concerns with regards to side-channel attacks
 <<SideChannel>> when the SM4 algorithm is implemented in a hardware device
@@ -120,10 +120,10 @@ In 2010 Cho et al. <<SM4-MLCho>> gave a linear analysis of 23 rounds of SM4
 with a data complexity of $$2^126.7$$ known plaintexts and a time complexity of
 $$2^127$$, storage complexity of $$2^120.7$$.
 
-In 2014, Liu et al. <<SM4-MLLiu2>> gave the results of multi-dimensional linear
-analysis of 23 rounds of SM4 algorithm. The time complexity was $$2^122.7$$,
-data complexity was $$2^122.6$$ known plaintext with storage complexity
-$$2^120.6$$.
+In 2014, Liu et al. <<SM4-LinearLiu>> gave the results of multi-dimensional
+linear analysis of 23 rounds of SM4 algorithm. The time complexity was
+$$2^122.7$$, data complexity was $$2^122.6$$ known plaintext with storage
+complexity $$2^120.6$$.
 
 ////
 3) 多维线性密码分析
@@ -284,11 +284,15 @@ cryptanalysis.
 
 // These are newer results than those in SM4-Details
 
-<<SM4-RKDC>> describes the lower bounds of active S-boxes within SM4 as
-follows:
+<<SM4-RKDC>> describes the lower bounds of active S-boxes within SM4
+and is shown in <<diagram-sm4-lower-sbox>>.
 
-[source]
-----
+[[diagram-sm4-lower-sbox]]
+.Lower Bounds of Active SM4 S-boxes
+[align=center]
+====
+[align=center]
+....
 +--------------+---------------------------------------+
 | Round        |  3 |  4 |  5 |  6 |  7 |  8 |  9 | 10 |
 | Single Key   |  0 |  1 |  2 |  2 |  5 |  6 |  7 |  8 |
@@ -302,10 +306,11 @@ follows:
 | Single Key   | 18 | 18 | 19 | 20 | 22 | 23 | 23 | 24 |
 | Related Key  | 22 | -  | -  | -  | -  | -  | -  | -  |
 +--------------+---------------------------------------+
-("-" denotes unknown)
-----
+                 ("-" denotes unknown)
+....
+====
 
-As the maximal probability of the SM4 S-box is $$2−6$$, when the minimum active
+As the maximal probability of the SM4 S-box is $$2^−6$$, when the minimum active
 S-boxes reach 22 the differential characteristics will have probability
 $$2^132$$, which is higher than enumeration ($$2^128$$).
 
@@ -404,9 +409,9 @@ As of the publication of this document, no open research results have provided
 a method to successfully attack beyond 24 rounds of SM4.
 
 The traditional view suggests that SM4 provides an extra safety margin
-especially compared to other blockciphers adopted in <<ISO.IEC.18033-3>> that
-already have full-round attacks, including MISTY1 <<MISTY1-IC>> <<MISTY1-270>>
-and AES <<AES-CA>> <<AES-BC>> <<AES-RKC>>.
+compared to blockciphers adopted in <<ISO.IEC.18033-3>> that already have
+full-round attacks, including MISTY1 <<MISTY1-IC>> <<MISTY1-270>> and AES
+<<AES-CA>> <<AES-BC>> <<AES-RKC>>.
 
 // 从公开的研究结果可以看出，目前还没有一种分析方法能够在理论上攻破24轮的SM4算法.因此，
 //从传统的分析方法来看，SM4算法具有较强的安全冗余度.尤其是对比MISTY1，

@@ -1,0 +1,38 @@
+<reference anchor='AES-BC' target='https://doi.org/10.1007/978-3-642-25385-0_19'>
+  <front>
+    <title>Biclique Cryptanalysis of the Full AES</title>
+    <author initials='A.' surname='Bogdanov' fullname='Andrey Bogdanov'>
+      <organization>K.U.</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>Leuven</city>
+          <country>Belgium</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='D.' surname='Khovratovich' fullname='Dmitry Khovratovich'>
+      <organization>Microsoft Research</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>Redmond</city>
+          <region>WA</region>
+          <country>USA</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='C.' surname='Rechberger' fullname='Christian Rechberger'>
+      <organization>ENS Paris and Chaire France Telecom</organization>
+      <address>
+        <postal>
+          <street></street>
+          <country>France</country>
+        </postal>
+      </address>
+    </author>
+    <date year='2011' />
+  </front>
+</reference>
+
+

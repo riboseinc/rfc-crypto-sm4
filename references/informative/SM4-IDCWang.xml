@@ -1,0 +1,18 @@
+<reference anchor='SM4-IDCWang' target='http://ieeexplore.ieee.org/document/5629201/'>
+  <front>
+    <title>Improved Impossible Differential Cryptanalysis on SMS4</title>
+    <author initials='G.' surname='Wang' fullname='Gaoli Wang'>
+      <organization>School of Computer Science and Technology</organization>
+      <address>
+        <postal>
+          <street>Donghua University</street>
+          <city>Shanghai</city>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <date month='October' day='13' year='2010' />
+  </front>
+</reference>
+
+

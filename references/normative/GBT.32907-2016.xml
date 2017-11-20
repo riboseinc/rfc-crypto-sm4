@@ -1,20 +1,18 @@
 
 <reference anchor='GBT.32907-2016' target='http://www.gb688.cn/bzgk/gb/newGbInfo?hcno=7803DE42D3BC5E80B0C3E5D8E873D56A'>
-<!--http://www.sac.gov.cn/SACSearch/search?channelid=97779&templet=gjcxjg_detail.jsp&searchword=STANDARD_CODE=%27GB/T%2032907-2016%27 -->
   <front>
     <title>GB/T 32907-2016: Information security technology -- SM4 block cipher algorithm</title>
     <author>
       <organization>Standardization Administration of the People's Republic of China</organization>
       <address>
         <postal>
-         <street>No. 9 Madian Donglu, Haidian District</street>
+         <street>9 Madian Donglu, Haidian District</street>
          <city>Beijing</city>
          <region>Beijing</region>
          <code>100088</code>
          <country>People's Republic of China</country>
         </postal>
         <phone>+86 (0)10 8226-2609</phone>
-        <!--<email>contact@oscca.gov.cn</email>-->
         <uri>http://www.sac.gov.cn</uri>
       </address>
     </author>

@@ -70,10 +70,13 @@ R(X_32, X_33, X_34, X_35) = (X_35, X_34, X_33, X_32)
 
 Please refer to <<appendix-a>> for sample calculations.
 
-A flow of the calculation is given in this diagram.
+A flow of the calculation is given in <<diagram-sm4-flow>>.
 
-[source]
-----
+[[diagram-sm4-flow]]
+.SM4 Encryption Flow
+====
+[align=center]
+....
 
                    128-bits plaintext
               \___________________________/
@@ -119,7 +122,8 @@ A flow of the calculation is given in this diagram.
                             v
                    128-bits ciphertext
 
-----
+....
+====
 
 
 [#sm4-decryption]
@@ -175,23 +179,27 @@ $$ -->
 Each round key $$rk_i$$ is created as follows, where $$i = 0, 1, ..., 31$$.
 
 ----
-(K_0, K_1, K_2, K_3)
-        = (MK_0 xor FK_0, MK_1 xor FK_1, MK_2 xor FK_2, MK_3 xor FK_3)
+(K_0, K_1, K_2, K_3) = 
+    (MK_0 xor FK_0, MK_1 xor FK_1, MK_2 xor FK_2, MK_3 xor FK_3)
 
 rk_i = K_{i + 4}
 
-K_{i + 4} = K_i xor T' (K_{i + 1} xor K_{i + 2} xor K_{i + 3} xor CK_i)
+K_{i + 4} = 
+    K_i xor T' (K_{i + 1} xor K_{i + 2} xor K_{i + 3} xor CK_i)
 ----
 
 Since the decryption key is identical to the encryption key, the round keys
 used in the decryption process are derived from the decryption key through
 the identical process to that of during encryption.
 
-Figure X depicts the i-th round of SM4.
+<<diagram-round-function>> depicts the i-th round of SM4.
 
-.Figure X
-[source]
-----
+.SM4 Round Function For the i-th Round
+[#diagram-round-function]
+====
+
+[align=center]
+....
 
   X_i                 rk_i  X_{i+1} X_{i+2} X_{i+3}
    |                   |      |       |       |
@@ -212,14 +220,15 @@ Figure X depicts the i-th round of SM4.
     |                         |       |       |
  X_{i+1}                   X_{i+2} X_{i+3} X_{i+4}
 
-----
+....
+====
 
 
 === Family Key $$FK$$
 
 Family key $$FK$$ given in hexadecimal notation, is:
 
-[source]
+[source,align=center]
 ----
 FK_0 = A3B1BAC6
 FK_1 = 56AA3350
@@ -266,7 +275,7 @@ A0A7AEB5, BCC3CAD1, D8DFE6ED, F4FB0209,
 The values of the constant key $$CK_i$$, where $$(i = 0, 1, ..., 31)$$, in
 hexadecimal, are:
 
-[source]
+[source,align=center]
 ----
 CK_0  = 00070E15   CK_16 = C0C7CED5
 CK_1  = 1C232A31   CK_17 = DCE3EAF1
@@ -285,3 +294,4 @@ CK_13 = 6C737A81   CK_29 = 2C333A41
 CK_14 = 888F969D   CK_30 = 484F565D
 CK_15 = A4ABB2B9   CK_31 = 646B7279
 ----
+

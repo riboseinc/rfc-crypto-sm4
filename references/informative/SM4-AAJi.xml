@@ -1,0 +1,39 @@
+<reference anchor='SM4-AAJi' target='https://doi.org/10.1109/IAS.2009.171'>
+  <front>
+    <title>Algebraic Attack to SMS4 and the Comparison with AES</title>
+    <author initials='J.' surname='Wen' fullname='Wen Ji'>
+      <organization>Beijing Electron. Sci. and Technol. Inst.</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>Beijing</city>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='H.' surname='Lei' fullname='Lei Hu'>
+      <organization>State Key Lab. of Inf. Security</organization>
+      <address>
+        <postal>
+          <street>Graduate School of Chinese Academy of Sciences</street>
+          <city>Beijing</city>
+          <code>100049</code>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='H.' surname='Ou' fullname='Haiwen Ou'>
+      <organization>Beijing Electron. Sci. and Technol. Inst.</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>Beijing</city>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <date year='2009' />
+  </front>
+</reference>
+
+

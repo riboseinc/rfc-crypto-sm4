@@ -1,0 +1,34 @@
+<reference anchor='SM4-LinearLiu' target='https://doi.org/10.1007/s11390-014-1495-9'>
+  <front>
+    <!-- Journal of Computer Science and Technology, November 2014, Volume 29, Issue 6, pp 1123–1133 -->
+    <title>Improved Linear Attacks on the Chinese Block Cipher Standard</title>
+    <author initials='M.' surname='Liu' fullname='Mingjie Liu'>
+      <organization>Beijing International Center for Mathematical Research, Peking University</organization>
+      <address>
+        <postal>
+          <street>5 Yiheyuan Road Haidian District</street>
+          <city>Beijing</city>
+          <code>100871</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <email>liumj9705@pku.edu.cn</email>
+        <uri>http://www.bicmr.org</uri>
+      </address>
+    </author>
+    <author initials='J.' surname='Chen' fullname='Jiazhe Chen'>
+      <organization>China Information Technology Security Evaluation Center</organization>
+      <address>
+        <postal>
+          <street>Building 1, No.8, Shangdi West Road, Haidian District</street>
+          <city>Beijing</city>
+          <code>100085</code>
+          <country>People's Republic of China</country>
+        </postal>
+        <email>jiazhechen@gmail.com</email>
+        <uri>http://www.itsec.gov.cn</uri>
+      </address>
+    </author>
+    <date day='17' month='November' year='2014'/>
+  </front>
+</reference>
+

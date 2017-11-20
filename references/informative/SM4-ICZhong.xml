@@ -1,0 +1,35 @@
+<reference anchor='SM4-ICZhong' target='http://www.cnki.com.cn/Article/CJFDTotal-XDKD200801019.htm'>
+  <!-- [26] 钟名富，胡予濮，陈杰.分组密码算法SM4的14轮 Square攻击[J].西安电子科技大学学报：自然科学版， 2008, 35(1)： 105-109 -->
+  <front>
+    <title>14-Round Square Attack on Blockcipher SMS4</title>
+    <author initials='M.' surname='Zhong' fullname='Mingfu Zhong'>
+      <organization>Computer Network and Information Security Ministry of Education Key Laboratory</organization>
+      <address>
+        <postal>
+          <street>Xidian University</street>
+          <country>People's Republic of China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='Y.' surname='Hu' fullname='Yupou Hu'>
+      <organization>Computer Network and Information Security Ministry of Education Key Laboratory</organization>
+      <address>
+        <postal>
+          <street>Xidian University</street>
+          <country>People's Republic of China</country>
+        </postal>
+      </address>
+    </author>
+    <author initials='J.' surname='Chen' fullname='Jie Chen'>
+      <organization>Computer Network and Information Security Ministry of Education Key Laboratory</organization>
+      <address>
+        <postal>
+          <street>Xidian University</street>
+          <country>People's Republic of China</country>
+        </postal>
+      </address>
+    </author>
+    <date year='2008' />
+  </front>
+</reference>
+

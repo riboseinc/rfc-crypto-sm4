@@ -1,0 +1,18 @@
+<reference anchor='SM4-LinearDong' target='http://kns.cnki.net/KCMS/detail/detail.aspx?dbcode=CDFD&amp;dbname=CDFD1214&amp;filename=1013114416.nh'>
+  <front>
+    <title>Security Analysis of the blockciphers AES and SM4</title>
+    <author initials="X." surname="Dong" fullname="Xiaoli Dong">
+      <organization>Xidian University</organization>
+      <address>
+        <postal>
+          <street></street>
+          <city>Xian</city>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <date year="2011"/>
+  </front>
+</reference>
+
+<!-- [17] 董晓丽.分组密码AES和SM4的安全性分析[D].西安： 西安电子科技大学，2011 -->

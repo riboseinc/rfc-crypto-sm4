@@ -1,17 +1,18 @@
 GIT
   remote: https://github.com/riboseinc/asciidoctor-bibliography
-  revision: bb5ea4aa1c6b23c4e1bbb5bb6e88169c2479b132
+  revision: f31ee9b250bf30968095880127a018679508b3b2
   specs:
-    asciidoctor-bibliography (0.5.0)
+    asciidoctor-bibliography (0.6.0)
       asciidoctor (~> 1.5.6)
       bibtex-ruby (~> 4.4.4)
       citeproc-ruby (~> 1.1.7)
       csl-styles (~> 1.0.1)
       latex-decode (~> 0.2.2)
+      nokogiri (~> 1.8.1)
 
 GIT
   remote: https://github.com/riboseinc/asciidoctor-rfc
-  revision: 42d8951cb92178618c212835c9b1154a4ae44581
+  revision: 7f184ed304e0f90a6ceff897bda48951ed613cbc
   specs:
     asciidoctor-rfc (0.8.0)
       asciidoctor (~> 1.5.6)

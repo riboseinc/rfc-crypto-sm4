@@ -1,0 +1,28 @@
+<reference anchor='SM4-SLC' target='https://doi.org/10.1007/s11432-011-4448-8'>
+  <front>
+    <title>Practical security against linear cryptanalysis for SMS4-like ciphers with SP round function</title>
+    <author initials='B.' surname='Zhang' fullname='Zhang Bin'>
+      <address>
+        <postal>
+          <street>PO. Box 1936</street>
+          <city>Beijing</city>
+          <code>100193</code>
+          <country>China</country>
+        </postal>
+        <email>dzjszhangbin@126.com</email>
+      </address>
+    </author>
+    <author initials='J.' surname='Chenhui' fullname='Jin Chenhui'>
+      <organization>Electronic Technology Institute</organization>
+      <address>
+        <postal>
+          <street>Information Engineering University</street>
+          <city>Zhengzhou</city>
+          <country>China</country>
+        </postal>
+      </address>
+    </author>
+    <date year='2012' />
+  </front>
+</reference>
+

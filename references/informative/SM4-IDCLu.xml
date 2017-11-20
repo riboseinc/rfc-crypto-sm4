@@ -1,0 +1,19 @@
+<reference anchor='SM4-IDCLu' target='https://doi.org/10.1007/978-3-540-77048-0_24'>
+  <front>
+    <title>Attacking Reduced-Round Versions of the SMS4 Block Cipher in the Chinese WAPI Standard</title>
+    <author initials='J.' surname='Lu' fullname='Jiqiang Lu'>
+      <organization>University of London, Information Security Group</organization>
+      <address>
+        <postal>
+          <street>Royal Holloway</street>
+          <city>Egham</city>
+          <region>Surrey</region>
+          <code>TW20 0EXUK</code>
+          <country>United Kingdom</country>
+        </postal>
+      </address>
+    </author>
+    <date year="2007"/>
+  </front>
+</reference>
+

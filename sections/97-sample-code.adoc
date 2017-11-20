@@ -1,10 +1,65 @@
 [#sample-implementation]
 = Sample Implementation In C
 
+== sm4.h
+
+"sm4.h" is the header file for the SM4 function.
+
+.sm4.h
+[source,c]
+----
+<CODE BEGINS>
+include::../code/sm4.h[]
+<CODE ENDS>
+----
+
+== sm4.c
+
+"sm4.c" contains the main implementation of SM4.
+
 .sm4.c
 [source,c]
 ----
 <CODE BEGINS>
-include::sm4_reference.c[]
+include::../code/sm4.c[tag=!skipdoc]
 <CODE ENDS>
 ----
+
+== sm4_main.c
+
+"sm4_main.c" is used to run the examples provided in this document
+and print out internal state for implementation reference.
+
+.sm4_main.c
+[source,c]
+----
+<CODE BEGINS>
+include::../code/sm4_main.c[tag=!skipdoc]
+<CODE ENDS>
+----
+
+== print.c and print.h
+
+"print.c" and "print.h" are used to provide pretty formatting used
+to print out the examples for this document.
+
+"print.h"
+
+.print.h
+[source,c]
+----
+<CODE BEGINS>
+include::../code/print.h[]
+<CODE ENDS>
+----
+
+"print.c"
+
+.print.c
+[source,c]
+----
+<CODE BEGINS>
+include::../code/print.c[]
+<CODE ENDS>
+----
+
