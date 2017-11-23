@@ -1,6 +1,6 @@
 = The SM4 Blockcipher Algorithm And Its Modes Of Operations
 :doctype: internet-draft
-:name: draft-ribose-cfrg-sm4-03
+:name: draft-ribose-cfrg-sm4-04
 :abbrev: SM4 Blockcipher Algorithm
 :status: info
 :ipr: trust200902
