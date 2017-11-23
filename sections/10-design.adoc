@@ -80,17 +80,21 @@ cryptographic strength of the S-box must be taken into account. The
 cryptographic strength of an S-box can be generally measured by factors such as
 its nonlinearity and differential distribution.
 
-//S盒的密码性质直接影响了整个分组密码算法的安全强度.
-//分组密码算法的设计必须充分考量S盒的密码强度，通常可用非线性度、差分均勻
-//性等指标来衡量S盒的安全强度.
+////
+S盒的密码性质直接影响了整个分组密码算法的安全强度.
+分组密码算法的设计必须充分考量S盒的密码强度，通常可用非线性度、差分均勻
+性等指标来衡量S盒的安全强度.
+////
 
-=== S-box algebraic expression
+=== S-box Algebraic Expression
 
-//1) S盒代数表达式
+////
+1) S盒代数表达式
 
-//为防止插入攻击，通常要求密码变换的代数式具有足够高的次数和复杂度.用拉格朗日插值多项
-//式可求得SM4算法S盒的代数表达式.这是一个
-//254次、255项的多项式，具有最高的复杂程度[9].
+为防止插入攻击，通常要求密码变换的代数式具有足够高的次数和复杂度.用拉格朗日插值多项
+式可求得SM4算法S盒的代数表达式.这是一个
+254次、255项的多项式，具有最高的复杂程度[9].
+////
 
 In order to prevent insertion attacks, the algebraic formula used for
 cryptographic substitution should be a high degree polynomial and contain a
@@ -106,13 +110,15 @@ f(x) : sum_{i=0}^{255} y_i
 ----
 
 
-=== Algebraic degree and distribution of terms
+=== Algebraic Degree And Distribution Of Terms
 
 Any n boolean function $$f(x): F_2^n -> F_2$$ can be represented
 uniquely in its algebraic normal form shown below:
 
-//2. 代数次数及项数分布 文献<<BC-Design>>提到任何n元布尔函数/(X):朽―
-//F2都可以唯一地表示成如下的代数正规形式：
+////
+2. 代数次数及项数分布 文献<<BC-Design>>提到任何n元布尔函数/(X):朽―
+F2都可以唯一地表示成如下的代数正规形式：
+////
 
 ----
 f(X) = a_0 + sum_{1<=i_i<...<i_k<=n, 1<=k<=n}
@@ -129,10 +135,12 @@ coefficient in its ANF representation. The constant of the i-th term of f(x) in
 ANF representation is called the i-th term of f(X), the total number of all
 i-th $$(0<=i<=n)$$ terms is called the "number of terms" of f(X).
 
-//文献<<BC-Design>>给出了 n元布尔函数代数项数及次
-//数的定义:代数正规形式中的最髙项的次数称为
-///(X)的次数;它的代数正规形式中的f次项的个 数称为/〇〇的f次项数;所有次项数
-//之和称为/〇〇的项数.
+////
+文献<<BC-Design>>给出了 n元布尔函数代数项数及次
+数的定义:代数正规形式中的最髙项的次数称为
+(X)的次数;它的代数正规形式中的f次项的个 数称为/〇〇的f次项数;所有次项数
+之和称为/〇〇的项数.
+////
 
 S(X) can be represented as a m-component function 
 $$S(X) = (f_1(X), f_2(X), ... f_m(X)): F_2^n -> F_2^m$$.
@@ -144,14 +152,17 @@ easily attacked by advanced differential cryptanalysis. If the number of terms
 are insufficient, then it may improve the success probability of insert
 attacks.
 
-//S(X)可以表示为m个分量函数S(X) = (/\ 〇〇，/2 Q〇，…，/w 〇〇 ):巧―F?，若将
-//S(X) 看成一个随机置换，它的每个分量函数的代数次 数最佳为n —
-//1，每个分量函数的i次项数应接 近于Ci/2.若代数次数太低，例如，每个分量函数
-//的次数都是2,则算法易受高阶差分密码分析的攻
-//击.若项数太少，有可能提高插值攻击的成功率.
+////
+S(X)可以表示为m个分量函数S(X) = (/\ 〇〇，/2 Q〇，…，/w 〇〇 ):巧―F?，若将
+S(X) 看成一个随机置换，它的每个分量函数的代数次 数最佳为n —
+1，每个分量函数的i次项数应接 近于Ci/2.若代数次数太低，例如，每个分量函数
+的次数都是2,则算法易受高阶差分密码分析的攻
+击.若项数太少，有可能提高插值攻击的成功率.
+////
 
 The algebraic degrees and number of terms of the SM4 S-box are described in
 <<diagram-sm4-degrees-terms>>.
+
 //SM4算法S盒的代数次数及项数分布如表2 所示：
 
 [[diagram-sm4-degrees-terms]]

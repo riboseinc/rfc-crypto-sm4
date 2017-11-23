@@ -148,7 +148,9 @@ int main(int argc, char **argv)
   };
   tests[3] = gbt32907t4;
 
+// tag::skipdoc[]
   /* TODO: add more examples */
+// end::skipdoc[]
 
   for (i = 0; i < 4; ++i)
   {

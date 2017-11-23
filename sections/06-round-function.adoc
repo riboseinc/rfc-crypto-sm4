@@ -38,7 +38,7 @@ $$
 -->
 ////
 
-== Permutation $$T$$ and $$T'$$
+== Permutations $$T$$ and $$T'$$
 
 ////
 <!-- 6.2 合成置换 𝐓 -->
@@ -119,7 +119,7 @@ tau(A) = (S(a_0), S(a_1), S(a_2), S(a_3))
 $$
 
 
-=== Linear Transformation $$L$$ and $$L'$$
+=== Linear Transformations $$L$$ and $$L'$$
 
 
 ////

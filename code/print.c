@@ -20,13 +20,3 @@ void print_bytes(unsigned int* buf, int n)
   debug_print("\n");
 }
 
-void print_block(unsigned int* buf, int n)
-{
-  print_bytes(buf, n * 4);
-}
-
-void print_hash(unsigned int* buf)
-{
-  print_block(buf, 8);
-}
-

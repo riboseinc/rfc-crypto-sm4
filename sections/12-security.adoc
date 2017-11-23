@@ -9,11 +9,22 @@
   considered as an alternative to AES-128 <<NIST.FIPS.197>>.
 
 * SM4 <<GBT.32907-2016>> is a blockcipher certified by the OSCCA <<OSCCA>>.
-  No formal proof of security is provided. There are no known feasible
+  No formal proof of security is provided. There are no known practical
   attacks against SM4 algorithm by the time of publishing this document, but
   there are security concerns with regards to side-channel attacks when the
-  SM4 algorithm is implemented in hardware. See <<cryptanalysis>> for more
-  details.
+  SM4 algorithm is implemented in hardware.
++
+For instance, <<SM4-Power>> illustrated an attack by measuring the power
+consumption of the device. A chosen ciphertext attack, assuming a fixed
+correlation between the round keys and data mask, is able to recover the round
+key successfully. 
++
+When the SM4 algorithm is implemented in hardware, the parameters and keys
+**SHOULD** be randomly generated without fixed correlation.
++
+There have also been improvements to the hardware embodiment design for SM4
+<<SM4-VLSI>> <<SM4-FPGA>>, white-box implementions <<SM4-WhiteBox>>,
+and performance enhancements <<SM4-HiSpeed>>, that may resist such attacks.
 
 * The IV does not have to be secret. The IV itself, or criteria enough to
   determine it, **MAY** be transmitted with ciphertext.
@@ -41,3 +52,4 @@ Various attack scenarios have been described in <<BC-EVAL>> and these modes
 +
 Users with no need of authenticity, non-malleablility and chosen-ciphertext
 (CCA) security **MAY** utilize this mode of operation <<BC-EVAL>>.
+

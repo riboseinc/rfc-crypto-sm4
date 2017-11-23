@@ -20,10 +20,12 @@ rounds::
   The number of iterations that the round function is run.
 
 round key::
-  A key used in each round on the blockcipher, derived from the input key, also called a subkey.
+  A key used in each round on the blockcipher, derived from the input key, also
+  called a subkey.
 
 word::
   a 32-bit quantity
 
 S-box::
-  The S (substitution) box function produces 8-bit output from 8-bit input, represented as $$S(.)$$
+  The S (substitution) box function produces 8-bit output from 8-bit input,
+  represented as $$S(.)$$

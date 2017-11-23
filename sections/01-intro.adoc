@@ -17,27 +17,25 @@ and also to serve as a stable reference for IETF documents that utilize
 this algorithm.
 
 While this document is similar to <<SM4-En>> in nature, <<SM4-En>> is a textual
-translation of the "SMS4" algorithm <<SM4>> published in 2006, while this
+translation of the "SMS4" algorithm <<SM4>> published in 2006. Instead, this
 document follows the updated description and structure of <<GBT.32907-2016>>
 published in 2016. Sections 1 to 7 of this document directly map to the
 corresponding sections numbers of the <<GBT.32907-2016>> standard for
 convenience of the reader.
 
 This document also provides additional information on the design
-considerations of the algorithm <<SM4-Details>>, practical usage and
-implementation of SM4 specifying modes of operations that are known
-to be used with SM4 (see <<sm4-modes>>), and providing the
-SM4 OIDs (see <<sm4-oids>>).
-
+considerations of the SM4 algorithm <<SM4-Details>>, its modes of operations
+that are currently being used (see <<sm4-modes>>), and the offical SM4 OIDs
+(see <<sm4-oids>>).
 
 == History
 
 The "SMS4" algorithm (the former name of SM4) was invented by
-Shu-Wang Lu <<LSW-Bio>>, first published in 2003 as part of
-<<GB.15629.11-2003>>, then published independently in 2006 <<SM4>> by the OSCCA,
-officially renamed to "SM4" in 2012 in <<GMT-0002-2012>> published by the OSCCA,
-and finally standardized in 2016 as a Chinese National Standard (GB Standard)
-<<GBT.32907-2016>>. SM4 is also standardized in <<ISO.IEC.18033-3.AMD2>>
+Shu-Wang Lu <<LSW-Bio>>. It was first published in 2003 as part of
+<<GB.15629.11-2003>>, then published independently in 2006 by OSCCA <<SM4>>,
+published as an industry cryptographic standard and renamed to "SM4" in 2012 by OSCCA <<GMT-0002-2012>>,
+and finally formalized in 2016 as a Chinese National Standard (GB Standard)
+<<GBT.32907-2016>>. SM4 has also been standardized in <<ISO.IEC.18033-3.AMD2>>
 by the International Organization for Standardization in 2017.
 
 SMS4 was originally created for use in protecting wireless networks <<SM4>>,
