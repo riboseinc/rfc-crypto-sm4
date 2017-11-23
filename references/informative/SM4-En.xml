@@ -1,7 +1,5 @@
-
-<reference anchor='SM4-En' target='https://www.iacr.org/cryptodb/data/paper.php?pubkey=18006'>
+<reference anchor='SM4-En' target='https://eprint.iacr.org/2008/329'>
   <front>
-    <!-- https://www.iacr.org/cryptodb/data/paper.php?pubkey=18006 -->
     <title>SMS4 Encryption Algorithm for Wireless Networks</title>
     <author initials="W." surname="Diffie" fullname="Whitfield Diffie">
       <organization>Sun Microsystems</organization>
@@ -34,5 +32,4 @@
     <date day='15' month='May' year='2008'/>
   </front>
 </reference>
-
 
