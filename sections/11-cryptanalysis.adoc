@@ -6,7 +6,12 @@
 ////
 丄1 SM4算法安全性分析现状
 
-SM4分组密码算法自从2006年1月发布以来，国内外众多的科研人员对其安全性进行了评估，评估方法几乎涵盖了目前已知的所有分组密码分析方法，如差分密码分析、线性密码分析、不可能差分分析等等.公开的评估结果表明，SM4分组密码算法能够抵抗目前已知的所有攻击，拥有足够的安全冗余度.
+SM4分组密码算法自从2006年1月发布以来，
+国内外众多的科研人员对其安全性进行了评估，
+评估方法几乎涵盖了目前已知的所有分组密码分析方法，
+如差分密码分析、线性密码分析、不可能差分分析等等.
+公开的评估结果表明，SM4分组密码算法能够抵抗目前已知的所有攻击，
+拥有足够的安全冗余度.
 ////
 
 SM4 has been heavily cryptanalyzed by international researchers since
@@ -366,59 +371,59 @@ S盒数 0 1 2 2 4 6 8 9 10 <=14
 at the time of publishing.
 
 [#table-sm4-attacks]
-.Strongest SM4 Attacks
-[align=center]
+.Leading SM4 Attacks As Of Publication
+[align=center,grid="all"]
 |===
-|Method | Rounds | Time Complexity | Data Complexity | Memory Complexity | Reference
-
-|Differential
-|23
-|$$2^126.7$$
-|$$2^117$$
-|$$2^120.7$$
-|<<SM4-DiffSu>>
+|Method | Rounds | Complexity | Reference
 
 |Linear
 |24
-|$$2^122.6$$
-|$$2^122.6$$
-|$$2^85$$
+|Time: $$2^{122.6}$$,
+Data: $$2^{122.6}$$,
+Memory: $$2^{85}$$
 |<<SM4-NLC>>
 
 |Multi-dimensional Linear
 |23
-|$$2^122.7$$
-|$$2^122.6$$
-|$$2^120.6$$
+|Time: $$2^{122.7}$$,
+Data: $$2^{122.6}$$,
+Memory: $$2^{120.6}$$
 |<<SM4-LinearLiu>>
+
+|Differential
+|23
+|Time: $$2^{126.7}$$,
+Data: $$2^{117}$$,
+Memory: $$2^{120.7}$$
+|<<SM4-DiffSu>>
+
+|Matrix
+|18
+|Time: $$2^{110.77}$$,
+Data: $$2^{127}$$,
+Memory $$2^{130}$$
+|<<SM4-MatrixShe>>
 
 |Impossible Differential
 |17
-|$$2^132$$
-|$$2^117$$
-|-
+|Time: $$2^{132}$$,   
+Data: $$2^{117}$$,   
+Memory: --
 |<<SM4-IDCWang>>
 
 |Zero-correlation Linear
 |14
-|$$2^120.7$$
-|$$2^123.5$$
-|$$2^73$$
-|SM4-ZCLC
+|Time: $$2^{120.7}$$,
+Data: $$2^{123.5}$$,
+Memory: $$2^{73}$$
+|<<SM4-ZCLC>>
 
 |Integral
 |14
-|$$2^96.5$$
-|$$2^32$$
-|-
+|Time: $$2^{96.5}$$,
+Data: $$2^{32}$$,
+Memory: --
 |<<SM4-ICZhong>>
-
-|Matrix
-|18
-|$$2^110.77$$
-|$$2^127$$
-|$$2^130$$
-|<<SM4-MatrixShe>>
 
 |===
 
