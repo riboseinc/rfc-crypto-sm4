@@ -1,8 +1,8 @@
 [abstract]
 
 This document describes the SM4 symmetric blockcipher algorithm
-published as GB/T 32907-2016 by the Organization of State Commercial
-Administration of China (OSCCA).
+published as GB/T 32907-2016 by the State Cryptography
+Administration of China (SCA).
 
 This document is a product of the Crypto Forum Research Group (CFRG).
 

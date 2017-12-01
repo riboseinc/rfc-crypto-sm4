@@ -1,47 +1,40 @@
+#!/bin/bash
+
 export DYLD_FALLBACK_LIBRARY_PATH=~/src/openssl
 export OPENSSL_BIN=~/src/openssl/apps/openssl
 
-plaintext="AAAAAAAABBBBBBBBCCCCCCCCDDDDDDDDEEEEEEEEFFFFFFFFAAAAAAAABBBBBBBB"
-ekey="0123456789ABCDEFFEDCBA9876543210"
+plaintext_short="AAAAAAAABBBBBBBBCCCCCCCCDDDDDDDDEEEEEEEEFFFFFFFFAAAAAAAABBBBBBBB"
+plaintext_long="AAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBCCCCCCCCCCCCCCCCDDDDDDDDDDDDDDDDEEEEEEEEEEEEEEEEFFFFFFFFFFFFFFFFAAAAAAAAAAAAAAAABBBBBBBBBBBBBBBB"
+ekey1="0123456789ABCDEFFEDCBA9876543210"
+ekey2="FEDCBA98765432100123456789ABCDEF"
 iv="000102030405060708090A0B0C0D0E0F"
 
-echo "SM4-ECB"
-echo ${plaintext} | \
-  xxd -r -p | \
-  ${OPENSSL_BIN} enc -sm4-ecb -e -nosalt \
-  -K ${ekey} | \
-  xxd
+for mode in ecb cbc ofb cfb ctr; do
 
-echo "SM4-CBC"
-echo ${plaintext} | \
-  xxd -r -p | \
-  ${OPENSSL_BIN} enc -sm4-cbc -e -nosalt \
-  -K ${ekey} \
-  -iv ${iv} | \
-  xxd
+  for ekey in ${ekey1} ${ekey2}; do
 
-echo "SM4-OFB"
-echo ${plaintext} | \
-  xxd -r -p | \
-  ${OPENSSL_BIN} enc -sm4-ofb -e -nosalt \
-  -K ${ekey} \
-  -iv ${iv} | \
-  xxd
+    echo "SM4-${mode} ekey ${ekey}"
 
-echo "SM4-CFB"
-echo ${plaintext} | \
-  xxd -r -p | \
-  ${OPENSSL_BIN} enc -sm4-cfb -e -nosalt \
-  -K ${ekey} \
-  -iv ${iv} | \
-  xxd
+    if [ "${mode}" == "ecb" ]; then
+      iv_opts=""
+    else
+      iv_opts=" -iv ${iv}"
+    fi
 
-echo "SM4-CTR"
-plaintext="AAAAAAAAAAAAAAAABBBBBBBBBBBBBBBBCCCCCCCCCCCCCCCCDDDDDDDDDDDDDDDDEEEEEEEEEEEEEEEEFFFFFFFFFFFFFFFFAAAAAAAAAAAAAAAABBBBBBBBBBBBBBBB"
-echo ${plaintext} | \
-  xxd -r -p | \
-  ${OPENSSL_BIN} enc -sm4-ctr -e -nosalt \
-  -K ${ekey} \
-  -iv ${iv} | \
-  xxd
+    plaintext="${plaintext_short}"
+    if [ "${mode}" == "ctr" ]; then
+      plaintext="${plaintext_long}"
+    fi
+
+    # WARNING: the HEX STRINGS outputted are wrong because they're uppercased.
+    # We do this here to make it easy to copy uppercase ciphertext to the text.
+    echo ${plaintext} | \
+      xxd -r -p | \
+      ${OPENSSL_BIN} enc -sm4-${mode} -e -nosalt \
+      -K ${ekey} ${iv_opts} | \
+      xxd | \
+      tr '[:lower:]' '[:upper:]'
+  done
+
+done
 

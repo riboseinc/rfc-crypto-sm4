@@ -4,7 +4,7 @@
 //<!-- 附录A 运算示例 -->
 == Examples From GB/T 32907-2016
 
-=== Example 1
+=== Example 1 (GB/T 32907-2016 Example 1 Encryption)
 
 ////
 <!-- 本部分为 SM4 分组密码算法对一组明文进行加密的运算示例。
@@ -17,14 +17,12 @@ This is example 1 provided by <<GBT.32907-2016>> to demonstrate encryption of a
 plaintext.
 
 Plaintext:
-
 [source]
 ----
 01 23 45 67 89 AB CD EF FE DC BA 98 76 54 32 10
 ----
 
 Encryption key:
-
 [source]
 ----
 01 23 45 67 89 AB CD EF FE DC BA 98 76 54 32 10
@@ -71,13 +69,74 @@ rk_31 = 9124A012   X_35 = 681EDF34
 //<!-- 输出密文: 68 1E DF 34 D2 06 96 5E 86 B3 E9 4F 53 6E 42 46 -->
 
 Ciphertext:
-
 [source]
 ----
 68 1E DF 34 D2 06 96 5E 86 B3 E9 4F 53 6E 42 46
 ----
 
-=== Example 2
+=== Example 2 (GB/T 32907-2016 Example 1 Decryption)
+
+This demonstrates the decryption process of the Example 1 ciphertext provided
+by <<GBT.32907-2016>>.
+
+Ciphertext:
+[source]
+----
+68 1E DF 34 D2 06 96 5E 86 B3 E9 4F 53 6E 42 46
+----
+
+Encryption key:
+[source]
+----
+01 23 45 67 89 AB CD EF FE DC BA 98 76 54 32 10
+----
+
+Status of the round key ($$rk_i$$) and round output ($$X_i$$) per round:
+
+[source]
+----
+rk_31 = 9124A012    X_35 = 7B938F4C
+rk_30 = 01CF72E5    X_34 = 893450AD
+rk_29 = 62293496    X_33 = 6FE46B75
+rk_28 = 428D3654    X_32 = EFF24FDC
+rk_27 = F1780C81    X_31 = 2FF60603
+rk_26 = 0E228AEB    X_30 = 1DCDFA10
+rk_25 = 1D2115B0    X_29 = F4CBA1F9
+rk_24 = B79BD80C    X_28 = 6AE7725F
+rk_23 = 99E1FD2E    X_27 = 124B18AA
+rk_22 = C7159060    X_26 = 55A3BA22
+rk_21 = 98CA015A    X_25 = ED1EC85E
+rk_20 = E89E641F    X_24 = AF2432C4
+rk_19 = 92244439    X_23 = F69E6888
+rk_18 = CC874966    X_22 = 2FFC5831
+rk_17 = 73B55FA3    X_21 = D42B7C59
+rk_16 = D120B428    X_20 = 8B952B83
+rk_15 = 104495A1    X_19 = 907127FA
+rk_14 = 44BA14AF    X_18 = B8A5DA02
+rk_13 = 30D895B7    X_17 = 42DD0F19
+rk_12 = 6988608C    X_16 = 27DAC07F
+rk_11 = 7EE55B57    X_15 = 7A96F2EB
+rk_10 = C30753ED    X_14 = 77F4C297
+rk_9  = B7584DBD    X_13 = 33220757
+rk_8  = A520307C    X_12 = F87C5BD5
+rk_7  = 24763151    X_11 = CC13E2EE
+rk_6  = B6BB89B3    X_10 = 11C1E22A
+rk_5  = 776A0C61    X_9  = A18B4CB2
+rk_4  = 367360F4    X_8  = 27FAD345
+rk_3  = 7BA92077    X_7  = 76543210
+rk_2  = 5A6AB19A    X_6  = FEDCBA98
+rk_1  = 41662B61    X_5  = 89ABCDEF
+rk_0  = F12186F9    X_4  = 01234567
+----
+
+Plaintext:
+
+[source]
+----
+01 23 45 67 89 AB CD EF FE DC BA 98 76 54 32 10
+----
+
+=== Example 3 (GB/T 32907-2016 Example 2 Encryption)
 
 //<!-- A.2 示例 2 -->
 
@@ -91,7 +150,6 @@ plaintext 1,000,000 times repeatedly, using a fixed encryption key.
 //<!-- 输入明文: 01 23 45 67 89 AB CD EF FE DC BA 98 76 54 32 10 -->
 
 Plaintext:
-
 [source]
 ----
 01 23 45 67 89 AB CD EF FE DC BA 98 76 54 32 10
@@ -113,6 +171,153 @@ Ciphertext:
 59 52 98 C7 C6 FD 27 1F 04 02 F8 04 C3 3D 3F 66
 ----
 
+
+=== Example 4
+
+The following example demonstrates encryption of a different message using a
+different key from the above examples.
+
+Plaintext:
+[source]
+----
+01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+----
+
+Encryption key:
+[source]
+----
+FE DC BA 98 76 54 32 10 01 23 45 67 89 AB CD EF
+----
+
+Status of the round key ($$rk_i$$) and round output ($$X_i$$) per round:
+
+[source]
+----
+rk_0  = 0D8CC1B4    X_4  = F7EAEB6A
+rk_1  = AC44F213    X_5  = B4967C0F
+rk_2  = 188C0C40    X_6  = 5B9B2419
+rk_3  = 7537585E    X_7  = F46BECBA
+rk_4  = 627646F5    X_8  = A8013E25
+rk_5  = 54D785AD    X_9  = B38E2ABE
+rk_6  = 51B96DEE    X_10 = 3E7C99A1
+rk_7  = 0C385958    X_11 = 6DD5F47F
+rk_8  = 5E494992    X_12 = B286430C
+rk_9  = 32F3FE04    X_13 = AB997DE3
+rk_10 = 3A3A733D    X_14 = 80F8F21F
+rk_11 = 0EDFB91D    X_15 = 4EF7052E
+rk_12 = 6823CD6B    X_16 = 4462FFAF
+rk_13 = 40F7D825    X_17 = 14DFD5EA
+rk_14 = 4BD68EE5    X_18 = 6D33EFED
+rk_15 = 165A36C8    X_19 = 3A4F8B3C
+rk_16 = 56608984    X_20 = 1A435088
+rk_17 = 23F35FF4    X_21 = 4E64B153
+rk_18 = 8B592B3E    X_22 = 0415CEDA
+rk_19 = 80F7388A    X_23 = ADD88955
+rk_20 = 0415C409    X_24 = 73964EF1
+rk_21 = AFDF1370    X_25 = B0085092
+rk_22 = CF444772    X_26 = 554A1293
+rk_23 = 9AF9901F    X_27 = 4BC6D6A8
+rk_24 = C457578C    X_28 = 7BB650E1
+rk_25 = 95701C60    X_29 = DDFB8A61
+rk_26 = 2B0F4EE1    X_30 = 5C4DFD78
+rk_27 = 7F826139    X_31 = FD9066FD
+rk_28 = FA37F8D9    X_32 = 55ADB594
+rk_29 = D18AF8CE    X_33 = AC1B3EA9
+rk_30 = 5BD5D8C6    X_34 = 13F01ADE
+rk_31 = 711138B7    X_35 = F766678F
+----
+
+Ciphertext:
+[source]
+----
+F7 66 67 8F 13 F0 1A DE AC 1B 3E A9 55 AD B5 94
+----
+
+=== Example 5
+
+The following example demonstrates decryption of Example 4.
+
+Ciphertext:
+[source]
+----
+F7 66 67 8F 13 F0 1A DE AC 1B 3E A9 55 AD B5 94
+----
+
+Encryption key:
+[source]
+----
+FE DC BA 98 76 54 32 10 01 23 45 67 89 AB CD EF
+----
+
+Status of the round key ($$rk_i$$) and round output ($$X_i$$) per round:
+
+[source]
+----
+rk_31 = 711138B7    X_35 = FD9066FD
+rk_30 = 5BD5D8C6    X_34 = 5C4DFD78
+rk_29 = D18AF8CE    X_33 = DDFB8A61
+rk_28 = FA37F8D9    X_32 = 7BB650E1
+rk_27 = 7F826139    X_31 = 4BC6D6A8
+rk_26 = 2B0F4EE1    X_30 = 554A1293
+rk_25 = 95701C60    X_29 = B0085092
+rk_24 = C457578C    X_28 = 73964EF1
+rk_23 = 9AF9901F    X_27 = ADD88955
+rk_22 = CF444772    X_26 = 0415CEDA
+rk_21 = AFDF1370    X_25 = 4E64B153
+rk_20 = 0415C409    X_24 = 1A435088
+rk_19 = 80F7388A    X_23 = 3A4F8B3C
+rk_18 = 8B592B3E    X_22 = 6D33EFED
+rk_17 = 23F35FF4    X_21 = 14DFD5EA
+rk_16 = 56608984    X_20 = 4462FFAF
+rk_15 = 165A36C8    X_19 = 4EF7052E
+rk_14 = 4BD68EE5    X_18 = 80F8F21F
+rk_13 = 40F7D825    X_17 = AB997DE3
+rk_12 = 6823CD6B    X_16 = B286430C
+rk_11 = 0EDFB91D    X_15 = 6DD5F47F
+rk_10 = 3A3A733D    X_14 = 3E7C99A1
+rk_9  = 32F3FE04    X_13 = B38E2ABE
+rk_8  = 5E494992    X_12 = A8013E25
+rk_7  = 0C385958    X_11 = F46BECBA
+rk_6  = 51B96DEE    X_10 = 5B9B2419
+rk_5  = 54D785AD    X_9  = B4967C0F
+rk_4  = 627646F5    X_8  = F7EAEB6A
+rk_3  = 7537585E    X_7  = 0C0D0E0F
+rk_2  = 188C0C40    X_6  = 08090A0B
+rk_1  = AC44F213    X_5  = 04050607
+rk_0  = 0D8CC1B4    X_4  = 00010203
+----
+
+Plaintext:
+[source]
+----
+01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+----
+
+=== Example 6
+
+This example is based on Example 4 to demonstrate encryption of a
+plaintext 1,000,000 times repeatedly, using a fixed encryption key.
+
+Plaintext:
+[source]
+----
+01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+----
+
+Encryption Key:
+[source]
+----
+FE DC BA 98 76 54 32 10 01 23 45 67 89 AB CD EF
+----
+
+Ciphertext:
+[source]
+----
+37 9A 96 D0 A6 A5 A5 06 0F B4 60 C7 5D 18 79 ED 
+----
+
+
+
 == Examples For Various Modes Of Operations
 
 The following examples can be verified using open-source cryptographic
@@ -122,7 +327,9 @@ libraries including:
 * the OpenSSL Cryptography and SSL/TLS Toolkit <<OPENSSL>> with SM4 support
 
 
-=== SM4-ECB Example
+=== SM4-ECB Examples
+
+==== Example 1
 
 Plaintext:
 [source]
@@ -145,8 +352,33 @@ Ciphertext:
 00 2A 8A 4E FA 86 3C CA D0 24 AC 03 00 BB 40 D2
 ----
 
+==== Example 2
 
-=== SM4-CBC Example
+Plaintext:
+[source]
+----
+AA AA AA AA BB BB BB BB CC CC CC CC DD DD DD DD
+EE EE EE EE FF FF FF FF AA AA AA AA BB BB BB BB
+----
+
+Encryption Key:
+[source]
+----
+FE DC BA 98 76 54 32 10 01 23 45 67 89 AB CD EF 
+----
+
+Ciphertext:
+[source]
+----
+C5 87 68 97 E4 A5 9B BB A7 2A 10 C8 38 72 24 5B 
+12 DD 90 BC 2D 20 06 92 B5 29 A4 15 5A C9 E6 00 
+A2 51 49 20 93 F8 F6 42 89 B7 8D 6E 8A 28 B1 C6 
+----
+
+
+=== SM4-CBC Examples
+
+==== Example 1
 
 Plaintext:
 
@@ -176,7 +408,39 @@ Ciphertext:
 40 D8 41 32 E9 99 74 A4 A8 80 88 68 42 07 48 59
 ----
 
-=== SM4-OFB Example
+==== Example 2
+
+Plaintext:
+
+[source]
+----
+AA AA AA AA BB BB BB BB CC CC CC CC DD DD DD DD
+EE EE EE EE FF FF FF FF AA AA AA AA BB BB BB BB
+----
+
+Encryption Key:
+[source]
+----
+FE DC BA 98 76 54 32 10 01 23 45 67 89 AB CD EF 
+----
+
+IV:
+[source]
+----
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+----
+
+Ciphertext:
+[source]
+----
+0D 3A 6D DC 2D 21 C6 98 85 72 15 58 7B 7B B5 9A 
+91 F2 C1 47 91 1A 41 44 66 5E 1F A1 D4 0B AE 38 
+67 C6 7F 15 25 1F 2A C5 21 9B B2 6E 80 7D A5 5B 
+----
+
+=== SM4-OFB Examples
+
+==== Example 1
 
 Plaintext:
 
@@ -205,7 +469,38 @@ AC 32 36 CB 86 1D D3 16 E6 41 3B 4E 3C 75 24 B7
 1D 01 AC A2 48 7C A5 82 CB F5 46 3E 66 98 53 9B
 ----
 
-=== SM4-CFB Example
+==== Example 2
+
+Plaintext:
+
+[source]
+----
+AA AA AA AA BB BB BB BB CC CC CC CC DD DD DD DD
+EE EE EE EE FF FF FF FF AA AA AA AA BB BB BB BB
+----
+
+Encryption Key:
+[source]
+----
+FE DC BA 98 76 54 32 10 01 23 45 67 89 AB CD EF 
+----
+
+IV:
+[source]
+----
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+----
+
+Ciphertext:
+[source]
+----
+5D CC CD 25 A8 4B A1 65 60 D7 F2 65 88 70 68 49 
+33 FA 16 BD 5C D9 C8 56 CA CA A1 E1 01 89 7A 97 
+----
+
+=== SM4-CFB Examples
+
+==== Example 1
 
 Plaintext:
 [source]
@@ -233,7 +528,37 @@ AC 32 36 CB 86 1D D3 16 E6 41 3B 4E 3C 75 24 B7
 69 D4 C5 4E D4 33 B9 A0 34 60 09 BE B3 7B 2B 3F
 ----
 
-=== SM4-CTR Example
+==== Example 2
+
+Plaintext:
+[source]
+----
+AA AA AA AA BB BB BB BB CC CC CC CC DD DD DD DD
+EE EE EE EE FF FF FF FF AA AA AA AA BB BB BB BB
+----
+
+Encryption Key:
+[source]
+----
+FE DC BA 98 76 54 32 10 01 23 45 67 89 AB CD EF 
+----
+
+IV:
+[source]
+----
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+----
+
+Ciphertext:
+[source]
+----
+5D CC CD 25 A8 4B A1 65 60 D7 F2 65 88 70 68 49 
+0D 9B 86 FF 20 C3 BF E1 15 FF A0 2C A6 19 2C C5 
+----
+
+=== SM4-CTR Examples
+
+==== Example 1
 
 Plaintext:
 [source]
@@ -263,5 +588,37 @@ AC 32 36 CB 97 0C C2 07 91 36 4C 39 5A 13 42 D1
 A3 CB C1 87 8C 6F 30 CD 07 4C CE 38 5C DD 70 C7
 F2 34 BC 0E 24 C1 19 80 FD 12 86 31 0C E3 7B 92
 6E 02 FC D0 FA A0 BA F3 8B 29 33 85 1D 82 45 14
+----
+
+==== Example 2
+
+Plaintext:
+[source]
+----
+AA AA AA AA AA AA AA AA BB BB BB BB BB BB BB BB
+CC CC CC CC CC CC CC CC DD DD DD DD DD DD DD DD
+EE EE EE EE EE EE EE EE FF FF FF FF FF FF FF FF
+EE EE EE EE EE EE EE EE AA AA AA AA AA AA AA AA
+----
+
+Encryption Key:
+[source]
+----
+FE DC BA 98 76 54 32 10 01 23 45 67 89 AB CD EF 
+----
+
+IV:
+[source]
+----
+00 01 02 03 04 05 06 07 08 09 0A 0B 0C 0D 0E 0F
+----
+
+Ciphertext:
+[source]
+----
+5D CC CD 25 B9 5A B0 74 17 A0 85 12 EE 16 0E 2F 
+8F 66 15 21 CB BA B4 4C C8 71 38 44 5B C2 9E 5C 
+0A E0 29 72 05 D6 27 04 17 3B 21 23 9B 88 7F 6C 
+8C B5 B8 00 91 7A 24 88 28 4B DE 9E 16 EA 29 06 
 ----
 

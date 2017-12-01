@@ -1,8 +1,8 @@
-<reference anchor='OSCCA' target='http://www.oscca.gov.cn'>
+<reference anchor='SCA' target='http://www.sca.gov.cn'>
   <front>
-    <title>Organization of State Commercial Administration of China</title>
+    <title>State Cryptography Administration of China</title>
     <author>
-      <organization>Organization of State Commercial Administration of China</organization>
+      <organization>State Cryptography Administration of China</organization>
       <address>
         <postal>
          <street>7 Dian Chang Lu, Fengtai Qu</street>
@@ -12,12 +12,10 @@
          <country>People's Republic of China</country>
         </postal>
         <phone>+86 (0)10 5970-3789</phone>
-        <!--<email>contact@oscca.gov.cn</email>-->
-        <uri>http://www.oscca.gov.cn</uri>
+        <uri>http://www.sca.gov.cn</uri>
       </address>
     </author>
-    <date month='May' year='2017'/>
+    <date month='Dec' year='2017'/>
   </front>
 </reference>
-
 

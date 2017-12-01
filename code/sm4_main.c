@@ -55,6 +55,7 @@ int sm4_run_example(test_case tc)
     }
   }
 
+  debug = 1;
   debug_print("+++++++++++++++++++++++++++++++"
       " RESULT "
       "++++++++++++++++++++++++++++++++\n");
@@ -65,6 +66,7 @@ int sm4_run_example(test_case tc)
   debug_print(" Output:\n");
   print_bytes((unsigned int*)output, SM4_BLOCK_SIZE);
 
+  debug = 0;
   return memcmp(
     (unsigned char*)output,
     (unsigned char*)tc.expected,
@@ -79,7 +81,7 @@ int main(int argc, char **argv)
   unsigned char key[SM4_BLOCK_SIZE];
   unsigned char block[SM4_BLOCK_SIZE];
 
-  test_case tests[4] = {0};
+  test_case tests[8] = {0};
 
   /*
    * This test vector comes from Example 1 of GB/T 32907-2016,
@@ -148,12 +150,67 @@ int main(int argc, char **argv)
   };
   tests[3] = gbt32907t4;
 
+  /*
+   * Newly added examples to demonstrate key changes.
+   */
+  static const unsigned int newexamplek1[SM4_BLOCK_SIZE] = {
+    0xfedcba98, 0x76543210,
+    0x01234567, 0x89abcdef
+  };
+  static const unsigned int newexamplem1[SM4_BLOCK_SIZE] = {
+    0x00010203, 0x04050607,
+    0x08090a0b, 0x0c0d0e0f
+  };
+  static const unsigned int newexamplee1[SM4_BLOCK_SIZE] = {
+    0xf766678f, 0x13f01ade,
+    0xac1b3ea9, 0x55adb594
+  };
+  /*
+   */
+  test_case newexample1 = {
+    (unsigned char*)newexamplek1,
+    (unsigned char*)newexamplem1,
+    (unsigned char*)newexamplee1,
+    1,
+    true
+  };
+  tests[4] = newexample1;
+
+  test_case newexample2 = {
+    (unsigned char*)newexamplek1,
+    (unsigned char*)newexamplee1,
+    (unsigned char*)newexamplem1,
+    1,
+    false
+  };
+  tests[5] = newexample2;
+
+  /*
+   * After 1,000,000 iterations.
+   */
+  static const unsigned int newexamplee2[SM4_BLOCK_SIZE] = {
+    0x379a96d0, 0xa6a5a506,
+    0x0fb460c7, 0x5d1879ed
+  };
+  test_case newexample3 = {
+    (unsigned char*)newexamplek1,
+    (unsigned char*)newexamplem1,
+    (unsigned char*)newexamplee2,
+    1000000,
+    true
+  };
+  tests[6] = newexample3;
+
 // tag::skipdoc[]
   /* TODO: add more examples */
 // end::skipdoc[]
 
-  for (i = 0; i < 4; ++i)
+  for (i = 0; i < 7; ++i)
   {
+
+    if (i == 1 || i == 3)
+      continue;
+
     printf("sm4_example[%2i]: %s\n", i,
       sm4_run_example(tests[i]) ?  "FAIL" : "PASS");
   }
