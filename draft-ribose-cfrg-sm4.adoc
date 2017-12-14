@@ -4,11 +4,12 @@
 :abbrev: SM4 Blockcipher Algorithm
 :status: info
 :ipr: trust200902
-:submissionType: IRTF
-:area: cfrg
+:submission-type: IRTF
+:area: sec
 :intended-series: full-standard
-:workgroup: Crypto Forum Research Group
-:revdate: 2017-12-08T00:00:00Z
+:workgroup: Internet Research Task Force
+//:workgroup: Crypto Forum Research Group
+:revdate: 2017-12-15T00:00:00Z
 :fullname: Ronald Henry Tse
 :lastname: Tse
 :forename_initials: R. H.
