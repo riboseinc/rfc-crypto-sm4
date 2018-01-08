@@ -1,0 +1,24 @@
+<reference anchor='GBT.33560-2017' target='http://www.gb688.cn/bzgk/gb/newGbInfo?hcno=252CF0F72A7BE339A56DEA7D774E8994'>
+  <front>
+    <title>GB/T 33560-2017: Information security technology -- Cryptographic application identifier criterion specification</title>
+    <author>
+      <organization>Standardization Administration of the People's Republic of China</organization>
+      <address>
+        <postal>
+         <street>No. 9 Madian Donglu, Haidian District</street>
+         <city>Beijing</city>
+         <region>Beijing</region>
+         <code>100088</code>
+         <country>People's Republic of China</country>
+        </postal>
+        <phone>+86 (0)10 8226-2609</phone>
+        <!--<email>contact@oscca.gov.cn</email>-->
+        <uri>http://www.sac.gov.cn</uri>
+      </address>
+    </author>
+    <date day='12' month='May' year='2017'/>
+  </front>
+</reference>
+
+
+

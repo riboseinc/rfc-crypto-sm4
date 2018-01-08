@@ -3,15 +3,52 @@
 
 The Object Identifier for SM4 is identified through these OIDs.
 
-== GM/T OID
+== GM/T OIDs
 
-"1.2.156.10197.1.104" for "SM4 Algorithm" <<GMT-0006-2012>>.
+=== SCA OID Prefix
+
+All SM4 GM/T OIDs belong under the "1.2.156.10197" OID prefix,
+registered by the Chinese Cryptography Standardization Technology
+Committee ("CCSTC"), a committee under the SCA.  Its components are
+described below in ASN.1 notation.
+
+* "id-ccstc" `{iso(1) member-body(2) cn(156) ccstc(10197)}`
+
+=== Blockcipher Algorithms
+
+These SM4 OIDs are assigned in <<GMT-0006-2012>> and described in
+<<GBT.33560-2017>>.
+
+"1.2.156.10197.1.100" for "Blockcipher Algorithms":
+
+* "id-bc" `{id-ccstc sm-scheme(1) block-cipher(100)}`
+
+"1.2.156.10197.1.104" for "Blockcipher Algorithm: SM4":
+
+* "id-bc-sm4" `{id-ccstc sm-scheme(1) sm4(104)}`
+
+
+=== Standard Identification
+
+The "SM4 Blockcipher Algorithm" standard is assigned the OID
+"1.2.156.10197.6.1.1.2" in <<GMT-0002-2012>> and this assignment is
+also described in <<GBT.33560-2017>>.
+
+* "id-standard-sm4" `{id-ccstc standard(1) fundamental(1) algorithm(1) sm4(2)}`
+
+Note that this OID is purely used for identifying the SM4 standard
+itself.
+
 
 == ISO OID
 
-"1.0.18033.3.2.4" for "id-bc128-sm4" <<ISO.IEC.18033-3.AMD2>>,
-described below.
+SM4 is assigned the OID "1.0.18033.3.2.4" ("id-bc128-sm4") in
+<<ISO.IEC.18033-3.AMD2>>. Its components are described below in ASN.1
+notation.
 
-- "is18033-3" {iso(1) standard(0) is18033(18033) part3(3)}
-- "id-bc128" {is18033-3 block-cipher-128-bit(2)}
-- "id-bc128-sm4" {id-bc128 sm4(4)}
+* "is18033-3" `{iso(1) standard(0) is18033(18033) part3(3)}`
+
+* "id-bc128" `{is18033-3 block-cipher-128-bit(2)}`
+
+* "id-bc128-sm4" `{id-bc128 sm4(4)}`
+
