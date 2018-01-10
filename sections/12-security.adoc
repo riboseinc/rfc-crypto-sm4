@@ -20,30 +20,30 @@ correlation between the round keys and data mask, is able to recover the round
 key successfully. 
 +
 When the SM4 algorithm is implemented in hardware, the parameters and keys
-**SHOULD** be randomly generated without fixed correlation.
+*SHOULD* be randomly generated without fixed correlation.
 +
 There have also been improvements to the hardware embodiment design for SM4
 <<SM4-VLSI>> <<SM4-FPGA>>, white-box implementions <<SM4-WhiteBox>>,
 and performance enhancements <<SM4-HiSpeed>>, that may resist such attacks.
 
 * The IV does not have to be secret. The IV itself, or criteria enough to
-  determine it, **MAY** be transmitted with ciphertext.
+  determine it, *MAY* be transmitted with ciphertext.
 
 * SM4-ECB: ECB is one of the four original modes defined for DES. With its
   problem well known to "leak quite a large amount of information" <<BC-EVAL>>,
-  it **SHOULD NOT** be used in most cases.
+  it *SHOULD NOT* be used in most cases.
 
 * SM4-CBC, SM4-CFB, SM4-OFB: CBC, CFB and OFB are IV-based modes of operation
   originally defined for DES.
 +
-When using these modes of operation, the IV **SHOULD** be random to preserve
+When using these modes of operation, the IV *SHOULD* be random to preserve
 message confidentiality <<BC-EVAL>>. It is shown in the same document that
 CBC, CFB, OFB, the variants #CBC, #CFB that utilize the recommendation of
 <<NIST.SP.800-38A>> to make CBC and CFB nonce-based, are SemCPA secure as
 probabilistic encryption schemes.
 +
 Various attack scenarios have been described in <<BC-EVAL>> and these modes
-**SHOULD NOT** be used unless for compatibility reasons.
+*SHOULD NOT* be used unless for compatibility reasons.
 
 * SM4-CTR: CTR is considered to be the "best" mode of operation within
   <<NIST.SP.800-38A>> as it is considered SemCPA secure as a nonce-based
@@ -51,5 +51,5 @@ Various attack scenarios have been described in <<BC-EVAL>> and these modes
   the classic modes of operation (ECB, CBC, CFB, OFB) <<BC-EVAL>>.
 +
 Users with no need of authenticity, non-malleablility and chosen-ciphertext
-(CCA) security **MAY** utilize this mode of operation <<BC-EVAL>>.
+(CCA) security *MAY* utilize this mode of operation <<BC-EVAL>>.
 

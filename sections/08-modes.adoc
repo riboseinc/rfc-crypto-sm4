@@ -47,7 +47,7 @@ The CBC, CFB and OFB modes require an additional input to the encryption process
 called the initialization vector (IV). The identical IV is used in the input
 of encryption as well as the decryption of the corresponding ciphertext.
 
-Generation of IV values **MUST** take into account of the considerations
+Generation of IV values *MUST* take into account of the considerations
 in <<security-considerations>> recommended by <<BC-EVAL>>.
 
 
@@ -68,7 +68,7 @@ to be computed in parallel.
 
 Inputs:
 
-- P, plaintext, length **MUST** be multiple of $$b$$
+- P, plaintext, length *MUST* be multiple of $$b$$
 - K, SM4 128-bit encryption key
 
 Output:
@@ -95,7 +95,7 @@ _____________________________________________________________________
 
 Inputs:
 
-- C, ciphertext, length **MUST** be multiple of $$b$$
+- C, ciphertext, length *MUST* be multiple of $$b$$
 - K, SM4 128-bit encryption key
 
 Output:
@@ -122,7 +122,7 @@ _____________________________________________________________________
 == SM4-CBC
 
 
-SM4-CBC is similar to SM4-ECB that the input plaintext **MUST** be a multiple
+SM4-CBC is similar to SM4-ECB that the input plaintext *MUST* be a multiple
 of the block size, which is 128-bit in SM4. SM4-CBC requires
 an additional input, the IV, that is unpredictable for a particular
 execution of the encryption process.
@@ -137,7 +137,7 @@ possible.
 
 Inputs:
 
-- P, plaintext, length **MUST** be multiple of $$b$$
+- P, plaintext, length *MUST* be multiple of $$b$$
 - K, SM4 128-bit encryption key
 - IV, 128-bit, unpredictable, initialization vector
 
@@ -167,7 +167,7 @@ _____________________________________________________________________
 
 Inputs:
 
-- C, ciphertext, length **MUST** be a multiple of $$b$$
+- C, ciphertext, length *MUST* be a multiple of $$b$$
 - K, SM4 128-bit encryption key
 - IV, 128-bit, unpredictable, initialization vector
 
@@ -230,7 +230,7 @@ various $$s$$:
 
 Inputs:
 
-- P#, plaintext, length **MUST** be multiple of $$s$$
+- P#, plaintext, length *MUST* be multiple of $$s$$
 - K, SM4 128-bit encryption key
 - IV, 128-bit, unpredictable, initialization vector
 - s, an integer $$1 <= s <= b$$ that defines segment size
@@ -268,7 +268,7 @@ _____________________________________________________________________
 
 Inputs:
 
-- C#, ciphertext, length **MUST** be a multiple of $$s$$
+- C#, ciphertext, length *MUST* be a multiple of $$s$$
 - K, SM4 128-bit encryption key
 - IV, 128-bit, unpredictable, initialization vector
 - s, an integer 1 <= s <= $$b$$ that defines segment size
@@ -307,7 +307,7 @@ _____________________________________________________________________
 == SM4-OFB
 
 SM4-OFB is the application of SM4 through the Output Feedback mode.
-This mode requires that the IV is a nonce, meaning that the IV **MUST**
+This mode requires that the IV is a nonce, meaning that the IV *MUST*
 be unique for each execution for an input key. OFB does not require the
 input plaintext to be a multiple of the block size.
 
