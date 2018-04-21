@@ -1,17 +1,9 @@
 [#appendix-a]
 = Appendix A: Example Calculations
 
-//<!-- 附录A 运算示例 -->
 == Examples From GB/T 32907-2016
 
 === Example 1 (GB/T 32907-2016 Example 1 Encryption)
-
-////
-<!-- 本部分为 SM4 分组密码算法对一组明文进行加密的运算示例。
-输入明文: 01 23 45 67 89 AB CD EF FE DC BA 98 76 54 32 10
-输入密钥: 01 23 45 67 89 AB CD EF FE DC BA 98 76 54 32 10
-轮密钥与每轮输出状态: -->
-////
 
 This is example 1 provided by <<GBT.32907-2016>> to demonstrate encryption of a
 plaintext.
@@ -65,8 +57,6 @@ rk_29 = 62293496   X_33 = 86B3E94F
 rk_30 = 01CF72E5   X_34 = D206965E
 rk_31 = 9124A012   X_35 = 681EDF34
 ----
-
-//<!-- 输出密文: 68 1E DF 34 D2 06 96 5E 86 B3 E9 4F 53 6E 42 46 -->
 
 Ciphertext:
 [source]
@@ -138,16 +128,9 @@ Plaintext:
 
 === Example 3 (GB/T 32907-2016 Example 2 Encryption)
 
-//<!-- A.2 示例 2 -->
-
-////
-<!-- 本部分为 SM4 分组密码算法使用固定的加密密钥，对一组明文反复加密1,000,000次的运算示例。 -->
-////
-
 This example is provided by <<GBT.32907-2016>> to demonstrate encryption of a
 plaintext 1,000,000 times repeatedly, using a fixed encryption key.
 
-//<!-- 输入明文: 01 23 45 67 89 AB CD EF FE DC BA 98 76 54 32 10 -->
 
 Plaintext:
 [source]
@@ -155,7 +138,6 @@ Plaintext:
 01 23 45 67 89 AB CD EF FE DC BA 98 76 54 32 10
 ----
 
-//<!-- 输入密钥: 01 23 45 67 89 AB CD EF FE DC BA 98 76 54 32 10 -->
 
 Encryption Key:
 [source]
@@ -163,7 +145,6 @@ Encryption Key:
 01 23 45 67 89 AB CD EF FE DC BA 98 76 54 32 10
 ----
 
-//<!-- 输出密文: 59 52 98 C7 C6 FD 27 1F 04 02 F8 04 C3 3D 3F 66 -->
 
 Ciphertext:
 [source]

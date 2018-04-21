@@ -1,16 +1,6 @@
 = Functions
 
-// 6 轮函数 F
-
 == Round Function $$F$$
-
-// 6.1 轮函数结构
-
-// 设输入为 𝑋 ,𝑋 ,𝑋 ,𝑋 ∈ 𝑍43 A，轮密钥为𝑟𝑘 ∈ 𝑍43，则轮函数𝐹为: 02343 3
-// 𝐹 𝑋0, 𝑋2, 𝑋3, 𝑋4, 𝑟𝑘 = 𝑋0⨁𝑇 𝑋2⨁𝑋3⨁𝑋4⨁𝑟𝑘 .
-
-// This algorithm uses a nonlinear substitution structure, encrypting 32 bits at a time. This
-// is called a one-round exchange. To illustrate, consider a one-round-substitution:
 
 The round function $$F$$ is defined as:
 
@@ -23,38 +13,9 @@ Where:
 * Each $$X_i$ is 32-bit wide.
 * The round key $$rk$$ is 32-bit wide.
 
-////
-<!-- $$
-(X_0, X_1, X_2, X_3)
-$$ -->
-
-<!-- $$
-(X_0, X_1, X_2, X_3) element-of (Z_2^32)^4
-$$ -->
-
-<!-- $$
-rk element-of Z_2^32
-$$
--->
-////
-
 == Permutations $$T$$ and $$T'$$
 
-////
-<!-- 6.2 合成置换 𝐓 -->
-<!-- 2.1 Mixer-substitution T -->
-<!-- Transformation T
-𝑇: 𝑍43 → 𝑍43是一个可逆变换，由非线性变换𝜏和线性变换𝐿复合而成，即𝑇 ⋅ = 𝐿 𝜏 ⋅ 。 33 -->
-////
-
 $$T$$ is a reversible permutation that outputs 32 bits from a 32-bit input.
-
-////
-<!-- $$
-T: Z_2^32 -> Z_2^32
-$$
- -->
-////
 
 It consists of a nonlinear transform $$tau$$ and linear transform $$L$$.
 
@@ -73,14 +34,6 @@ $$
 
 === Nonlinear Transformation tau
 
-////
-<!-- (1) 非线性变换 𝜏 -->
-<!-- 𝜏由4个并行的S盒构成。
-设输入为𝐴= 𝑎,𝑎,𝑎,𝑎 ∈ 𝑍K A，输出为𝐵= 𝑏,𝑏,𝑏,𝑏 ∈ 𝑍K A，则 0234 3 0234 3
-𝑏0,𝑏2,𝑏3,𝑏4 = 𝜏 𝐴 = 𝑆𝑏𝑜𝑥 𝑎0 ,𝑆𝑏𝑜𝑥 𝑎2 ,𝑆𝑏𝑜𝑥 𝑎3 ,𝑆𝑏𝑜𝑥 𝑎4
-其中，Sbox 数据如下: -->
-////
-
 $$tau$$ is composed of four parallel S-boxes.
 
 Given a 32-bit input $$A$$, where each $$a_i$$ is a 8-bit string:
@@ -89,24 +42,11 @@ $$
 A = (a_0, a_1, a_2, a_3)
 $$
 
-////
-<!-- $$
-A = (a_0, a_1, a_2, a_3) element-of (Z_2^8)^4
-$$
- -->
-////
-
 The output is a 32-bit $$B$$, where each $$b_i$$ is a 8-bit string:
 
 $$
 B = (b_0, b_1, b_2, b_3)
 $$
-
-////
-<!-- $$
-B = (b_0, b_1, b_2, b_3) element-of (Z_2^8)^4
-$$ -->
-////
 
 $$B$$ is calculated as follows:
 
@@ -121,36 +61,10 @@ $$
 
 === Linear Transformations $$L$$ and $$L'$$
 
-
-////
-(2) 线性变换 𝐿
-非线性变换 𝜏 的输出是线性变换 𝐿 的输入。设输入为𝐵 ∈ 𝑍43，输出为𝐶 ∈ 𝑍43，则
-33 𝐶=𝐿𝐵 =𝐵⨁𝐵⋘2⨁𝐵⋘10⨁𝐵⋘18⨁𝐵⋘24.
-////
-
 The output of nonlinear transformation function $$tau$$ is used as input
 to linear transformation function $$L$$.
 
 Given $$B$$, a 32-bit input.
-
-////
-<!-- Given $$B$$, a 32-bit input: -->
-
-<!-- $$
-B element-of Z_2^32
-$$
--->
-
-<!-- $$L$$ produces a 32-bit output $$C$$: -->
-
-<!-- $$
-C element-of Z_2^32
-$$ -->
-
-<!-- $$
-C = L(B)
-$$ -->
-////
 
 The linear transformation $$L'$$ is defined as follows.
 

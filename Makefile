@@ -1,7 +1,3 @@
-#
-# Makefile to build Internet Drafts using docker image "paulej/rfctools".
-#
-
 SRC  := $(wildcard draft-*.adoc)
 TXT  := $(patsubst %.adoc,%.txt,$(SRC))
 XML  := $(patsubst %.adoc,%.xml,$(SRC))
