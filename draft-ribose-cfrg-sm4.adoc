@@ -1,6 +1,6 @@
 = The SM4 Blockcipher Algorithm And Its Modes Of Operations
 :doctype: internet-draft
-:name: draft-ribose-cfrg-sm4-09
+:name: draft-ribose-cfrg-sm4-10
 :abbrev: SM4 Blockcipher Algorithm
 :status: info
 :ipr: trust200902
@@ -9,7 +9,7 @@
 :intended-series: full-standard
 :workgroup: Internet Research Task Force
 //:workgroup: Crypto Forum Research Group
-:revdate: 2018-01-08T00:00:00Z
+:revdate: 2018-04-21T00:00:00Z
 :rfc2629xslt: true
 :fullname: Ronald Henry Tse
 :lastname: Tse
@@ -31,7 +31,16 @@
 :country_2: People's Republic of China
 :uri_2: https://www.hsmc.edu.hk
 :email_2: wongwk@hsmc.edu.hk
-//:bibliography-database: my_database.bib
+:fullname_3: Markku-Juhani O. Saarinen
+:lastname_3: Saarinen
+:forename_initials_3: M-J.
+:organization_3: ARM
+:street_3: 110 Fulbourn Road
+:city_3: Cambridge
+:code_3: CB1 9NJ
+:country_3: United Kingdom
+:uri_3: https://www.arm.com/
+:email_3: mjos@iki.fi
 
 include::sections/00-abstract.adoc[leveloffset=+1]
 
