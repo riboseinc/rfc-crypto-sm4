@@ -34,12 +34,8 @@
 :fullname_3: Markku-Juhani O. Saarinen
 :lastname_3: Saarinen
 :forename_initials_3: M-J.
-:organization_3: ARM
-:street_3: 110 Fulbourn Road
-:city_3: Cambridge
-:code_3: CB1 9NJ
-:country_3: United Kingdom
-:uri_3: https://www.arm.com/
+:organization_3: Independent Consultant
+:uri_3: https://mjos.fi/
 :email_3: mjos@iki.fi
 
 include::sections/00-abstract.adoc[leveloffset=+1]
